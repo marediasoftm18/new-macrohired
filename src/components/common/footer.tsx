@@ -200,15 +200,6 @@ export default function Footer() {
             Developed and designed by Macrohired
           </span>
         </div>
-
-        {/* Scroll To Top Button */}
-        <button
-          onClick={scrollToTop}
-          className="absolute right-6 md:right-16 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-[#044647] bg-transparent text-[#044647] hover:bg-[#044647] hover:text-[#C6D936] transition-all flex items-center justify-center shadow-md shrink-0"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={16} />
-        </button>
       </div>
 
     </footer>

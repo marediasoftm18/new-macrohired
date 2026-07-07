@@ -4,6 +4,7 @@ import "./globals.css";
 import PageLoader from "@/components/common/loader";
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
+import ScrollToTop from "@/components/common/scroll-to-top";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
