@@ -5,10 +5,19 @@ import { ArrowUp } from "lucide-react";
 
 export default function ScrollToTop() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      
+      // Toggle visibility based on scroll position
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+
       if (totalScroll > 0) {
         const progress = window.scrollY / totalScroll;
         setScrollProgress(Math.min(Math.max(progress, 0), 1));
@@ -35,7 +44,9 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.1)] flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 group focus:outline-none"
+      className={`fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.1)] flex items-center justify-center hover:scale-105 active:scale-95 group focus:outline-none transition-all duration-300 ${
+        isVisible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"
+      }`}
       aria-label="Scroll to top"
     >
       {/* SVG Circular Progress */}
