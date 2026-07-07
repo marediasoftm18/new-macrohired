@@ -18,8 +18,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "HireHive - Human Resources & Recruiting Next.js Theme",
-  description: "Replicating HireHive WordPress Recruiting & Staffing template in Next.js",
+  title: "Macrohired - Human Resources & Recruiting Next.js Theme",
+  description: "Replicating Macrohired Recruiting & Staffing web application in Next.js",
 };
 
 export default function RootLayout({

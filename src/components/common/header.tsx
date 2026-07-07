@@ -447,7 +447,7 @@ export default function Header() {
                   Get a Quote
                 </Link>
                 <div className="text-center text-xs text-gray-500">
-                  © 2026 HireHive. All rights reserved.
+                  © 2026 Macrohired. All rights reserved.
                 </div>
               </div>
             </motion.div>
