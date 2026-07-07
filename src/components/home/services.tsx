@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, BarChart3, Users, BookOpen } from "lucide-react";
 
 const clientLogos = [
   {
@@ -58,21 +57,21 @@ const clientLogos = [
 
 const serviceCards = [
   {
-    icon: BarChart3,
+    icon: "bar_chart",
     title: "Strategic Talent Management",
     description: "We help organizations identify and develop talent through structured planning.",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80",
     link: "/services/recruitment",
   },
   {
-    icon: Users,
+    icon: "group",
     title: "Staff Engagement Programs",
     description: "We design engagement initiatives that foster a positive work culture.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
     link: "/services/staffing",
   },
   {
-    icon: BookOpen,
+    icon: "menu_book",
     title: "Staff Development Solutions",
     description: "Our staff development programs focus on career progression pathways.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
@@ -163,7 +162,9 @@ export default function Services() {
                 className="w-10 h-10 rounded-full bg-[#C6D936] flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
                 aria-label="View services list"
               >
-                <ArrowUpRight size={18} />
+                <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                  arrow_outward
+                </span>
               </Link>
             </div>
           </div>
@@ -172,7 +173,6 @@ export default function Services() {
         {/* Services Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
           {serviceCards.map((card, idx) => {
-            const Icon = card.icon;
             return (
               <motion.div
                 key={idx}
@@ -196,7 +196,9 @@ export default function Services() {
                       {card.title}
                     </h3>
                     <div className="text-[#044647] group-hover:text-[#C6D936] transition-colors shrink-0">
-                      <Icon size={28} />
+                      <span className="material-symbols-outlined text-[28px] select-none leading-none">
+                        {card.icon}
+                      </span>
                     </div>
                   </div>
 
@@ -216,7 +218,9 @@ export default function Services() {
                   {/* Overlay circular arrow button */}
                   <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#044647] shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                      <ArrowUpRight size={20} />
+                      <span className="material-symbols-outlined text-[20px] select-none leading-none">
+                        arrow_outward
+                      </span>
                     </div>
                   </div>
                 </div>

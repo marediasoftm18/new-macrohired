@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, BarChart3, HelpCircle, GitFork } from "lucide-react";
 
 export default function SmartTracking() {
   return (
@@ -86,7 +85,9 @@ export default function SmartTracking() {
               {/* Stat 1 */}
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full border border-[#044647]/20 flex items-center justify-center shrink-0">
-                  <GitFork size={18} className="text-[#044647]" />
+                  <span className="material-symbols-outlined text-[#044647] text-[18px] select-none leading-none">
+                    alt_route
+                  </span>
                 </div>
                 <div className="text-left flex items-baseline gap-2">
                   <span className="text-3xl font-extrabold" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
@@ -101,7 +102,9 @@ export default function SmartTracking() {
               {/* Stat 2 */}
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full border border-[#044647]/20 flex items-center justify-center shrink-0">
-                  <Users size={18} className="text-[#044647]" />
+                  <span className="material-symbols-outlined text-[#044647] text-[18px] select-none leading-none">
+                    group
+                  </span>
                 </div>
                 <div className="text-left flex items-baseline gap-2">
                   <span className="text-3xl font-extrabold" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>

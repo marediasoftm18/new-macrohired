@@ -1,13 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MapPin, ArrowUpRight, ArrowUp } from "lucide-react";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <footer className="w-full bg-[#044647] text-white rounded-t-[40px] lg:rounded-t-[60px] relative overflow-hidden font-sans pt-16 md:pt-20">
       
@@ -52,7 +47,9 @@ export default function Footer() {
                 className="w-9 h-9 rounded-full bg-[#044647] hover:scale-105 transition-transform flex items-center justify-center text-white"
                 aria-label="Subscribe"
               >
-                <ArrowUpRight size={16} />
+                <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                  arrow_outward
+                </span>
               </button>
             </div>
           </div>
@@ -167,19 +164,25 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-4 text-xs md:text-sm text-gray-300">
               <div className="flex items-center gap-3">
-                <Phone size={14} className="text-[#C6D936] shrink-0" />
+                <span className="material-symbols-outlined text-[#C6D936] text-[16px] shrink-0 select-none">
+                  phone
+                </span>
                 <a href="tel:+11234567890" className="hover:text-[#C6D936] transition-colors">
                   +1 (123) 456 7890
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail size={14} className="text-[#C6D936] shrink-0" />
+                <span className="material-symbols-outlined text-[#C6D936] text-[16px] shrink-0 select-none">
+                  mail
+                </span>
                 <a href="mailto:info@example.com" className="hover:text-[#C6D936] transition-colors">
                   info@example.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin size={14} className="text-[#C6D936] shrink-0 mt-0.5" />
+                <span className="material-symbols-outlined text-[#C6D936] text-[16px] shrink-0 mt-0.5 select-none">
+                  location_on
+                </span>
                 <span>
                   7164 Barton Terrace, North Penelope, Vermont &ndash; 97879, USA
                 </span>

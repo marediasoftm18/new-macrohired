@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star } from "lucide-react";
 
 const reviews = [
   {
@@ -92,7 +91,9 @@ export default function Testimonials() {
             {/* Stars */}
             <div className="flex gap-1 text-orange-500">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={18} fill="currentColor" className="stroke-none" />
+                <span key={i} className="material-symbols-outlined material-symbols-filled text-[18px] select-none leading-none">
+                  star
+                </span>
               ))}
             </div>
 
@@ -162,15 +163,19 @@ export default function Testimonials() {
                     {/* Numeric rating */}
                     <div className="flex items-center gap-1 mt-4 text-xs font-bold text-[#044647]" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
                       <span>{review.rating}</span>
-                      <Star size={12} fill="#C6D936" className="stroke-none text-[#C6D936]" />
+                      <span className="material-symbols-outlined material-symbols-filled text-[#C6D936] text-[12px] select-none leading-none">
+                        star
+                      </span>
                     </div>
                   </div>
 
                   {/* Right sub-column: Quote text */}
                   <div className="flex flex-col justify-between flex-grow text-left relative">
-                    <div className="flex gap-0.5 text-orange-500 mb-3">
+                    <div className="flex gap-0.5 text-[#C6D936] mb-3">
                       {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} size={14} fill="currentColor" className="stroke-none" />
+                        <span key={i} className="material-symbols-outlined material-symbols-filled text-[14px] select-none leading-none">
+                          star
+                        </span>
                       ))}
                     </div>
                     <p className="text-gray-600 text-xs md:text-sm leading-relaxed pr-8" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>

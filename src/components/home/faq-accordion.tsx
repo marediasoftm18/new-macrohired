@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronRight, HelpCircle, PhoneCall } from "lucide-react";
 
 const faqItems = [
   {
@@ -74,7 +73,9 @@ export default function FAQAccordion() {
                             isOpen ? "bg-[#C6D936] text-[#044647]" : "bg-[#044647] text-white"
                           }`}
                         >
-                          <HelpCircle size={14} />
+                          <span className="material-symbols-outlined text-[14px] select-none leading-none">
+                            help
+                          </span>
                         </div>
                         <span
                           className="font-bold text-[#044647] text-sm md:text-base text-left"
@@ -84,8 +85,16 @@ export default function FAQAccordion() {
                         </span>
                       </div>
                       
-                      <div className="text-[#044647] shrink-0">
-                        {isOpen ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+                      <div className="text-[#044647] shrink-0 flex items-center justify-center">
+                        {isOpen ? (
+                          <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                            keyboard_arrow_down
+                          </span>
+                        ) : (
+                          <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                            keyboard_arrow_right
+                          </span>
+                        )}
                       </div>
                     </button>
 
@@ -125,7 +134,9 @@ export default function FAQAccordion() {
               {/* Floating Emergency Call Card */}
               <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4 max-w-[280px] border border-gray-100">
                 <div className="w-12 h-12 rounded-full bg-[#044647] flex items-center justify-center text-[#C6D936] shrink-0">
-                  <PhoneCall size={20} />
+                  <span className="material-symbols-outlined text-[20px] select-none leading-none">
+                    phone_in_talk
+                  </span>
                 </div>
                 <div className="text-left">
                   <span

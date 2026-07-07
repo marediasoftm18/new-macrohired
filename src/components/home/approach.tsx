@@ -1,16 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Cpu, Layers, DollarSign, Laptop, Cpu as ChipIcon, FileText, CheckCircle2, User } from "lucide-react";
 
 const bottomTags = [
-  { icon: FileText, label: "AI UI/UX Design" },
-  { icon: Laptop, label: "Tech Solutions" },
-  { icon: Layers, label: "Design Automation" },
-  { icon: DollarSign, label: "Finance Application" },
-  { icon: User, label: "Personalized Experiences" },
-  { icon: Sparkles, label: "Generative Branding" },
-  { icon: Cpu, label: "IT Services" },
+  { icon: "description", label: "AI UI/UX Design" },
+  { icon: "laptop_mac", label: "Tech Solutions" },
+  { icon: "layers", label: "Design Automation" },
+  { icon: "attach_money", label: "Finance Application" },
+  { icon: "person", label: "Personalized Experiences" },
+  { icon: "auto_awesome", label: "Generative Branding" },
+  { icon: "developer_board", label: "IT Services" },
 ];
 
 export default function Approach() {
@@ -219,7 +218,6 @@ export default function Approach() {
         {/* Bottom Tags Marquee/Pills List */}
         <div className="flex flex-wrap justify-center gap-3 w-full max-w-4xl mt-8">
           {bottomTags.map((tag, idx) => {
-            const Icon = tag.icon;
             return (
               <motion.div
                 key={idx}
@@ -227,7 +225,9 @@ export default function Approach() {
                 className="flex items-center gap-2 px-5 py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs font-bold shadow-md cursor-pointer transition-all duration-300 select-none"
                 style={{ fontFamily: "var(--font-manrope), sans-serif" }}
               >
-                <Icon size={14} className="text-[#C6D936]" />
+                <span className="material-symbols-outlined text-[#C6D936] text-[14px] select-none leading-none">
+                  {tag.icon}
+                </span>
                 <span>{tag.label}</span>
               </motion.div>
             );

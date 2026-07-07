@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
 
 export default function ScrollToTop() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -76,7 +75,9 @@ export default function ScrollToTop() {
       </svg>
 
       {/* Up Arrow Icon */}
-      <ArrowUp size={16} className="text-[#C6D936] relative z-10 transition-transform group-hover:-translate-y-0.5 duration-300" strokeWidth={2.5} />
+      <span className="material-symbols-outlined text-[#C6D936] text-[18px] font-bold relative z-10 transition-transform group-hover:-translate-y-0.5 duration-300 select-none">
+        arrow_upward
+      </span>
     </button>
   );
 }

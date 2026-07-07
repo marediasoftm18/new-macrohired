@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, Play } from "lucide-react";
 
 const episodes = [
   {
@@ -104,7 +103,9 @@ export default function WorkplaceTrends() {
                 className="w-10 h-10 rounded-full bg-[#C6D936] flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
                 aria-label="View all podcasts"
               >
-                <Play size={14} fill="currentColor" />
+                <span className="material-symbols-outlined material-symbols-filled text-[14px] leading-none select-none">
+                  play_arrow
+                </span>
               </Link>
             </div>
           </div>
@@ -132,8 +133,10 @@ export default function WorkplaceTrends() {
                   />
                   
                   {/* Floating Podcast Indicator */}
-                  <div className="absolute top-4 left-4 bg-[#044647]/90 text-white rounded-full p-2.5 shadow-md backdrop-blur-sm">
-                    <Play size={12} fill="currentColor" />
+                  <div className="absolute top-4 left-4 bg-[#044647]/90 text-white rounded-full p-2 flex items-center justify-center shadow-md backdrop-blur-sm">
+                    <span className="material-symbols-outlined material-symbols-filled text-[12px] leading-none select-none">
+                      play_arrow
+                    </span>
                   </div>
                 </div>
 
@@ -166,7 +169,9 @@ export default function WorkplaceTrends() {
 
                     {/* Light green hover background play button */}
                     <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:bg-[#C6D936] group-hover:text-[#044647] group-hover:border-[#C6D936] transition-all mt-2">
-                      <Play size={12} fill="currentColor" />
+                      <span className="material-symbols-outlined material-symbols-filled text-[12px] leading-none select-none">
+                        play_arrow
+                      </span>
                     </div>
                   </div>
                 </div>

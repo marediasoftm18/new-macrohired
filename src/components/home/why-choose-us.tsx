@@ -2,36 +2,35 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, Award, Heart, BarChart3, BookOpen, ShieldCheck, Compass } from "lucide-react";
 
 const whyChooseList = [
   {
-    icon: Compass,
+    icon: "explore",
     title: "Talent Management Excellence",
     description: "Our talent management services help organizations attract and retain employees while enhancing workforce performance effectively.",
   },
   {
-    icon: Heart,
+    icon: "favorite",
     title: "Employee Engagement Experts",
     description: "We design engagement programs that motivate teams, boost morale, and improve collaboration across the workplace.",
   },
   {
-    icon: BarChart3,
+    icon: "bar_chart",
     title: "Workforce Planning Solutions",
     description: "We help organizations anticipate staffing needs, optimize resources with objectives. Every position contributes to sustainable growth.",
   },
   {
-    icon: BookOpen,
+    icon: "menu_book",
     title: "Training And Development",
     description: "We provide training programs that build skills and leadership abilities. Employees gain knowledge to meet challenges and grow professionally.",
   },
   {
-    icon: ShieldCheck,
+    icon: "verified_user",
     title: "Payroll And Compliance",
     description: "Our payroll and compliance services ensure accurate compensation, benefits management, and adherence to labor laws, helping organizations operate smoothly.",
   },
   {
-    icon: Award,
+    icon: "workspace_premium",
     title: "Strategic HR Support",
     description: "We deliver strategic HR support to implement best practices, optimize processes, and achieve workforce goals through efficient, people-focused solutions.",
   },
@@ -93,7 +92,9 @@ export default function WhyChooseUs() {
                 className="w-10 h-10 rounded-full bg-[#C6D936] flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
                 aria-label="Contact us to get started"
               >
-                <ArrowUpRight size={18} />
+                <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                  arrow_outward
+                </span>
               </Link>
             </div>
 
@@ -110,7 +111,6 @@ export default function WhyChooseUs() {
           {/* Right Column: Scrollable List of Features */}
           <div className="lg:col-span-7 flex flex-col w-full">
             {whyChooseList.map((item, idx) => {
-              const Icon = item.icon;
               return (
                 <div
                   key={idx}
@@ -118,7 +118,9 @@ export default function WhyChooseUs() {
                 >
                   {/* Icon Box */}
                   <div className="group w-14 h-14 bg-white hover:bg-[#044647] rounded-xl flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.03)] shrink-0 border border-gray-100/50 hover-wobble-skew transition-all duration-300 cursor-pointer">
-                    <Icon size={24} className="text-[#044647] group-hover:text-[#C6D936] transition-colors duration-300" />
+                    <span className="material-symbols-outlined text-[24px] text-[#044647] group-hover:text-[#C6D936] transition-colors duration-300 select-none leading-none">
+                      {item.icon}
+                    </span>
                   </div>
 
                   {/* Text Details */}

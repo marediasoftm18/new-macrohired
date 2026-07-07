@@ -2,21 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, Compass, Heart, Award } from "lucide-react";
 
 const features = [
   {
-    icon: Compass,
+    icon: "explore",
     title: "Manage Talent Effectively",
     description: "Manage top talent with efficiency.",
   },
   {
-    icon: Heart,
+    icon: "favorite",
     title: "Boost Employee Engagement",
     description: "Boost employee engagement every day.",
   },
   {
-    icon: Award,
+    icon: "workspace_premium",
     title: "Develop Workforce Skills",
     description: "Develop workforce skills for success.",
   },
@@ -67,7 +66,9 @@ export default function AboutBanner() {
                   className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-md"
                   aria-label="Read more about us"
                 >
-                  <ArrowUpRight size={20} />
+                  <span className="material-symbols-outlined text-[20px] select-none leading-none">
+                    arrow_outward
+                  </span>
                 </Link>
               </div>
             </div>
@@ -87,7 +88,6 @@ export default function AboutBanner() {
               {/* Overlapping Floating Cards stacked vertically */}
               <div className="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20 w-[60%] min-w-[280px]">
                 {features.map((feature, idx) => {
-                  const Icon = feature.icon;
                   return (
                     <motion.div
                       key={idx}
@@ -98,7 +98,9 @@ export default function AboutBanner() {
                       className="bg-white rounded-2xl p-4 shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex items-center gap-4 border border-white/80 backdrop-blur-sm"
                     >
                       <div className="w-10 h-10 rounded-full bg-[#044647] flex items-center justify-center text-[#C6D936] shrink-0">
-                        <Icon size={18} />
+                        <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                          {feature.icon}
+                        </span>
                       </div>
                       <div className="text-left">
                         <h4 className="text-[#044647] font-bold text-sm font-sans" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 const bgImages = [
   "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80",
@@ -127,7 +126,9 @@ export default function Hero() {
               className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-md"
               aria-label="Get started details"
             >
-              <ArrowUpRight size={20} />
+              <span className="material-symbols-outlined text-[20px] select-none leading-none">
+                arrow_outward
+              </span>
             </Link>
           </motion.div>
         </div>

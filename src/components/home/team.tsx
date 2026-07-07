@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, Share2 } from "lucide-react";
 
 const teamList = [
   {
@@ -89,7 +88,9 @@ export default function Team() {
                   className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
                   aria-label="View all team members"
                 >
-                  <ArrowUpRight size={18} />
+                  <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                    arrow_outward
+                  </span>
                 </Link>
               </div>
             </div>
@@ -119,7 +120,9 @@ export default function Team() {
                     className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C6D936] hover:bg-[#b4c62e] text-[#044647] flex items-center justify-center shadow-lg transition-transform hover:scale-110"
                     aria-label={`Share profile of ${member.name}`}
                   >
-                    <Share2 size={16} />
+                    <span className="material-symbols-outlined text-[16px] select-none leading-none">
+                      share
+                    </span>
                   </button>
                 </div>
 
