@@ -279,7 +279,7 @@ export default function Header() {
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black z-[1999]"
+              className="fixed inset-0 bg-black z-1999"
             />
             {/* Drawer */}
             <motion.div
@@ -287,7 +287,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-[2000] p-6 flex flex-col justify-between"
+              className="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-2000 p-6 flex flex-col justify-between"
             >
               <div>
                 <div className="flex justify-between items-center mb-8">

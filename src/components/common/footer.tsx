@@ -7,12 +7,12 @@ export default function Footer() {
     <footer className="w-full bg-[#044647] text-white rounded-t-[40px] lg:rounded-t-[60px] relative overflow-hidden font-sans pt-16 md:pt-20">
       
       {/* Ribbon Watermark Patterns */}
-      <div className="absolute left-[-50px] top-[-50px] opacity-[0.02] text-white pointer-events-none select-none">
+      <div className="absolute -left-12.5 -top-12.5 opacity-[0.02] text-white pointer-events-none select-none">
         <svg className="w-80 h-80" viewBox="0 0 100 100" fill="currentColor">
           <path d="M50 0 C25 25, 25 75, 50 100 C75 75, 75 25, 50 0 Z" />
         </svg>
       </div>
-      <div className="absolute right-[-50px] bottom-[50px] opacity-[0.02] text-white pointer-events-none select-none">
+      <div className="absolute -right-12.5 bottom-12.5 opacity-[0.02] text-white pointer-events-none select-none">
         <svg className="w-80 h-80" viewBox="0 0 100 100" fill="currentColor">
           <path d="M50 0 C25 25, 25 75, 50 100 C75 75, 75 25, 50 0 Z" />
         </svg>
@@ -41,7 +41,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow bg-transparent border-none outline-none text-xs md:text-sm text-[#044647] placeholder-[#044647]/50 font-medium"
+                className="grow bg-transparent border-none outline-none text-xs md:text-sm text-[#044647] placeholder-[#044647]/50 font-medium"
               />
               <button
                 className="w-9 h-9 rounded-full bg-[#044647] hover:scale-105 transition-transform flex items-center justify-center text-white"

@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
           
           {/* Left Column: Sticky Content (Moves down as user scrolls) */}
           <div className="lg:col-span-5 lg:sticky lg:top-24 flex flex-col gap-6 text-left self-start">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
               // WHY CHOOSE US
             </span>
 
@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
               <img
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
                 alt="HR strategy session"
-                className="w-full h-[250px] object-cover"
+                className="w-full h-62.5 object-cover"
               />
             </div>
           </div>

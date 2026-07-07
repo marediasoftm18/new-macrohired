@@ -62,7 +62,7 @@ export default function Stats() {
                 </span>
               </div>
               <p
-                className="text-[#044647] font-bold text-xs md:text-sm max-w-[140px] leading-tight"
+                className="text-[#044647] font-bold text-xs md:text-sm max-w-35 leading-tight"
                 style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
               >
                 {stat.label}

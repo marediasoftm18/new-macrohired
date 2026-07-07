@@ -45,7 +45,7 @@ export default function Portfolio() {
         
         {/* Header Block */}
         <div className="flex flex-col items-center gap-4 text-center max-w-xl">
-          <span className="inline-flex bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+          <span className="inline-flex bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
             // OUR PORTFOLIO
           </span>
           <h2
@@ -95,7 +95,7 @@ export default function Portfolio() {
                   className="group flex flex-col overflow-hidden"
                 >
                   {/* Card Image */}
-                  <div className="w-full h-[280px] rounded-t-3xl overflow-hidden relative shadow-sm">
+                  <div className="w-full h-70 rounded-t-3xl overflow-hidden relative shadow-sm">
                     <img
                       src={project.image}
                       alt={project.title}

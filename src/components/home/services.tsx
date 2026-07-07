@@ -129,7 +129,7 @@ export default function Services() {
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8">
           <div className="flex flex-col gap-4 max-w-xl text-left">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
               // OUR SERVICES
             </span>
             <h2

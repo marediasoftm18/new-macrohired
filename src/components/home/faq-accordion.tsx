@@ -40,7 +40,7 @@ export default function FAQAccordion() {
           
           {/* Left Column: Title & Accordion list */}
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
               // QUICK ANSWERS
             </span>
 
@@ -124,15 +124,15 @@ export default function FAQAccordion() {
 
           {/* Right Column: Image & Floating Card */}
           <div className="lg:col-span-5 relative w-full flex justify-end">
-            <div className="relative w-full max-w-[420px] rounded-3xl overflow-hidden shadow-xl">
+            <div className="relative w-full max-w-105 rounded-3xl overflow-hidden shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
                 alt="HR consultation support"
-                className="w-full h-[450px] object-cover"
+                className="w-full h-112.5 object-cover"
               />
               
               {/* Floating Emergency Call Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4 max-w-[280px] border border-gray-100">
+              <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4 max-w-70 border border-gray-100">
                 <div className="w-12 h-12 rounded-full bg-[#044647] flex items-center justify-center text-[#C6D936] shrink-0">
                   <span className="material-symbols-outlined text-[20px] select-none leading-none">
                     phone_in_talk

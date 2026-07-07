@@ -71,7 +71,7 @@ export default function Testimonials() {
           
           {/* Left Column: Sticky Summary */}
           <div className="lg:col-span-5 lg:sticky lg:top-24 flex flex-col gap-6 text-left self-start">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
               // OUR TESTIMONIALS
             </span>
 
@@ -132,7 +132,7 @@ export default function Testimonials() {
           </div>
 
           {/* Right Column: Sliding Vertical Feed (Shows 3 Review Cards) */}
-          <div className="lg:col-span-7 flex flex-col gap-6 relative h-[360px] md:h-[650px] overflow-hidden">
+          <div className="lg:col-span-7 flex flex-col gap-6 relative h-90 md:h-162.5 overflow-hidden">
             <AnimatePresence mode="popLayout">
               {visibleReviews.map((review, positionIdx) => (
                 <motion.div
@@ -142,12 +142,12 @@ export default function Testimonials() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -50, scale: 0.95 }}
                   transition={{ duration: 0.55, ease: "easeInOut" }}
-                  className={`bg-white rounded-[32px] p-8 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-gray-100 flex-col md:flex-row gap-6 relative overflow-hidden md:h-[198px] ${
+                  className={`bg-white rounded-4xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-gray-100 flex-col md:flex-row gap-6 relative overflow-hidden md:h-49.5 ${
                     positionIdx > 0 ? "hidden md:flex" : "flex"
                   }`}
                 >
                   {/* Left sub-column: Profile details */}
-                  <div className="flex flex-col items-center text-center md:border-r border-gray-100 md:pr-6 shrink-0 min-w-[120px]">
+                  <div className="flex flex-col items-center text-center md:border-r border-gray-100 md:pr-6 shrink-0 min-w-30">
                     <img
                       src={memberPortrait(review.image)}
                       alt={review.name}
@@ -170,7 +170,7 @@ export default function Testimonials() {
                   </div>
 
                   {/* Right sub-column: Quote text */}
-                  <div className="flex flex-col justify-between flex-grow text-left relative">
+                  <div className="flex flex-col justify-between grow text-left relative">
                     <div className="flex gap-0.5 text-[#C6D936] mb-3">
                       {[...Array(review.rating)].map((_, i) => (
                         <span key={i} className="material-symbols-outlined material-symbols-filled text-[14px] select-none leading-none">
@@ -183,7 +183,7 @@ export default function Testimonials() {
                     </p>
 
                     {/* Large Quote watermark decoration */}
-                    <div className="absolute right-0 bottom-[-10px] text-gray-100 pointer-events-none select-none font-serif text-[120px] font-extrabold leading-none opacity-30">
+                    <div className="absolute right-0 -bottom-2.5 text-gray-100 pointer-events-none select-none font-serif text-[120px] font-extrabold leading-none opacity-30">
                       &ldquo;
                     </div>
                   </div>

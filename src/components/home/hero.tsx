@@ -70,7 +70,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex self-start bg-[#C6D936] text-[#044647] px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]"
+            className="inline-flex self-start bg-[#C6D936] text-[#044647] px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider rounded-xs"
           >
             // HR EXPERTISE
           </motion.div>
@@ -139,10 +139,10 @@ export default function Hero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white/[0.08] backdrop-blur-[12px] border border-white/[0.15] shadow-[0_8px_32px_0_rgba(4,70,71,0.3)] rounded-2xl p-8 max-w-sm relative overflow-hidden text-left"
+            className="bg-white/8 backdrop-blur-md border-white/15 shadow-[0_8px_32px_0_rgba(4,70,71,0.3)] rounded-2xl p-8 max-w-sm relative overflow-hidden text-left"
           >
             {/* Background Watermark/Ribbon Pattern */}
-            <div className="absolute right-[-20px] bottom-[-20px] opacity-5 text-white pointer-events-none select-none">
+            <div className="absolute -right-5 -bottom-5 opacity-5 text-white pointer-events-none select-none">
               <svg className="w-40 h-40" viewBox="0 0 100 100" fill="currentColor">
                 <path d="M50 0 C25 25, 25 75, 50 100 C75 75, 75 25, 50 0 Z" />
               </svg>
