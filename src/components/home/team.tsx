@@ -46,7 +46,7 @@ export default function Team() {
       <div className="w-full bg-[#044647] rounded-t-[40px] lg:rounded-t-[60px] py-16 md:py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-16">
           {/* Ribbon Watermark Pattern */}
-          <div className="absolute left-[-40px] bottom-[-40px] opacity-[0.03] text-white pointer-events-none select-none">
+          <div className="absolute -left-10 -bottom-10 opacity-[0.03] text-white pointer-events-none select-none">
             <svg className="w-96 h-96" viewBox="0 0 100 100" fill="currentColor">
               <path d="M50 0 C25 25, 25 75, 50 100 C75 75, 75 25, 50 0 Z" />
             </svg>
@@ -55,7 +55,7 @@ export default function Team() {
           {/* Header Block */}
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-12 relative z-10">
             <div className="flex flex-col gap-4 max-w-xl text-left">
-              <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+              <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
                 // TEAM MEMBERS
               </span>
               <h2
@@ -108,7 +108,7 @@ export default function Team() {
                 className="flex flex-col items-center"
               >
                 {/* Image box with share button */}
-                <div className="w-full h-[380px] rounded-3xl overflow-hidden relative shadow-md group">
+                <div className="w-full h-95 rounded-3xl overflow-hidden relative shadow-md group">
                   <img
                     src={member.image}
                     alt={member.name}

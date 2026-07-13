@@ -42,7 +42,7 @@ export default function Approach() {
 
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center max-w-2xl">
-          <span className="inline-flex bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+          <span className="inline-flex bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
             // OUR APPROACH
           </span>
           <h2
@@ -63,7 +63,7 @@ export default function Approach() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full items-stretch mt-4">
           
           {/* Card 1: Innovation */}
-          <div className="bg-[#F6F5F2] rounded-[32px] p-8 flex flex-col justify-between border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+          <div className="bg-[#F6F5F2] rounded-4xl p-8 flex flex-col justify-between border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
               <h3
                 className="text-[#044647] font-extrabold text-2xl mb-4"
@@ -101,7 +101,7 @@ export default function Approach() {
           </div>
 
           {/* Card 2: Performance Analytics */}
-          <div className="bg-[#044647] rounded-[32px] p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
+          <div className="bg-[#044647] rounded-4xl p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
             <div>
               <h3
                 className="text-white font-extrabold text-lg mb-6"
@@ -111,7 +111,7 @@ export default function Approach() {
               </h3>
 
               {/* Chart Grid */}
-              <div className="w-full flex items-end justify-between h-36 gap-2 mb-8 bg-[#033738] rounded-2xl p-4 border border-white/[0.04]">
+              <div className="w-full flex items-end justify-between h-36 gap-2 mb-8 bg-[#033738] rounded-2xl p-4 border border-white/4">
                 {/* Y-Axis Label placeholder helper */}
                 <div className="flex flex-col justify-between text-[9px] text-gray-400 h-full font-mono pr-1 select-none">
                   <span>05</span>
@@ -160,7 +160,7 @@ export default function Approach() {
           </div>
 
           {/* Card 3: Sales Yearly */}
-          <div className="bg-[#C6D936] rounded-[32px] p-8 flex flex-col justify-between text-[#044647] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+          <div className="bg-[#C6D936] rounded-4xl p-8 flex flex-col justify-between text-[#044647] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
               <h3
                 className="text-[#044647] font-extrabold text-2xl mb-4"

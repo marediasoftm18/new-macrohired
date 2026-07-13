@@ -70,7 +70,7 @@ export default function WorkplaceTrends() {
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-16">
           <div className="flex flex-col gap-4 max-w-xl text-left">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-[2px]">
+            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
               // CEO TALKS PODCAST
             </span>
             <h2
@@ -112,7 +112,7 @@ export default function WorkplaceTrends() {
         </div>
 
         {/* Carousel Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative min-h-[460px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative min-h-115">
           <AnimatePresence mode="popLayout">
             {visibleEpisodes.map((ep, idx) => (
               <motion.div
@@ -125,7 +125,7 @@ export default function WorkplaceTrends() {
                 className={`flex-col text-left group ${idx > 0 ? "hidden md:flex" : "flex"}`}
               >
                 {/* Episode Image */}
-                <div className="w-full h-[240px] rounded-3xl overflow-hidden shadow-sm relative mb-6">
+                <div className="w-full h-60 rounded-3xl overflow-hidden shadow-sm relative mb-6">
                   <img
                     src={ep.image}
                     alt={ep.title}

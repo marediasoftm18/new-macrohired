@@ -83,7 +83,7 @@ export default function Hero() {
             style={{
               fontFamily: "var(--font-manrope), sans-serif",
               fontWeight: 800,
-              fontSize: "clamp(38px, 5.5vw, 64px)",
+              fontSize: "clamp(38px, 5.5vw, 92px)",
               lineHeight: 1.1,
             }}
             className="text-white tracking-tight"
