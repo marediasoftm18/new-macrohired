@@ -6,18 +6,18 @@ import Link from "next/link";
 const features = [
   {
     icon: "explore",
-    title: "Manage Talent Effectively",
-    description: "Manage top talent with efficiency.",
+    title: "Strategic Talent Management",
+    description: "We help organizations identify and develop talent through structured planning.",
   },
   {
     icon: "favorite",
-    title: "Boost Employee Engagement",
-    description: "Boost employee engagement every day.",
+    title: "Staff Engagement Programs",
+    description: "We design engagement initiatives that foster a positive work culture.",
   },
   {
     icon: "workspace_premium",
-    title: "Develop Workforce Skills",
-    description: "Develop workforce skills for success.",
+    title: "Staff Development Solutions",
+    description: "Our staff development programs focus on career progression pathways.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function AboutBanner() {
                 }}
                 className="tracking-tight"
               >
-                Shaping People And Performance
+                Shaping Focus And Performance
               </h2>
 
               <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-xl font-light" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>

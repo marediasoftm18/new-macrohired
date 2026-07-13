@@ -93,29 +93,38 @@ export default function Services() {
       `}</style>
 
       {/* Top Client Brand Slider */}
-      <div className="w-full py-10 border-b border-gray-200/50 bg-[#F6F5F2]">
-        <div className="max-w-7xl mx-auto px-6 text-center mb-6">
+      <div className="w-full py-12 border-b border-gray-200/50 bg-[#F6F5F2]">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-6 mb-8">
+          <div className="grow border-t border-gray-300/60 max-w-[400px] hidden sm:block"></div>
           <span 
-            className="text-gray-500 text-xs md:text-sm tracking-wide font-medium"
-            style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+            className="text-[#0A2540]/80 text-sm md:text-[15px] tracking-wide font-medium shrink-0"
+            style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
           >
-            More Than <span className="text-[#044647] font-bold">5.2k+ Brand</span> with Work Hero
+            More Than <span className="text-[#044647] font-semibold">5.2k+ Brand</span> with Work Hero
           </span>
+          <div className="grow border-t border-gray-300/60 max-w-[400px] hidden sm:block"></div>
         </div>
 
         {/* Infinite Slider */}
-        <div className="relative w-full overflow-hidden flex items-center">
-          <div className="flex gap-16 animate-scroll whitespace-nowrap">
+        <div className="relative w-full overflow-hidden flex items-center py-2">
+          <div className="flex gap-6 animate-scroll whitespace-nowrap">
             {/* Render 3 sets of logos for seamless infinite loop */}
             {[...Array(3)].map((_, setIdx) => (
-              <div key={setIdx} className="flex gap-16 items-center shrink-0">
+              <div key={setIdx} className="flex gap-6 items-center shrink-0">
                 {clientLogos.map((logo, logoIdx) => (
                   <div
                     key={`${setIdx}-${logoIdx}`}
-                    className="flex items-center gap-2 text-gray-400 hover:text-[#044647] transition-colors cursor-pointer select-none font-bold text-lg uppercase tracking-wide"
+                    className="flex items-center justify-center gap-3 bg-white px-10 py-5 rounded-xl border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all hover:scale-105 select-none text-[#0A2540]"
                   >
-                    {logo.icon}
-                    <span>{logo.name}</span>
+                    <div className="text-gray-500 flex items-center justify-center scale-110">
+                      {logo.icon}
+                    </div>
+                    <span 
+                      className="font-bold text-lg tracking-tight text-[#0C213A]"
+                      style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                    >
+                      {logo.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -137,7 +146,7 @@ export default function Services() {
                 fontFamily: "var(--font-manrope), sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(30px, 4.5vw, 48px)",
-                color: "#044647",
+                color: "#051B05",
                 lineHeight: 1.15,
               }}
               className="tracking-tight"
@@ -147,7 +156,7 @@ export default function Services() {
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 max-w-xl">
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-[#595B62] text-sm leading-relaxed font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
               We provide tailored HR solutions that enhance employee performance, streamline processes, and drive organisational growth efficiently.
             </p>
             <div className="flex items-center gap-3 shrink-0">
@@ -190,8 +199,9 @@ export default function Services() {
                         fontFamily: "var(--font-manrope), sans-serif",
                         fontWeight: 700,
                         fontSize: "20px",
+                        color: "#051B05",
                       }}
-                      className="text-[#044647] group-hover:text-white transition-colors leading-snug"
+                      className="group-hover:text-white transition-colors leading-snug"
                     >
                       {card.title}
                     </h3>
@@ -203,7 +213,10 @@ export default function Services() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-500 group-hover:text-gray-200 text-sm leading-relaxed mb-8 transition-colors">
+                  <p 
+                    className="text-[#595B62] group-hover:text-gray-200 text-sm leading-relaxed mb-8 transition-colors font-normal"
+                    style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                  >
                     {card.description}
                   </p>
                 </div>

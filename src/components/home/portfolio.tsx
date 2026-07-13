@@ -3,31 +3,31 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = ["All", "Culture", "Development", "Recruitment", "Strategy", "Workforce"];
+const categories = ["All", "Recruiting", "Staffing", "Consulting", "Training"];
 
 const projects = [
   {
     title: "Workplace Excellence",
-    category: "Culture",
-    tag: "Recruitment",
+    category: "Recruiting",
+    tag: "Recruiting",
     image: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Team Empowerment",
-    category: "Development",
-    tag: "Leadership",
+    category: "Staffing",
+    tag: "Staffing",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Recruitment Strategy",
-    category: "Strategy",
-    tag: "Hiring",
+    category: "Consulting",
+    tag: "Consulting",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Staffing Solutions",
-    category: "Recruitment",
-    tag: "Staffing",
+    category: "Training",
+    tag: "Training",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
   },
 ];
@@ -36,7 +36,7 @@ export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = projects.filter(
-    (project) => activeCategory === "All" || project.category === activeCategory || (activeCategory === "Workforce" && project.category === "Recruitment")
+    (project) => activeCategory === "All" || project.category === activeCategory
   );
 
   return (
@@ -46,14 +46,14 @@ export default function Portfolio() {
         {/* Header Block */}
         <div className="flex flex-col items-center gap-4 text-center max-w-xl">
           <span className="inline-flex bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
-            // OUR PORTFOLIO
+            // PORTFOLIO
           </span>
           <h2
             style={{
               fontFamily: "var(--font-manrope), sans-serif",
               fontWeight: 800,
               fontSize: "clamp(30px, 4.5vw, 44px)",
-              color: "#044647",
+              color: "#051B05",
               lineHeight: 1.15,
             }}
             className="tracking-tight"
@@ -107,7 +107,7 @@ export default function Portfolio() {
                   {/* Card Footer Text Block */}
                   <div className="bg-[#F6F5F2] rounded-b-3xl p-6 flex justify-between items-center border-t border-gray-100/50 shadow-sm">
                     <h3
-                      className="text-[#044647] font-bold text-lg"
+                      className="text-[#051B05] font-bold text-lg"
                       style={{ fontFamily: "var(--font-manrope), sans-serif" }}
                     >
                       {project.title}

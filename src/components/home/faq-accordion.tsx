@@ -49,12 +49,12 @@ export default function FAQAccordion() {
                 fontFamily: "var(--font-manrope), sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(30px, 4.5vw, 44px)",
-                color: "#044647",
+                color: "#051B05",
                 lineHeight: 1.15,
               }}
               className="tracking-tight mb-4"
             >
-              HR Support and Guidance
+              We support organizations
             </h2>
 
             {/* Accordion list */}
@@ -78,7 +78,7 @@ export default function FAQAccordion() {
                           </span>
                         </div>
                         <span
-                          className="font-bold text-[#044647] text-sm md:text-base text-left"
+                          className="font-bold text-[#051B05] text-sm md:text-base text-left"
                           style={{ fontFamily: "var(--font-manrope), sans-serif" }}
                         >
                           {item.question}
@@ -108,7 +108,7 @@ export default function FAQAccordion() {
                           className="overflow-hidden"
                         >
                           <p
-                            className="text-gray-500 text-xs md:text-sm pl-11 pr-8 pt-2 pb-3 leading-relaxed"
+                            className="text-[#595B62] text-xs md:text-sm pl-11 pr-8 pt-2 pb-3 leading-relaxed font-normal"
                             style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
                           >
                             {item.answer}

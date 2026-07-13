@@ -71,24 +71,24 @@ export default function WorkplaceTrends() {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-16">
           <div className="flex flex-col gap-4 max-w-xl text-left">
             <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
-              // CEO TALKS PODCAST
+              // WORKPLACE TRENDS
             </span>
             <h2
               style={{
                 fontFamily: "var(--font-manrope), sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(30px, 4.5vw, 44px)",
-                color: "#044647",
+                color: "#051B05",
                 lineHeight: 1.15,
               }}
               className="tracking-tight"
             >
-              Insights from Industry Leaders
+              Insights for Modern Human Resources
             </h2>
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 max-w-xl text-left">
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-[#595B62] text-sm leading-relaxed font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
               Listen to exclusive insights, success stories, and leadership strategies directly from top executives and industry pioneers.
             </p>
             <div className="flex items-center gap-3 shrink-0">
@@ -96,7 +96,7 @@ export default function WorkplaceTrends() {
                 href="/ceo-talks"
                 className="px-6 py-3 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
               >
-                See All Podcasts
+                See All Blogs
               </Link>
               <Link
                 href="/ceo-talks"
@@ -144,7 +144,7 @@ export default function WorkplaceTrends() {
                 <div className="flex items-start gap-4">
                   {/* Vertical Episode Stack */}
                   <div className="flex flex-col items-center shrink-0">
-                    <span className="text-3xl font-extrabold text-[#044647] leading-none" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
+                    <span className="text-3xl font-extrabold text-[#051B05] leading-none" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
                       {ep.epNum}
                     </span>
                     <span className="text-[10px] font-bold text-gray-500 mt-1 uppercase tracking-wider" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
@@ -157,11 +157,11 @@ export default function WorkplaceTrends() {
 
                   {/* Title & Category & Link details */}
                   <div className="flex flex-col gap-2">
-                    <span className="text-[10px] font-bold text-[#044647]/60 tracking-wider" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                    <span className="text-[10px] font-bold text-[#051B05]/60 tracking-wider" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                       {ep.category}
                     </span>
                     <h3
-                      className="text-[#044647] font-extrabold text-sm md:text-base leading-snug group-hover:text-teal-700 transition-colors"
+                      className="text-[#051B05] font-extrabold text-sm md:text-base leading-snug group-hover:text-teal-700 transition-colors"
                       style={{ fontFamily: "var(--font-manrope), sans-serif" }}
                     >
                       {ep.title}

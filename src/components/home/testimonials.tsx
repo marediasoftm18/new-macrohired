@@ -72,7 +72,7 @@ export default function Testimonials() {
           {/* Left Column: Sticky Summary */}
           <div className="lg:col-span-5 lg:sticky lg:top-24 flex flex-col gap-6 text-left self-start">
             <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
-              // OUR TESTIMONIALS
+              // TESTIMONIALS
             </span>
 
             <h2
@@ -85,47 +85,24 @@ export default function Testimonials() {
               }}
               className="tracking-tight"
             >
-              Experiences from Our Clients
+              Expressive feedback Our Client
             </h2>
 
-            {/* Stars */}
-            <div className="flex gap-1 text-orange-500">
-              {[...Array(5)].map((_, i) => (
-                <span key={i} className="material-symbols-outlined material-symbols-filled text-[18px] select-none leading-none">
-                  star
-                </span>
-              ))}
-            </div>
-
-            <p className="text-gray-600 text-sm leading-relaxed max-w-sm font-light" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              This HR agency improved our workplace with simple, effective solutions.
-            </p>
-
-            {/* Customer Avatars */}
-            <div className="flex items-center gap-4 mt-4">
-              <div className="flex -space-x-3">
-                <img
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80"
-                  alt="Customer 1"
-                />
-                <img
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80"
-                  alt="Customer 2"
-                />
-                <img
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80"
-                  alt="Customer 3"
-                />
-              </div>
-              <div className="text-left">
-                <span className="block text-lg font-bold text-[#044647] leading-none" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
-                  1.8 M+
-                </span>
-                <span className="text-gray-500 text-xs mt-0.5 block" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                  Satisfied customers
+            {/* Rating Section */}
+            <div className="flex items-center gap-4 mt-2">
+              <span className="text-6xl font-extrabold text-[#044647]" style={{ fontFamily: "var(--font-manrope), sans-serif", letterSpacing: "-0.03em" }}>
+                4.8
+              </span>
+              <div className="flex flex-col text-left">
+                <div className="flex gap-0.5 text-orange-500">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="material-symbols-outlined material-symbols-filled text-[18px] select-none leading-none">
+                      star
+                    </span>
+                  ))}
+                </div>
+                <span className="text-gray-500 text-xs font-bold uppercase tracking-wider mt-1.5" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  500+ Client reviews
                 </span>
               </div>
             </div>

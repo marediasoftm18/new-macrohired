@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
                 fontFamily: "var(--font-manrope), sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(30px, 4.5vw, 44px)",
-                color: "#044647",
+                color: "#051B05",
                 lineHeight: 1.15,
               }}
               className="tracking-tight"
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
               Helping organizations unlock people potential
             </h2>
 
-            <p className="text-gray-600 text-sm leading-relaxed max-w-md font-light" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p className="text-[#595B62] text-sm leading-relaxed max-w-md font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
               The best way to improve workplace performance is to create and follow an HR strategy. Start with goals, then build processes to achieve them.
             </p>
 
@@ -126,13 +126,13 @@ export default function WhyChooseUs() {
                   {/* Text Details */}
                   <div className="flex flex-col gap-2 text-left">
                     <h3
-                      className="text-[#044647] font-bold text-lg leading-snug"
+                      className="text-[#051B05] font-bold text-lg leading-snug"
                       style={{ fontFamily: "var(--font-manrope), sans-serif" }}
                     >
                       {item.title}
                     </h3>
                     <p
-                      className="text-gray-500 text-xs md:text-sm leading-relaxed"
+                      className="text-[#595B62] text-xs md:text-sm leading-relaxed font-normal"
                       style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
                     >
                       {item.description}

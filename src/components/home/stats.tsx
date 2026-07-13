@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 const statsList = [
   {
     number: "12",
-    suffix: "Y",
-    label: "Professional Experience",
+    suffix: "+",
+    label: "Years of experience",
   },
   {
     number: "55",
-    suffix: "K",
-    label: "Hires Employee",
+    suffix: "+",
+    label: "Recruiting agency",
   },
   {
     number: "25",
     suffix: "+",
-    label: "Our Company Clients",
+    label: "Success stories",
   },
   {
     number: "92",
     suffix: "%",
-    label: "Success Last year 2025",
+    label: "Client satisfaction",
   },
 ];
 

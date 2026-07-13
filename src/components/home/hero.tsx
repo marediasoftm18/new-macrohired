@@ -20,7 +20,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="w-full relative overflow-hidden flex items-center min-h-[90vh] py-20 px-6">
+    <section className="w-full relative overflow-hidden flex items-center min-h-[calc(100vh-88px)] py-20 px-6">
       {/* Background Images with Zoom & Crossfade */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {bgImages.map((image, idx) => {
@@ -62,9 +62,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch relative z-10">
         {/* Left Column: Heading and Description */}
-        <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+        <div className="lg:col-span-8 flex flex-col gap-6 text-left self-center">
           {/* Tagline Badge */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -82,11 +82,11 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             style={{
               fontFamily: "var(--font-manrope), sans-serif",
-              fontWeight: 800,
+              fontWeight: 700,
               fontSize: "clamp(38px, 5.5vw, 92px)",
-              lineHeight: 1.1,
+              lineHeight: 1.2,
             }}
-            className="text-white tracking-tight"
+            className="text-white tracking-tight line-clamp-2"
           >
             Grow Employee<br />
             Culture and Value
@@ -97,8 +97,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-200 text-sm md:text-base leading-relaxed max-w-xl font-light"
-            style={{ fontFamily: "var(--font-inter), sans-serif" }}
+            className="text-white font-normal line-clamp-2"
+            style={{
+              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontSize: "18px",
+              lineHeight: "28px",
+            }}
           >
             Enhance employee growth with strategic, people-first solutions tailored for teams and organizations. Our expert HR services deliver lasting value today globally.
           </motion.p>
@@ -112,11 +116,14 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="px-8 py-3.5 rounded-full text-sm font-bold shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center"
+              className="px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center"
               style={{
                 backgroundColor: "#C6D936",
-                color: "#044647",
-                fontFamily: "var(--font-montserrat), sans-serif",
+                color: "rgb(5, 27, 5)",
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontWeight: 500,
+                fontSize: "18px",
+                lineHeight: "30px",
               }}
             >
               Get Started
@@ -134,7 +141,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Floating Glassmorphic Card */}
-        <div className="lg:col-span-5 lg:self-end flex justify-start lg:justify-end relative pb-10">
+        <div className="lg:col-span-4 lg:self-end flex justify-start lg:justify-end relative pb-0">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}

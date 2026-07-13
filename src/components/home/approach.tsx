@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 
 const bottomTags = [
-  { icon: "description", label: "AI UI/UX Design" },
-  { icon: "laptop_mac", label: "Tech Solutions" },
-  { icon: "layers", label: "Design Automation" },
-  { icon: "attach_money", label: "Finance Application" },
-  { icon: "person", label: "Personalized Experiences" },
-  { icon: "auto_awesome", label: "Generative Branding" },
-  { icon: "developer_board", label: "IT Services" },
+  { icon: "trending_up", label: "Sales Yearly" },
+  { icon: "campaign", label: "Marketing" },
+  { icon: "corporate_fare", label: "Management" },
+  { icon: "model_training", label: "Training" },
+  { icon: "fact_check", label: "HR Audit" },
+  { icon: "gavel", label: "Compliance" },
+  { icon: "developer_board", label: "Development" },
 ];
 
 export default function Approach() {
@@ -50,7 +50,7 @@ export default function Approach() {
               fontFamily: "var(--font-manrope), sans-serif",
               fontWeight: 800,
               fontSize: "clamp(30px, 4.5vw, 44px)",
-              color: "#044647",
+              color: "#051B05",
               lineHeight: 1.15,
             }}
             className="tracking-tight"
@@ -66,12 +66,12 @@ export default function Approach() {
           <div className="bg-[#F6F5F2] rounded-4xl p-8 flex flex-col justify-between border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
               <h3
-                className="text-[#044647] font-extrabold text-2xl mb-4"
+                className="text-[#051B05] font-extrabold text-2xl mb-4"
                 style={{ fontFamily: "var(--font-manrope), sans-serif" }}
               >
                 Innovation
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-8" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              <p className="text-[#595B62] text-sm leading-relaxed mb-8 font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                 We use smart ideas and modern solutions to support steady business growth and long-term success.
               </p>
 
@@ -104,16 +104,16 @@ export default function Approach() {
           <div className="bg-[#044647] rounded-4xl p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
             <div>
               <h3
-                className="text-white font-extrabold text-lg mb-6"
+                className="text-white font-extrabold text-lg mb-8"
                 style={{ fontFamily: "var(--font-manrope), sans-serif" }}
               >
                 Performance Analytics
               </h3>
 
               {/* Chart Grid */}
-              <div className="w-full flex items-end justify-between h-36 gap-2 mb-8 bg-[#033738] rounded-2xl p-4 border border-white/4">
+              <div className="w-full flex items-end justify-between h-40 gap-1.5 mb-8 px-2">
                 {/* Y-Axis Label placeholder helper */}
-                <div className="flex flex-col justify-between text-[9px] text-gray-400 h-full font-mono pr-1 select-none">
+                <div className="flex flex-col justify-between text-[10px] text-gray-400/80 h-full font-mono pr-2 select-none">
                   <span>05</span>
                   <span>04</span>
                   <span>03</span>
@@ -124,25 +124,25 @@ export default function Approach() {
 
                 {/* Bars */}
                 {[
-                  { label: "S", value: "35%", active: false },
-                  { label: "M", value: "70%", active: true },
-                  { label: "T", value: "60%", active: true },
-                  { label: "W", value: "25%", active: false },
-                  { label: "T", value: "50%", active: true },
-                  { label: "F", value: "75%", active: true },
-                  { label: "S", value: "40%", active: false },
+                  { label: "S", value: "40%" },
+                  { label: "M", value: "90%" },
+                  { label: "T", value: "70%" },
+                  { label: "W", value: "30%" },
+                  { label: "T", value: "60%" },
+                  { label: "F", value: "84%" },
+                  { label: "S", value: "40%" },
                 ].map((bar, i) => (
-                  <div key={i} className="flex flex-col items-center flex-1 h-full justify-end gap-1.5">
-                    <div className="w-full bg-white/10 rounded-full h-full flex flex-col justify-end overflow-hidden">
+                  <div key={i} className="flex flex-col items-center flex-1 h-full justify-end gap-2">
+                    <div className="w-2.5 bg-white/15 rounded-full h-full flex flex-col justify-end overflow-hidden">
                       <motion.div
                         initial={{ height: 0 }}
                         whileInView={{ height: bar.value }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: i * 0.05 }}
-                        className={`w-full rounded-full ${bar.active ? "bg-[#C6D936]" : "bg-teal-700/60"}`}
+                        className="w-full bg-[#C6D936] rounded-full"
                       />
                     </div>
-                    <span className="text-[9px] font-mono text-gray-300 font-bold">{bar.label}</span>
+                    <span className="text-[10px] font-mono text-gray-300 font-bold">{bar.label}</span>
                   </div>
                 ))}
               </div>
@@ -160,16 +160,16 @@ export default function Approach() {
           </div>
 
           {/* Card 3: Sales Yearly */}
-          <div className="bg-[#C6D936] rounded-4xl p-8 flex flex-col justify-between text-[#044647] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+          <div className="bg-[#C6D936] rounded-4xl p-8 flex flex-col justify-between text-[#051B05] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
               <h3
-                className="text-[#044647] font-extrabold text-2xl mb-4"
+                className="text-[#051B05] font-extrabold text-2xl mb-4"
                 style={{ fontFamily: "var(--font-manrope), sans-serif" }}
               >
                 Sales Yearly
               </h3>
               <p
-                className="text-[#044647] text-sm leading-relaxed mb-8 font-semibold italic"
+                className="text-[#051B05] text-sm leading-relaxed mb-8 font-semibold italic"
                 style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
               >
                 &ldquo;Consistent year-over-year sales growth driven by strategic planning, strong client relationships, and performance-focused execution.&rdquo;
@@ -177,14 +177,14 @@ export default function Approach() {
             </div>
 
             {/* Gauge Arc Component */}
-            <div className="relative flex flex-col items-center justify-center mt-4">
-              <svg className="w-48 h-24 overflow-visible" viewBox="0 0 100 50">
+            <div className="relative flex flex-col items-center justify-center mt-6">
+              <svg className="w-72 h-36 overflow-visible" viewBox="0 0 100 50">
                 {/* Base gray/white track arc */}
                 <path
                   d="M 10 50 A 40 40 0 0 1 90 50"
                   fill="none"
                   stroke="#ffffff"
-                  strokeWidth="8"
+                  strokeWidth="12"
                   strokeLinecap="round"
                 />
                 {/* Active dark-green arc (65%) */}
@@ -192,7 +192,7 @@ export default function Approach() {
                   d="M 10 50 A 40 40 0 0 1 90 50"
                   fill="none"
                   stroke="#044647"
-                  strokeWidth="8"
+                  strokeWidth="12"
                   strokeLinecap="round"
                   strokeDasharray="125.6"
                   initial={{ strokeDashoffset: 125.6 }}
@@ -202,11 +202,11 @@ export default function Approach() {
                 />
               </svg>
               {/* Text inside */}
-              <div className="absolute bottom-0 text-center flex flex-col items-center">
-                <span className="text-3xl font-extrabold text-[#044647] tracking-tight leading-none" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
+              <div className="absolute bottom-4 text-center flex flex-col items-center">
+                <span className="text-5xl font-extrabold text-[#044647] tracking-tight leading-none" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
                   65%
                 </span>
-                <span className="text-[10px] font-bold text-[#044647] opacity-80 uppercase mt-0.5" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <span className="text-[10px] font-bold text-[#044647] opacity-80 uppercase mt-2.5" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
                   Grow in Few Month
                 </span>
               </div>
