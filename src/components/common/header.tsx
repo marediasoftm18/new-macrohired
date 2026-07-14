@@ -78,7 +78,7 @@ export default function Header() {
   return (
     <header
       className={`w-full z-50 transition-all duration-300 ${
-        scrolled ? "fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 py-3" : "bg-white py-5 lg:py-[30px]"
+        scrolled ? "fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 py-3" : "bg-white py-5 lg:py-7.5"
       }`}
     >
       <div className="w-full px-6 md:px-12 flex justify-between items-center">

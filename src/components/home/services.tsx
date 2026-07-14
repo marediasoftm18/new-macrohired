@@ -95,14 +95,14 @@ export default function Services() {
       {/* Top Client Brand Slider */}
       <div className="w-full py-12 border-b border-gray-200/50 bg-[#F6F5F2]">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-6 mb-8">
-          <div className="grow border-t border-gray-300/60 max-w-[400px] hidden sm:block"></div>
+          <div className="grow border-t border-gray-300/60 max-w-100 hidden sm:block"></div>
           <span 
             className="text-[#0A2540]/80 text-sm md:text-[15px] tracking-wide font-medium shrink-0"
             style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
           >
             More Than <span className="text-[#044647] font-semibold">5.2k+ Brand</span> with Work Hero
           </span>
-          <div className="grow border-t border-gray-300/60 max-w-[400px] hidden sm:block"></div>
+          <div className="grow border-t border-gray-300/60 max-w-100 hidden sm:block"></div>
         </div>
 
         {/* Infinite Slider */}
