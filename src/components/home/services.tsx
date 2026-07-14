@@ -138,16 +138,24 @@ export default function Services() {
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8">
           <div className="flex flex-col gap-4 max-w-xl text-left">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
+            <span 
+              className="inline-flex self-start bg-[#C6D936] text-[#051B05] px-2.5 py-0.5 uppercase tracking-wider rounded-xs"
+              style={{
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontWeight: 600,
+                fontSize: "16px",
+                lineHeight: "15px",
+              }}
+            >
               // OUR SERVICES
             </span>
             <h2
               style={{
                 fontFamily: "var(--font-manrope), sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(30px, 4.5vw, 48px)",
+                fontWeight: 600,
+                fontSize: "clamp(32px, 4.5vw, 52px)",
                 color: "#051B05",
-                lineHeight: 1.15,
+                lineHeight: "62px",
               }}
               className="tracking-tight"
             >
@@ -156,13 +164,26 @@ export default function Services() {
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 max-w-xl">
-            <p className="text-[#595B62] text-sm leading-relaxed font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p 
+              className="text-[#595B62] font-normal" 
+              style={{ 
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontSize: "18px",
+                lineHeight: "28px",
+              }}
+            >
               We provide tailored HR solutions that enhance employee performance, streamline processes, and drive organisational growth efficiently.
             </p>
             <div className="flex items-center gap-3 shrink-0">
               <Link
                 href="/services"
-                className="px-6 py-3 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
+                className="px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
+                style={{
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontWeight: 500,
+                  fontSize: "18px",
+                  lineHeight: "30px",
+                }}
               >
                 View Services
               </Link>
@@ -197,11 +218,11 @@ export default function Services() {
                     <h3
                       style={{
                         fontFamily: "var(--font-manrope), sans-serif",
-                        fontWeight: 700,
-                        fontSize: "20px",
-                        color: "#051B05",
+                        fontWeight: 600,
+                        fontSize: "28px",
+                        lineHeight: "36px",
                       }}
-                      className="group-hover:text-white transition-colors leading-snug"
+                      className="text-[#051B05] group-hover:text-white transition-colors"
                     >
                       {card.title}
                     </h3>
@@ -214,8 +235,12 @@ export default function Services() {
 
                   {/* Description */}
                   <p 
-                    className="text-[#595B62] group-hover:text-gray-200 text-sm leading-relaxed mb-8 transition-colors font-normal"
-                    style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                    className="text-[#595B62] group-hover:text-white transition-colors font-normal mb-8"
+                    style={{ 
+                      fontFamily: "var(--font-dm-sans), sans-serif",
+                      fontSize: "18px",
+                      lineHeight: "28px",
+                    }}
                   >
                     {card.description}
                   </p>
