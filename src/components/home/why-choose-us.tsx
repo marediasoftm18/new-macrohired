@@ -55,61 +55,93 @@ export default function WhyChooseUs() {
       `}</style>
 
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           {/* Left Column: Sticky Content (Moves down as user scrolls) */}
-          <div className="lg:col-span-5 lg:sticky lg:top-24 flex flex-col gap-6 text-left self-start">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
+          <div className="lg:sticky lg:top-24 flex flex-col gap-6 text-left self-start">
+            <span
+              style={{
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontWeight: 600,
+                fontSize: "16px",
+                lineHeight: "15px",
+                color: "#051B05",
+              }}
+              className="inline-flex self-start bg-[#C6D936] px-3 py-1 uppercase tracking-wider rounded-xs"
+            >
               // WHY CHOOSE US
             </span>
 
             <h2
               style={{
                 fontFamily: "var(--font-manrope), sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(30px, 4.5vw, 44px)",
+                fontWeight: 600,
+                fontSize: "clamp(32px, 4.5vw, 52px)",
                 color: "#051B05",
-                lineHeight: 1.15,
+                lineHeight: "62px",
               }}
-              className="tracking-tight"
+              className="tracking-tight mt-2"
             >
               Helping organizations unlock people potential
             </h2>
 
-            <p className="text-[#595B62] text-sm leading-relaxed max-w-md font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p
+              style={{
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontWeight: 400,
+                fontSize: "18px",
+                lineHeight: "28px",
+                color: "#595B62",
+              }}
+              className="max-w-md font-normal"
+            >
               The best way to improve workplace performance is to create and follow an HR strategy. Start with goals, then build processes to achieve them.
             </p>
 
             <div className="flex items-center gap-3 my-2">
               <Link
                 href="/contact"
-                className="px-6 py-3 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
+                className="px-6 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647]"
+                style={{
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontWeight: 500,
+                  fontSize: "18px",
+                  lineHeight: "30px",
+                  color: "#ffffff",
+                }}
               >
                 Get Started
               </Link>
               <Link
                 href="/contact"
-                className="w-10 h-10 rounded-full bg-[#C6D936] flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
+                className="w-12 h-12 rounded-full bg-[#C6D936] flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
                 aria-label="Contact us to get started"
               >
-                <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                <span className="material-symbols-outlined text-[20px] select-none leading-none">
                   arrow_outward
                 </span>
               </Link>
             </div>
 
             {/* Document Reviewing Image */}
-            <div className="w-full rounded-3xl overflow-hidden shadow-md mt-4">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ y: -5 }}
+              className="w-full rounded-3xl overflow-hidden shadow-lg mt-4 cursor-pointer group"
+            >
               <img
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
                 alt="HR strategy session"
-                className="w-full h-62.5 object-cover"
+                className="w-full h-62.5 object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Column: Scrollable List of Features */}
-          <div className="lg:col-span-7 flex flex-col w-full">
+          <div className="flex flex-col w-full">
             {whyChooseList.map((item, idx) => {
               return (
                 <div
@@ -117,23 +149,40 @@ export default function WhyChooseUs() {
                   className="flex gap-6 items-start border-b border-gray-300/40 last:border-b-0 pb-8 mb-8 last:pb-0 last:mb-0"
                 >
                   {/* Icon Box */}
-                  <div className="group w-14 h-14 bg-white hover:bg-[#044647] rounded-xl flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.03)] shrink-0 border border-gray-100/50 hover-wobble-skew transition-all duration-300 cursor-pointer">
-                    <span className="material-symbols-outlined text-[24px] text-[#044647] group-hover:text-[#C6D936] transition-colors duration-300 select-none leading-none">
-                      {item.icon}
-                    </span>
+                  <div
+                    style={{ width: "105px", height: "105px" }}
+                    className="group bg-white hover:bg-[#044647] rounded-xl flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.03)] shrink-0 border border-gray-100/50 hover-wobble-skew transition-all duration-300 cursor-pointer"
+                  >
+                    <img
+                      src={`/media assets/home/why choose ${idx + 1}.svg`}
+                      alt={item.title}
+                      style={{ width: "55px", height: "55px" }}
+                      className="group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    />
                   </div>
 
                   {/* Text Details */}
                   <div className="flex flex-col gap-2 text-left">
                     <h3
-                      className="text-[#051B05] font-bold text-lg leading-snug"
-                      style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+                      style={{
+                        fontFamily: "var(--font-manrope), sans-serif",
+                        fontWeight: 600,
+                        fontSize: "26px",
+                        lineHeight: "36px",
+                        color: "#051B05",
+                      }}
                     >
                       {item.title}
                     </h3>
                     <p
-                      className="text-[#595B62] text-xs md:text-sm leading-relaxed font-normal"
-                      style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                      style={{
+                        fontFamily: "var(--font-dm-sans), sans-serif",
+                        fontWeight: 400,
+                        fontSize: "18px",
+                        lineHeight: "28px",
+                        color: "#595B62",
+                      }}
+                      className="font-normal"
                     >
                       {item.description}
                     </p>

@@ -118,10 +118,12 @@ export default function AboutBanner() {
                       transition={{ duration: 0.5, delay: idx * 0.15 }}
                       className="bg-white rounded-3xl p-6.25 shadow-[0_15px_40px_rgba(0,0,0,0.12)] flex items-center gap-5 border border-white/80 backdrop-blur-sm"
                     >
-                      <div className="w-8 h-8 rounded-full bg-[#044647] flex items-center justify-center text-[#C6D936] shrink-0 shadow-inner">
-                        <span className="material-symbols-outlined text-[24px] select-none leading-none">
-                          {feature.icon}
-                        </span>
+                      <div className="w-8 h-8 rounded-full bg-[#044647] flex items-center justify-center shrink-0 shadow-inner">
+                        <img
+                          src="/media assets/home/svgexport-7.svg"
+                          alt={feature.title}
+                          className="w-5 h-5 object-contain"
+                        />
                       </div>
                       <div className="text-left">
                         <h4 

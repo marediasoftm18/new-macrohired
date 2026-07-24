@@ -4,74 +4,30 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const clientLogos = [
-  {
-    name: "Sitemark",
-    icon: (
-      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" />
-        <circle cx="12" cy="12" r="3" />
-      </svg>
-    ),
-  },
-  {
-    name: "Network",
-    icon: (
-      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="5" r="2.5" fill="currentColor" />
-        <circle cx="5" cy="12" r="2.5" fill="currentColor" />
-        <circle cx="19" cy="12" r="2.5" fill="currentColor" />
-        <circle cx="12" cy="19" r="2.5" fill="currentColor" />
-        <line x1="12" y1="7.5" x2="5" y2="12" />
-        <line x1="12" y1="7.5" x2="19" y2="12" />
-        <line x1="5" y1="12" x2="12" y2="16.5" />
-        <line x1="19" y1="12" x2="12" y2="16.5" />
-      </svg>
-    ),
-  },
-  {
-    name: "vision",
-    icon: (
-      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 3a9 9 0 0 0 0 18" fill="currentColor" />
-      </svg>
-    ),
-  },
-  {
-    name: "Penta",
-    icon: (
-      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-        <path d="M12 2v20M5 5h14M8 12h8" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    name: "Nextmove",
-    icon: (
-      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-        <path d="M13 5l7 7-7 7M6 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
+  { name: "Client 01", path: "/media assets/home/client-01.png" },
+  { name: "Client 02", path: "/media assets/home/client-02.png" },
+  { name: "Client 03", path: "/media assets/home/client-03.png" },
+  { name: "Client 04", path: "/media assets/home/client-04.png" },
+  { name: "Client 05", path: "/media assets/home/client-05.png" },
 ];
 
 const serviceCards = [
   {
-    icon: "bar_chart",
+    icon: "/media assets/home/strategic-talent-management.svg",
     title: "Strategic Talent Management",
     description: "We help organizations identify and develop talent through structured planning.",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80",
     link: "/services/recruitment",
   },
   {
-    icon: "group",
+    icon: "/media assets/home/staff-engagement-programs.svg",
     title: "Staff Engagement Programs",
     description: "We design engagement initiatives that foster a positive work culture.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
     link: "/services/staffing",
   },
   {
-    icon: "menu_book",
+    icon: "/media assets/home/staff-development-solutions.svg",
     title: "Staff Development Solutions",
     description: "Our staff development programs focus on career progression pathways.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
@@ -97,8 +53,8 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-6 mb-8">
           <div className="grow border-t border-gray-300/60 max-w-100 hidden sm:block"></div>
           <span 
-            className="text-[#0A2540]/80 text-sm md:text-[15px] tracking-wide font-medium shrink-0"
-            style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+            className="text-[#051b05] text-xl font-semibold tracking-wide shrink-0"
+            style={{ fontFamily: "var(--font-manrope), sans-serif" }}
           >
             More Than <span className="text-[#044647] font-semibold">5.2k+ Brand</span> with Work Hero
           </span>
@@ -114,17 +70,13 @@ export default function Services() {
                 {clientLogos.map((logo, logoIdx) => (
                   <div
                     key={`${setIdx}-${logoIdx}`}
-                    className="flex items-center justify-center gap-3 bg-white px-10 py-5 rounded-xl border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all hover:scale-105 select-none text-[#0A2540]"
+                    className="flex items-center justify-center bg-white rounded-xl border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all hover:scale-105 select-none w-[256px] h-[120px]"
                   >
-                    <div className="text-gray-500 flex items-center justify-center scale-110">
-                      {logo.icon}
-                    </div>
-                    <span 
-                      className="font-bold text-lg tracking-tight text-[#0C213A]"
-                      style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
-                    >
-                      {logo.name}
-                    </span>
+                    <img
+                      src={logo.path}
+                      alt={logo.name}
+                      className="w-[176px] h-[50px] object-contain opacity-70 hover:opacity-100 transition-all duration-300"
+                    />
                   </div>
                 ))}
               </div>
@@ -226,10 +178,12 @@ export default function Services() {
                     >
                       {card.title}
                     </h3>
-                    <div className="text-[#044647] group-hover:text-[#C6D936] transition-colors shrink-0">
-                      <span className="material-symbols-outlined text-[28px] select-none leading-none">
-                        {card.icon}
-                      </span>
+                    <div className="shrink-0">
+                      <img
+                        src={card.icon}
+                        alt={`${card.title} Icon`}
+                        className="w-12 h-12 object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                      />
                     </div>
                   </div>
 

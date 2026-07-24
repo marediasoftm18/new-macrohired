@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Search, MapPin, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,6 +10,20 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  const isItemActive = (item: any) => {
+    if (item.name === "Home") {
+      return pathname === "/";
+    }
+    if (item.href !== "#" && pathname === item.href) {
+      return true;
+    }
+    if (item.dropdown) {
+      return item.dropdown.some((sub: any) => sub.href !== "#" && pathname === sub.href);
+    }
+    return false;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,10 +93,12 @@ export default function Header() {
   return (
     <header
       className={`w-full z-50 transition-all duration-300 ${
-        scrolled ? "fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 py-3" : "bg-white py-5 lg:py-7.5"
+        scrolled
+          ? "fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 h-27.5"
+          : "bg-white h-27.5"
       }`}
     >
-      <div className="w-full px-6 md:px-12 flex justify-between items-center">
+      <div className="w-full h-full px-5 md:px-6 flex justify-between items-center">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           {/* Custom SVG logo matching the Hirehive style (crossed green & lime loops) */}
@@ -123,39 +140,48 @@ export default function Header() {
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-8">
-          {menuItems.map((item) => (
-            <div key={item.name} className="relative group py-2">
-              <Link
-                href={item.href}
-                className="flex items-center gap-1 transition-colors duration-200"
-                style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontWeight: 500,
-                  fontSize: "18px",
-                  lineHeight: "30px",
-                  color: "#044647",
-                }}
-              >
-                <span className="hover:text-[#0A3A3B] transition-colors">{item.name}</span>
-                <ChevronDown size={14} className="text-[#044647] group-hover:text-[#0A3A3B] transition-transform duration-200 group-hover:rotate-180" />
-              </Link>
-              {/* Dropdown Menu */}
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 rounded-lg shadow-xl bg-white border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 z-50">
-                <div className="py-2">
-                  {item.dropdown.map((subItem) => (
-                    <Link
-                      key={subItem.name}
-                      href={subItem.href}
-                      className="block px-4 py-2.5 text-sm text-[#404E4F] hover:bg-gray-50 hover:text-[#0A3A3B] font-medium transition-colors"
-                      style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
+          {menuItems.map((item) => {
+            const active = isItemActive(item);
+            return (
+              <div key={item.name} className="relative group py-2">
+                <Link
+                  href={item.href}
+                  className={`flex items-center gap-1 transition-colors duration-200 ${
+                    active ? "text-[#044647]" : "text-black"
+                  } hover:text-[#044647]`}
+                  style={{
+                    fontFamily: "var(--font-dm-sans), sans-serif",
+                    fontWeight: 500,
+                    fontSize: "18px",
+                    lineHeight: "30px",
+                  }}
+                >
+                  <span>{item.name}</span>
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform duration-200 group-hover:rotate-180 ${
+                      active ? "text-[#044647]" : "text-black"
+                    } group-hover:text-[#044647]`}
+                  />
+                </Link>
+                {/* Dropdown Menu */}
+                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 rounded-lg shadow-xl bg-white border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 z-50">
+                  <div className="py-2">
+                    {item.dropdown.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block px-4 py-2.5 text-sm text-black hover:bg-gray-50 hover:text-[#044647] font-medium transition-colors"
+                        style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </nav>
 
         {/* Right Section Details */}
@@ -168,8 +194,9 @@ export default function Header() {
             >
               <i className="fa-solid fa-phone-volume text-[20px]"></i>
             </Link>
-            <span
-              className="font-medium text-[#044647]"
+            <Link
+              href="tel:+11234567890"
+              className="font-medium text-black hover:text-[#044647] transition-colors"
               style={{
                 fontFamily: "var(--font-dm-sans), sans-serif",
                 fontWeight: 500,
@@ -177,29 +204,35 @@ export default function Header() {
               }}
             >
               +1 (123) 456 7890
-            </span>
+            </Link>
           </div>
 
           {/* Search Icon */}
-          <button className="p-2 text-[#0A3A3B] hover:text-[#C6D936] transition-colors">
-            <Search size={22} strokeWidth={2} />
+          <button className="p-2 text-black hover:text-[#044647] transition-colors flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
           </button>
 
           {/* Hamburger Menu Icon */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="p-2 text-[#0A3A3B] hover:text-[#C6D936] transition-colors"
+            className="p-2 text-black hover:text-[#044647] transition-colors flex items-center justify-center animate-pulse-slow"
           >
-            <Menu size={24} strokeWidth={2} />
+            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="16" width="24" height="2" fill="currentColor" />
+              <rect x="6" y="8" width="18" height="2" fill="currentColor" />
+              <rect width="24" height="2" fill="currentColor" />
+            </svg>
           </button>
 
           {/* Get a Free Quote Button */}
           <Link
             href="/contact"
-            className="hidden xl:inline-block px-7 py-3 rounded-full text-[18px] font-medium transition-all duration-300 hover:bg-[#0A3A3B] hover:text-white hover:scale-105 shadow-sm"
+            className="hidden xl:inline-block px-7 py-3 rounded-full text-[18px] font-medium transition-all duration-300 hover:bg-[#044647] hover:text-white hover:scale-105 shadow-sm"
             style={{
               backgroundColor: "#C6D936",
-              color: "#0A3A3B",
+              color: "#000000",
               fontFamily: "var(--font-dm-sans), sans-serif",
               fontWeight: 500,
             }}

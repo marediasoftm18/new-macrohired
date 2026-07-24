@@ -110,41 +110,14 @@ export default function Approach() {
                 Performance Analytics
               </h3>
 
-              {/* Chart Grid */}
-              <div className="w-full flex items-end justify-between h-40 gap-1.5 mb-8 px-2">
-                {/* Y-Axis Label placeholder helper */}
-                <div className="flex flex-col justify-between text-[10px] text-gray-400/80 h-full font-mono pr-2 select-none">
-                  <span>05</span>
-                  <span>04</span>
-                  <span>03</span>
-                  <span>02</span>
-                  <span>01</span>
-                  <span>0</span>
-                </div>
-
-                {/* Bars */}
-                {[
-                  { label: "S", value: "40%" },
-                  { label: "M", value: "90%" },
-                  { label: "T", value: "70%" },
-                  { label: "W", value: "30%" },
-                  { label: "T", value: "60%" },
-                  { label: "F", value: "84%" },
-                  { label: "S", value: "40%" },
-                ].map((bar, i) => (
-                  <div key={i} className="flex flex-col items-center flex-1 h-full justify-end gap-2">
-                    <div className="w-2.5 bg-white/15 rounded-full h-full flex flex-col justify-end overflow-hidden">
-                      <motion.div
-                        initial={{ height: 0 }}
-                        whileInView={{ height: bar.value }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: i * 0.05 }}
-                        className="w-full bg-[#C6D936] rounded-full"
-                      />
-                    </div>
-                    <span className="text-[10px] font-mono text-gray-300 font-bold">{bar.label}</span>
-                  </div>
-                ))}
+              {/* Chart Grid Image */}
+              <div className="w-full flex justify-center mb-8">
+                <img
+                  src="/media assets/home/performance analysis.svg"
+                  alt="Performance Analysis"
+                  style={{ width: "353px", height: "195px" }}
+                  className="object-contain"
+                />
               </div>
 
               <h4
@@ -176,40 +149,14 @@ export default function Approach() {
               </p>
             </div>
 
-            {/* Gauge Arc Component */}
+            {/* Gauge Arc Image */}
             <div className="relative flex flex-col items-center justify-center mt-6">
-              <svg className="w-72 h-36 overflow-visible" viewBox="0 0 100 50">
-                {/* Base gray/white track arc */}
-                <path
-                  d="M 10 50 A 40 40 0 0 1 90 50"
-                  fill="none"
-                  stroke="#ffffff"
-                  strokeWidth="12"
-                  strokeLinecap="round"
-                />
-                {/* Active dark-green arc (65%) */}
-                <motion.path
-                  d="M 10 50 A 40 40 0 0 1 90 50"
-                  fill="none"
-                  stroke="#044647"
-                  strokeWidth="12"
-                  strokeLinecap="round"
-                  strokeDasharray="125.6"
-                  initial={{ strokeDashoffset: 125.6 }}
-                  whileInView={{ strokeDashoffset: 125.6 * (1 - 0.65) }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                />
-              </svg>
-              {/* Text inside */}
-              <div className="absolute bottom-4 text-center flex flex-col items-center">
-                <span className="text-5xl font-extrabold text-[#044647] tracking-tight leading-none" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
-                  65%
-                </span>
-                <span className="text-[10px] font-bold text-[#044647] opacity-80 uppercase mt-2.5" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                  Grow in Few Month
-                </span>
-              </div>
+              <img
+                src="/media assets/home/Sales Yearly.svg"
+                alt="Sales Yearly"
+                style={{ width: "335px", height: "175px" }}
+                className="object-contain"
+              />
             </div>
           </div>
 

@@ -3,31 +3,31 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = ["All", "Recruiting", "Staffing", "Consulting", "Training"];
+const categories = ["All", "Culture", "Development", "Marketing", "Technology"];
 
 const projects = [
   {
     title: "Workplace Excellence",
-    category: "Recruiting",
-    tag: "Recruiting",
+    category: "Culture",
+    tag: "Excellence",
     image: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Team Empowerment",
-    category: "Staffing",
-    tag: "Staffing",
+    category: "Development",
+    tag: "Leadership",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Recruitment Strategy",
-    category: "Consulting",
-    tag: "Consulting",
+    category: "Marketing",
+    tag: "Strategy",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Staffing Solutions",
-    category: "Training",
-    tag: "Training",
+    category: "Technology",
+    tag: "Staffing",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
   },
 ];
@@ -44,19 +44,28 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-12">
         
         {/* Header Block */}
-        <div className="flex flex-col items-center gap-4 text-center max-w-xl">
-          <span className="inline-flex bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
-            // PORTFOLIO
+        <div className="flex flex-col items-center gap-4 text-center max-w-2xl">
+          <span
+            style={{
+              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontWeight: 600,
+              fontSize: "16px",
+              lineHeight: "15px",
+              color: "#051B05",
+            }}
+            className="inline-flex bg-[#C6D936] px-3 py-1 uppercase tracking-wider rounded-xs"
+          >
+            // OUR PORTFOLIOS
           </span>
           <h2
             style={{
               fontFamily: "var(--font-manrope), sans-serif",
-              fontWeight: 800,
-              fontSize: "clamp(30px, 4.5vw, 44px)",
+              fontWeight: 600,
+              fontSize: "clamp(32px, 4.5vw, 52px)",
               color: "#051B05",
-              lineHeight: 1.15,
+              lineHeight: "62px",
             }}
-            className="tracking-tight"
+            className="tracking-tight mt-2"
           >
             Driving Success Through HR Projects
           </h2>
@@ -68,12 +77,17 @@ export default function Portfolio() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-[#044647] text-white shadow-md scale-105"
-                  : "bg-gray-100 text-[#044647] hover:bg-gray-200"
+                  ? "bg-[#044647] text-[#ffffff] shadow-md"
+                  : "bg-[#F6F5F2] text-[#051B05] hover:bg-gray-200/80"
               }`}
-              style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+              style={{
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontWeight: 400,
+                fontSize: "18px",
+                lineHeight: "28px",
+              }}
             >
               {category}
             </button>
@@ -81,7 +95,7 @@ export default function Portfolio() {
         </div>
 
         {/* Projects Grid */}
-        <div className="w-full max-w-5xl">
+        <div className="w-full max-w-350">
           <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project) => (
@@ -95,7 +109,7 @@ export default function Portfolio() {
                   className="group flex flex-col overflow-hidden"
                 >
                   {/* Card Image */}
-                  <div className="w-full h-70 rounded-t-3xl overflow-hidden relative shadow-sm">
+                  <div className="w-full aspect-670/435.5 rounded-t-3xl overflow-hidden relative shadow-sm">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -105,16 +119,27 @@ export default function Portfolio() {
                   </div>
 
                   {/* Card Footer Text Block */}
-                  <div className="bg-[#F6F5F2] rounded-b-3xl p-6 flex justify-between items-center border-t border-gray-100/50 shadow-sm">
+                  <div className="bg-[#F6F5F2] rounded-b-3xl p-7.5 flex justify-between items-center border-t border-gray-100/50 shadow-sm h-25">
                     <h3
-                      className="text-[#051B05] font-bold text-lg"
-                      style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+                      style={{
+                        fontFamily: "var(--font-manrope), sans-serif",
+                        fontWeight: 600,
+                        fontSize: "32px",
+                        lineHeight: "40px",
+                        color: "#044647",
+                      }}
                     >
                       {project.title}
                     </h3>
                     <span
-                      className="bg-[#044647] text-[#C6D936] rounded-full px-4.5 py-1 text-[11px] font-bold tracking-wide shadow-sm"
-                      style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                      style={{
+                        fontFamily: "var(--font-dm-sans), sans-serif",
+                        fontWeight: 600,
+                        fontSize: "14px",
+                        lineHeight: "10px",
+                        color: "#051B05",
+                      }}
+                      className="bg-white border border-[#051B05]/10 rounded-full px-4 py-2.5 shadow-sm"
                     >
                       {project.tag}
                     </span>
@@ -129,3 +154,4 @@ export default function Portfolio() {
     </section>
   );
 }
+
