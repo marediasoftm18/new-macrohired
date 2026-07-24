@@ -29,18 +29,12 @@ export default function AboutBanner() {
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-100 h-100 bg-[#C6D936]/10 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-20 w-full">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-24 w-full">
             
             {/* Left Column: Text Content */}
-            <div className="w-full lg:w-[44%] flex flex-col text-left relative z-10">
+            <div className="w-full lg:w-[50%] h-full flex flex-col text-left relative z-10 gap-6">
               <span 
-                className="inline-flex self-start bg-[#C6D936] text-[#051B05] px-2.5 py-0.5 uppercase tracking-wider rounded-xs mb-4"
-                style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontWeight: 600,
-                  fontSize: "16px",
-                  lineHeight: "15px",
-                }}
+                className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]"
               >
                 // ABOUT US
               </span>
@@ -53,13 +47,13 @@ export default function AboutBanner() {
                   color: "#ffffff",
                   lineHeight: "64px",
                 }}
-                className="tracking-tight mb-8"
+                className="tracking-tight"
               >
-                Shaping People And Performance
+                Shaping People <br />And Performance
               </h2>
 
               <p 
-                className="text-white font-normal mt-10 mb-8"
+                className="text-white font-normal"
                 style={{ 
                   fontFamily: "var(--font-dm-sans), sans-serif",
                   fontSize: "18px",
@@ -69,7 +63,7 @@ export default function AboutBanner() {
                 Whether you aim to build a motivated workforce or a high-performing team, we turn your HR vision into reality with strategic planning and expert guidance.
               </p>
 
-              <div className="flex items-center gap-3 mt-2">
+              <div className="flex items-center gap-3">
                 <Link
                   href="/about"
                   className="px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#C6D936] text-[#051B05]"
@@ -116,7 +110,7 @@ export default function AboutBanner() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: idx * 0.15 }}
-                      className="bg-white rounded-3xl p-6.25 shadow-[0_15px_40px_rgba(0,0,0,0.12)] flex items-center gap-5 border border-white/80 backdrop-blur-sm"
+                      className="bg-white rounded-xl p-6.25 shadow-[0_15px_40px_rgba(0,0,0,0.12)] flex items-center gap-5 border border-white/80 backdrop-blur-sm"
                     >
                       <div className="w-8 h-8 rounded-full bg-[#044647] flex items-center justify-center shrink-0 shadow-inner">
                         <img
