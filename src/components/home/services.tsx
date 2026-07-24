@@ -91,15 +91,9 @@ export default function Services() {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8">
           <div className="flex flex-col gap-4 max-w-xl text-left">
             <span 
-              className="inline-flex self-start bg-[#C6D936] text-[#051B05] px-2.5 py-0.5 uppercase tracking-wider rounded-xs"
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontWeight: 600,
-                fontSize: "16px",
-                lineHeight: "15px",
-              }}
+              className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]"
             >
-              // OUR SERVICES
+              {"// OUR SERVICES"}
             </span>
             <h2
               style={{
@@ -162,7 +156,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="group bg-white rounded-3xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-xl border border-gray-100 hover:bg-[#044647] transition-all duration-300 flex flex-col justify-between"
+                className="group bg-white rounded-3xl p-5 h-[525px] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-xl border border-gray-100 hover:bg-[#044647] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Top line with Title and Icon */}
@@ -171,18 +165,27 @@ export default function Services() {
                       style={{
                         fontFamily: "var(--font-manrope), sans-serif",
                         fontWeight: 600,
-                        fontSize: "28px",
+                        fontSize: "26px",
                         lineHeight: "36px",
                       }}
-                      className="text-[#051B05] group-hover:text-white transition-colors"
+                      className="text-[#044647] group-hover:text-white transition-colors"
                     >
                       {card.title}
                     </h3>
                     <div className="shrink-0">
-                      <img
-                        src={card.icon}
-                        alt={`${card.title} Icon`}
-                        className="w-12 h-12 object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                      <div
+                        className="w-12 h-12 bg-[#044647] group-hover:bg-[#c8db2b] transition-colors duration-300"
+                        style={{
+                          maskImage: `url('${encodeURI(card.icon)}')`,
+                          WebkitMaskImage: `url('${encodeURI(card.icon)}')`,
+                          maskSize: "contain",
+                          WebkitMaskSize: "contain",
+                          maskRepeat: "no-repeat",
+                          WebkitMaskRepeat: "no-repeat",
+                          maskPosition: "center",
+                          WebkitMaskPosition: "center",
+                        }}
+                        aria-label={`${card.title} Icon`}
                       />
                     </div>
                   </div>
