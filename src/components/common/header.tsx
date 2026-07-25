@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Search, MapPin, Mail } from "lucide-react";
@@ -9,7 +9,11 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [scrollingUp, setScrollingUp] = useState(false);
+  const [headerHovered, setHeaderHovered] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
 
   const isItemActive = (item: any) => {
@@ -27,14 +31,40 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 50) {
         setScrolled(true);
+        if (currentScrollY < lastScrollY.current - 5) {
+          setScrollingUp(true);
+        } else if (currentScrollY > lastScrollY.current + 5) {
+          setScrollingUp(false);
+        }
       } else {
         setScrolled(false);
+        setScrollingUp(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const height = headerRef.current?.offsetHeight || 110;
+      const isInsideHeader = headerRef.current?.contains(e.target as Node);
+      if (e.clientY <= height || isInsideHeader) {
+        setHeaderHovered(true);
+      } else {
+        setHeaderHovered(false);
       }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   const menuItems = [
@@ -90,12 +120,24 @@ export default function Header() {
     },
   ];
 
+  const showHeader = !scrolled || scrollingUp || headerHovered || mobileMenuOpen;
+
   return (
     <header
-      className={`w-full z-50 transition-all duration-300 ${
+      ref={headerRef}
+      onMouseEnter={() => setHeaderHovered(true)}
+      onMouseLeave={(e) => {
+        const height = headerRef.current?.offsetHeight || 110;
+        if (e.clientY > height) {
+          setHeaderHovered(false);
+        }
+      }}
+      className={`w-full z-50 transition-all duration-300 ease-in-out ${
         scrolled
-          ? "fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 h-27.5"
-          : "bg-white h-27.5"
+          ? `fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 h-27.5 ${
+              showHeader ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+            }`
+          : "bg-white h-27.5 translate-y-0 opacity-100"
       }`}
     >
       <div className="w-full h-full px-5 md:px-6 flex justify-between items-center">
