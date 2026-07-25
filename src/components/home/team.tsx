@@ -55,7 +55,7 @@ export default function Team() {
           {/* Header Block */}
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-12 relative z-10">
             <div className="flex flex-col gap-4 max-w-xl text-left">
-              <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
+              <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
                 // TEAM MEMBERS
               </span>
               <h2

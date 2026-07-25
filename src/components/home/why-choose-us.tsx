@@ -59,16 +59,7 @@ export default function WhyChooseUs() {
           
           {/* Left Column: Sticky Content (Moves down as user scrolls) */}
           <div className="lg:sticky lg:top-24 flex flex-col gap-6 text-left self-start">
-            <span
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontWeight: 600,
-                fontSize: "16px",
-                lineHeight: "15px",
-                color: "#051B05",
-              }}
-              className="inline-flex self-start bg-[#C6D936] px-3 py-1 uppercase tracking-wider rounded-xs"
-            >
+            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // WHY CHOOSE US
             </span>
 

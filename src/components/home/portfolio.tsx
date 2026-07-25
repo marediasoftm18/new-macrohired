@@ -45,16 +45,7 @@ export default function Portfolio() {
         
         {/* Header Block */}
         <div className="flex flex-col items-center gap-4 text-center max-w-2xl">
-          <span
-            style={{
-              fontFamily: "var(--font-dm-sans), sans-serif",
-              fontWeight: 600,
-              fontSize: "16px",
-              lineHeight: "15px",
-              color: "#051B05",
-            }}
-            className="inline-flex bg-[#C6D936] px-3 py-1 uppercase tracking-wider rounded-xs"
-          >
+          <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
             // OUR PORTFOLIOS
           </span>
           <h2

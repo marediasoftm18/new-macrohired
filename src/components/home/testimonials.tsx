@@ -71,7 +71,7 @@ export default function Testimonials() {
           
           {/* Left Column: Sticky Summary */}
           <div className="lg:col-span-5 lg:sticky lg:top-24 flex flex-col gap-6 text-left self-start">
-            <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
+            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // TESTIMONIALS
             </span>
 

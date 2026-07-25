@@ -30,7 +30,7 @@ export default function SmartTracking() {
 
             {/* Right Form Content */}
             <div className="w-full md:w-[55%] p-8 md:p-12 flex flex-col justify-center gap-5 relative z-10 text-left">
-              <span className="inline-flex self-start bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
+              <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
                 // SMART TRACKING
               </span>
 

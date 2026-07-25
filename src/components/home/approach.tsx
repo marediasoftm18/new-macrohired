@@ -42,7 +42,7 @@ export default function Approach() {
 
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center max-w-2xl">
-          <span className="inline-flex bg-[#C6D936] text-[#044647] px-2.5 py-0.5 font-mono text-xs font-bold uppercase tracking-wider rounded-xs">
+          <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
             // OUR APPROACH
           </span>
           <h2
