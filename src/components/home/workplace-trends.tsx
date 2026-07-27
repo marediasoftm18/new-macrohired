@@ -64,39 +64,27 @@ export default function WorkplaceTrends() {
   ];
 
   return (
-    <section className="w-full bg-[#F6F5F2] py-16 md:py-24 px-6 md:px-16 font-sans overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto">
+    <section className="w-full bg-[#F6F5F2] py-16 md:py-24 px-6 md:px-12 lg:px-16 2xl:px-63.75 font-sans overflow-hidden">
+      <div className="w-full max-w-360 mx-auto">
         
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-16">
-          <div className="flex flex-col gap-4 max-w-xl text-left">
+          <div className="flex flex-col gap-4 max-w-350 text-left">
             <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // WORKPLACE TRENDS
             </span>
-            <h2
-              style={{
-                fontFamily: "var(--font-manrope), sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(30px, 4.5vw, 44px)",
-                color: "#051B05",
-                lineHeight: 1.15,
-              }}
-              className="tracking-tight"
-            >
-              Insights for Modern Human Resources
-            </h2>
+            <h2 className="font-manrope font-semibold text-[52px] leading-15.5 text-[#051B05]">Insights for Modern Human Resources</h2>
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 max-w-xl text-left">
-            <p className="text-[#595B62] text-sm leading-relaxed font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              Listen to exclusive insights, success stories, and leadership strategies directly from top executives and industry pioneers.
-            </p>
+            <p className="font-dm-sans text-[#595B62] text-[18px] leading-7 font-normal">
+              Whether you aim to build a strong workplace culture or a high-performing modern workforce, we turn your people strategy into results with expert human resources.            </p>
             <div className="flex items-center gap-3 shrink-0">
               <Link
                 href="/ceo-talks"
-                className="px-6 py-3 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
+                className="font-dm-sans px-6 py-3 rounded-full text-[18px] leading-7.5 font-medium shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
               >
-                See All Blogs
+                See All Posts
               </Link>
               <Link
                 href="/ceo-talks"
@@ -112,7 +100,7 @@ export default function WorkplaceTrends() {
         </div>
 
         {/* Carousel Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative min-h-115">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative min-h-115 w-full">
           <AnimatePresence mode="popLayout">
             {visibleEpisodes.map((ep, idx) => (
               <motion.div
@@ -124,8 +112,8 @@ export default function WorkplaceTrends() {
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 className={`flex-col text-left group ${idx > 0 ? "hidden md:flex" : "flex"}`}
               >
-                {/* Episode Image */}
-                <div className="w-full h-60 rounded-3xl overflow-hidden shadow-sm relative mb-6">
+                {/* Episode Image (Full column width x 294px height) */}
+                <div className="w-full h-73.5 rounded-3xl overflow-hidden shadow-sm relative mb-6">
                   <img
                     src={ep.image}
                     alt={ep.title}
@@ -141,38 +129,35 @@ export default function WorkplaceTrends() {
                 </div>
 
                 {/* Episode Content Metadata Area */}
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-5">
                   {/* Vertical Episode Stack */}
                   <div className="flex flex-col items-center shrink-0">
-                    <span className="text-3xl font-extrabold text-[#051B05] leading-none" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
+                    <span className="font-manrope text-[42px] font-extrabold text-[#051B05] leading-10.5">
                       {ep.epNum}
                     </span>
-                    <span className="text-[10px] font-bold text-gray-500 mt-1 uppercase tracking-wider" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                    <span className="font-dm-sans text-[20px] leading-7 font-extrabold text-[#595B62] mt-1 uppercase">
                       {ep.label}
                     </span>
-                  </div>
 
-                  {/* Divider line */}
-                  <div className="w-px h-12 bg-gray-200 shrink-0" />
-
-                  {/* Title & Category & Link details */}
-                  <div className="flex flex-col gap-2">
-                    <span className="text-[10px] font-bold text-[#051B05]/60 tracking-wider" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                      {ep.category}
-                    </span>
-                    <h3
-                      className="text-[#051B05] font-extrabold text-sm md:text-base leading-snug group-hover:text-teal-700 transition-colors"
-                      style={{ fontFamily: "var(--font-manrope), sans-serif" }}
-                    >
-                      {ep.title}
-                    </h3>
-
-                    {/* Light green hover background play button */}
-                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:bg-[#C6D936] group-hover:text-[#044647] group-hover:border-[#C6D936] transition-all mt-2">
-                      <span className="material-symbols-outlined material-symbols-filled text-[12px] leading-none select-none">
+                    {/* Lime Green Play Button placed under EPISODE text */}
+                    <div className="w-9 h-9 rounded-full bg-[#C6D936] text-[#044647] flex items-center justify-center mt-3 group-hover:scale-110 transition-transform duration-300 shadow-sm cursor-pointer">
+                      <span className="material-symbols-outlined material-symbols-filled text-[18px] leading-none select-none">
                         play_arrow
                       </span>
                     </div>
+                  </div>
+
+                  {/* Divider line */}
+                  <div className="w-px h-16 bg-gray-200 shrink-0 mt-2" />
+
+                  {/* Title & Category details */}
+                  <div className="flex flex-col gap-2 pt-1">
+                    <span className="font-dm-sans text-[18px] leading-7 font-normal text-[#595b62] uppercase tracking-wider">
+                      {ep.category}
+                    </span>
+                    <h3 className="font-manrope text-[#044647] font-semibold text-[24px] leading-9 group-hover:text-teal-700 transition-colors">
+                      {ep.title}
+                    </h3>
                   </div>
                 </div>
               </motion.div>

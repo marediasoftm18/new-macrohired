@@ -49,13 +49,12 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.05 }}
               style={{
-                fontFamily: "var(--font-manrope), sans-serif",
                 fontWeight: 700,
                 fontSize: "92px",
                 lineHeight: "110px",
                 letterSpacing: "0em",
               }}
-              className="mt-2.5 text-white"
+              className="font-manrope mt-2.5 text-white"
             >
               Grow Employee<br />
               Culture and Value
@@ -65,8 +64,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.12 }}
-              className="mt-5 max-w-145.5 text-[18px] leading-7 text-white"
-              style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+              className="font-dm-sans mt-5 max-w-145.5 text-[18px] leading-7 text-white"
             >
               Enhance employee growth with strategic, people-first solutions tailored for teams and organizations. Our expert HR services deliver lasting value today globally.
             </motion.p>
@@ -79,8 +77,7 @@ export default function Hero() {
             >
               <Link
                 href="/about"
-                className="inline-flex h-15 items-center rounded-full bg-[#c8db2b] px-7 text-[18px] font-medium text-[#062828] shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-transform hover:scale-[1.02]"
-                style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                className="font-dm-sans inline-flex h-15 items-center rounded-full bg-[#c8db2b] px-7 text-[18px] font-medium text-[#062828] shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-transform hover:scale-[1.02]"
               >
                 Get Started
               </Link>

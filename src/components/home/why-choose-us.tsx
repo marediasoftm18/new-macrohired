@@ -65,26 +65,18 @@ export default function WhyChooseUs() {
 
             <h2
               style={{
-                fontFamily: "var(--font-manrope), sans-serif",
                 fontWeight: 600,
                 fontSize: "clamp(32px, 4.5vw, 52px)",
                 color: "#051B05",
                 lineHeight: "62px",
               }}
-              className="tracking-tight mt-2"
+              className="font-manrope tracking-tight mt-2"
             >
               Helping organizations unlock people potential
             </h2>
 
             <p
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontWeight: 400,
-                fontSize: "18px",
-                lineHeight: "28px",
-                color: "#595B62",
-              }}
-              className="max-w-md font-normal"
+              className="font-dm-sans max-w-md font-normal text-[18px] leading-7 text-[#595B62]"
             >
               The best way to improve workplace performance is to create and follow an HR strategy. Start with goals, then build processes to achieve them.
             </p>
@@ -92,14 +84,7 @@ export default function WhyChooseUs() {
             <div className="flex items-center gap-3 my-2">
               <Link
                 href="/contact"
-                className="px-6 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647]"
-                style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontWeight: 500,
-                  fontSize: "18px",
-                  lineHeight: "30px",
-                  color: "#ffffff",
-                }}
+                className="font-dm-sans px-6 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] font-medium text-[18px] leading-7.5 text-white"
               >
                 Get Started
               </Link>
@@ -155,25 +140,12 @@ export default function WhyChooseUs() {
                   {/* Text Details */}
                   <div className="flex flex-col gap-2 text-left">
                     <h3
-                      style={{
-                        fontFamily: "var(--font-manrope), sans-serif",
-                        fontWeight: 600,
-                        fontSize: "26px",
-                        lineHeight: "36px",
-                        color: "#051B05",
-                      }}
+                      className="font-manrope font-semibold text-[26px] leading-9 text-[#051B05]"
                     >
                       {item.title}
                     </h3>
                     <p
-                      style={{
-                        fontFamily: "var(--font-dm-sans), sans-serif",
-                        fontWeight: 400,
-                        fontSize: "18px",
-                        lineHeight: "28px",
-                        color: "#595B62",
-                      }}
-                      className="font-normal"
+                      className="font-dm-sans font-normal text-[18px] leading-7 text-[#595B62]"
                     >
                       {item.description}
                     </p>

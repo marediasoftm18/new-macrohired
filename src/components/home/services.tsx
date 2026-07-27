@@ -53,8 +53,7 @@ export default function Services() {
         <div className="max-w-350 mx-auto px-5 flex items-center justify-center gap-6 mb-8">
           <div className="grow border-t border-gray-300/60 max-w-100 hidden sm:block"></div>
           <span 
-            className="text-[#051b05] text-xl font-semibold tracking-wide shrink-0"
-            style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+            className="font-manrope text-[#051b05] text-xl font-semibold tracking-wide shrink-0"
           >
             More Than <span className="text-[#044647] font-semibold">5.2k+ Brand</span> with Work Hero
           </span>
@@ -97,13 +96,12 @@ export default function Services() {
             </span>
             <h2
               style={{
-                fontFamily: "var(--font-manrope), sans-serif",
                 fontWeight: 600,
                 fontSize: "clamp(32px, 4.5vw, 52px)",
                 color: "#051B05",
                 lineHeight: "62px",
               }}
-              className="tracking-tight"
+              className="font-manrope tracking-tight"
             >
               Expert Solutions for Workforce Success
             </h2>
@@ -111,12 +109,7 @@ export default function Services() {
 
           <div className="flex items-start lg:justify-center">
             <p 
-              className="text-[#595B62] font-normal max-w-130" 
-              style={{ 
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: "18px",
-                lineHeight: "28px",
-              }}
+              className="font-dm-sans text-[#595B62] font-normal max-w-130 text-[18px] leading-7" 
             >
               We provide tailored HR solutions that enhance employee performance, streamline processes, and drive organisational growth efficiently.
             </p>
@@ -125,13 +118,7 @@ export default function Services() {
           <div className="flex items-center gap-3 shrink-0 lg:justify-self-end">
               <Link
                 href="/services"
-                className="px-8.75 py-3.75 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
-                style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontWeight: 500,
-                  fontSize: "18px",
-                  lineHeight: "30px",
-                }}
+                className="font-dm-sans px-8.75 py-3.75 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white font-medium text-[18px] leading-7.5"
               >
                 View Services
               </Link>
@@ -164,12 +151,11 @@ export default function Services() {
                   <div className="flex justify-between items-start gap-4 mb-6">
                     <h3
                       style={{
-                        fontFamily: "var(--font-manrope), sans-serif",
                         fontWeight: 600,
                         fontSize: "26px",
                         lineHeight: "34px",
                       }}
-                      className="service-title text-[#044647] group-hover:text-white transition-colors max-w-65"
+                      className="font-manrope service-title text-[#044647] group-hover:text-white transition-colors max-w-65"
                     >
                       {card.title}
                     </h3>
@@ -193,12 +179,7 @@ export default function Services() {
 
                   {/* Description */}
                   <p 
-                    className="service-description text-[#595B62] group-hover:text-white transition-colors font-normal mb-8 max-w-92.5"
-                    style={{ 
-                      fontFamily: "var(--font-dm-sans), sans-serif",
-                      fontSize: "16px",
-                      lineHeight: "26px",
-                    }}
+                    className="font-dm-sans service-description text-[#595B62] group-hover:text-white transition-colors font-normal mb-8 max-w-92.5 text-[16px] leading-6.5"
                   >
                     {card.description}
                   </p>

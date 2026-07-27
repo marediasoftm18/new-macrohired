@@ -41,24 +41,18 @@ export default function AboutBanner() {
 
               <h2
                 style={{
-                  fontFamily: "var(--font-manrope), sans-serif",
                   fontWeight: 600,
                   fontSize: "clamp(32px, 4.5vw, 56px)",
                   color: "#ffffff",
                   lineHeight: "64px",
                 }}
-                className="tracking-tight"
+                className="font-manrope tracking-tight"
               >
                 Shaping People <br />And Performance
               </h2>
 
               <p 
-                className="text-white font-normal"
-                style={{ 
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontSize: "18px",
-                  lineHeight: "28px",
-                }}
+                className="font-dm-sans text-white font-normal text-[18px] leading-7"
               >
                 Whether you aim to build a motivated workforce or a high-performing team, we turn your HR vision into reality with strategic planning and expert guidance.
               </p>
@@ -66,13 +60,7 @@ export default function AboutBanner() {
               <div className="flex items-center gap-3">
                 <Link
                   href="/about"
-                  className="px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#C6D936] text-[#051B05]"
-                  style={{
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    fontWeight: 500,
-                    fontSize: "18px",
-                    lineHeight: "30px",
-                  }}
+                  className="font-dm-sans px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#C6D936] text-[#051B05] font-medium text-[18px] leading-7.5"
                 >
                   Get Started
                 </Link>
@@ -121,23 +109,12 @@ export default function AboutBanner() {
                       </div>
                       <div className="text-left">
                         <h4 
-                          style={{ 
-                            fontFamily: "var(--font-manrope), sans-serif",
-                            fontWeight: 600,
-                            fontSize: "24px",
-                            lineHeight: "26px",
-                            color: "#051B05",
-                          }}
+                          className="font-manrope font-semibold text-[24px] leading-6.5 text-[#051B05]"
                         >
                           {feature.title}
                         </h4>
                         <p 
-                          className="text-[#595B62] font-normal mt-1" 
-                          style={{ 
-                            fontFamily: "var(--font-dm-sans), sans-serif",
-                            fontSize: "18px",
-                            lineHeight: "28px",
-                          }}
+                          className="font-dm-sans text-[#595B62] font-normal mt-1 text-[18px] leading-7" 
                         >
                           {feature.description}
                         </p>

@@ -47,3 +47,8 @@ CLAUDE.md
 # vscode
 .vscode/
 
+.idea/Macrohired.iml
+.idea/modules.xml
+.idea/ShadcnHelperSettings.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/Project_Default.xml

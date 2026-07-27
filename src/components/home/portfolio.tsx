@@ -50,13 +50,12 @@ export default function Portfolio() {
           </span>
           <h2
             style={{
-              fontFamily: "var(--font-manrope), sans-serif",
               fontWeight: 600,
               fontSize: "clamp(32px, 4.5vw, 52px)",
               color: "#051B05",
               lineHeight: "62px",
             }}
-            className="tracking-tight mt-2"
+            className="font-manrope tracking-tight mt-2"
           >
             Driving Success Through HR Projects
           </h2>
@@ -68,17 +67,11 @@ export default function Portfolio() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`font-dm-sans px-6 py-2 rounded-full font-normal text-[18px] leading-7 transition-all duration-300 ${
                 activeCategory === category
                   ? "bg-[#044647] text-[#ffffff] shadow-md"
                   : "bg-[#F6F5F2] text-[#051B05] hover:bg-gray-200/80"
               }`}
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontWeight: 400,
-                fontSize: "18px",
-                lineHeight: "28px",
-              }}
             >
               {category}
             </button>
@@ -112,25 +105,12 @@ export default function Portfolio() {
                   {/* Card Footer Text Block */}
                   <div className="bg-[#F6F5F2] rounded-b-3xl p-7.5 flex justify-between items-center border-t border-gray-100/50 shadow-sm h-25">
                     <h3
-                      style={{
-                        fontFamily: "var(--font-manrope), sans-serif",
-                        fontWeight: 600,
-                        fontSize: "32px",
-                        lineHeight: "40px",
-                        color: "#044647",
-                      }}
+                      className="font-manrope font-semibold text-[32px] leading-10 text-[#044647]"
                     >
                       {project.title}
                     </h3>
                     <span
-                      style={{
-                        fontFamily: "var(--font-dm-sans), sans-serif",
-                        fontWeight: 600,
-                        fontSize: "14px",
-                        lineHeight: "10px",
-                        color: "#051B05",
-                      }}
-                      className="bg-white border border-[#051B05]/10 rounded-full px-4 py-2.5 shadow-sm"
+                      className="font-dm-sans font-semibold text-[14px] leading-2.5 text-[#051B05] bg-white border border-[#051B05]/10 rounded-full px-4 py-2.5 shadow-sm"
                     >
                       {project.tag}
                     </span>

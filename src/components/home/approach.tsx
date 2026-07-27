@@ -18,23 +18,38 @@ export default function Approach() {
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-12">
         
         {/* Top Circular Portrait & Text */}
-        <div className="relative w-32 h-32 flex items-center justify-center">
-          {/* Circular rotating text */}
-          <svg className="absolute inset-0 w-full h-full animate-[spin_30s_linear_infinite]" viewBox="0 0 100 100">
-            <defs>
-              <path id="textCirclePath" d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
-            </defs>
-            <text className="text-[7.5px] fill-[#044647] font-extrabold tracking-[0.16em] uppercase">
-              <textPath href="#textCirclePath" startOffset="0%">
-                Building Stronger Workforces • MacroHired Experts •
-              </textPath>
-            </text>
-          </svg>
-          {/* Portrait Image inside */}
-          <div className="w-20 h-20 rounded-full overflow-hidden border-[3px] border-[#C6D936] shadow-md z-10">
+        <div className="flex items-center justify-center relative">
+          {/* Left Dark Teal Circle with rotating text and center icon */}
+          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full bg-[#044647] flex items-center justify-center shadow-lg z-10 shrink-0">
+            {/* Center User Icon */}
+            <span className="material-symbols-outlined text-white text-3xl select-none leading-none z-10">
+              person
+            </span>
+            
+            {/* Circular rotating text */}
+            <svg
+              className="absolute inset-0 w-full h-full animate-[spin_25s_linear_infinite]"
+              viewBox="0 0 100 100"
+            >
+              <defs>
+                <path
+                  id="textCirclePathApproach"
+                  d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                />
+              </defs>
+              <text className="text-[10px] fill-white font-extrabold tracking-[0.16em] uppercase">
+                <textPath href="#textCirclePathApproach" startOffset="0%">
+                  BUILDING STRONGER WORKFORCES •
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
+          {/* Right Portrait Circle */}
+          <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden shadow-md shrink-0 -ml-8 border-2 border-white z-0">
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80"
-              alt="Team Director"
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80"
+              alt="Professional Leader"
               className="w-full h-full object-cover"
             />
           </div>
@@ -47,13 +62,12 @@ export default function Approach() {
           </span>
           <h2
             style={{
-              fontFamily: "var(--font-manrope), sans-serif",
-              fontWeight: 800,
-              fontSize: "clamp(30px, 4.5vw, 44px)",
+              fontWeight: 600,
+              fontSize: "clamp(30px, 4.5vw, 52px)",
               color: "#051B05",
-              lineHeight: 1.15,
+              lineHeight: "clamp(36px, 5vw, 62px)",
             }}
-            className="tracking-tight"
+            className="font-manrope tracking-tight"
           >
             Our Collaborative Approach to Human Resources
           </h2>
@@ -64,49 +78,42 @@ export default function Approach() {
           
           {/* Card 1: Innovation */}
           <div className="bg-[#F6F5F2] rounded-4xl p-8 flex flex-col justify-between border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
-            <div>
-              <h3
-                className="text-[#051B05] font-extrabold text-2xl mb-4"
-                style={{ fontFamily: "var(--font-manrope), sans-serif" }}
-              >
-                Innovation
-              </h3>
-              <p className="text-[#595B62] text-sm leading-relaxed mb-8 font-normal" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                We use smart ideas and modern solutions to support steady business growth and long-term success.
-              </p>
+            <h3 className="font-manrope text-[#051b05] font-semibold text-[32px] leading-10">
+              Innovation
+            </h3>
+            <p className="font-dm-sans text-[#051b05] text-[18px] leading-7 font-normal">
+              We use smart ideas and modern solutions to support steady business growth and long-term success.
+            </p>
 
-              {/* Bullet list */}
-              <div className="flex flex-col">
-                {[
-                  "Experienced HR specialists",
-                  "Professional Tools and Systems",
-                  "Quality Service by Professionals",
-                  "Expert Service & Follow-Up",
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 py-3 border-b border-gray-300/30 last:border-b-0"
-                  >
-                    <div className="w-2.5 h-2.5 bg-[#C6D936] rounded-full shrink-0" />
-                    <span
-                      className="text-gray-700 text-xs md:text-sm font-semibold"
-                      style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
-                    >
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            {/* Bullet list */}
+            <div className="flex flex-col">
+              {[
+                "Experienced HR specialists",
+                "Professional Tools and Systems",
+                "Quality Service by Professionals",
+                "Expert Service & Follow-Up",
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 py-3 border-b border-gray-300/30 last:border-b-0"
+                >
+                  <img
+                    src="/media assets/home/icon-24.svg"
+                    alt="bullet icon"
+                    className="w-4.5 h-4.5 shrink-0"
+                  />
+                  <span className="font-dm-sans text-[#051b05] text-[18px] leading-7 font-normal">
+                    {item}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Card 2: Performance Analytics */}
           <div className="bg-[#044647] rounded-4xl p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
             <div>
-              <h3
-                className="text-white font-extrabold text-lg mb-8"
-                style={{ fontFamily: "var(--font-manrope), sans-serif" }}
-              >
+              <h3 className="font-manrope text-white font-bold text-[22px] leading-7.5 mb-8">
                 Performance Analytics
               </h3>
 
@@ -120,13 +127,10 @@ export default function Approach() {
                 />
               </div>
 
-              <h4
-                className="text-white font-bold text-xl mb-3"
-                style={{ fontFamily: "var(--font-manrope), sans-serif" }}
-              >
+              <h4 className="font-manrope text-white font-semibold text-[32px] leading-10 mb-3">
                 Sales Overview
               </h4>
-              <p className="text-gray-300 text-xs leading-relaxed" style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              <p className="font-dm-sans text-gray-300 font-normal text-[18px] leading-7">
                 This is what we do, executed with perfection. Our dedication and expertise ensure every detail is flawless.
               </p>
             </div>
@@ -135,16 +139,10 @@ export default function Approach() {
           {/* Card 3: Sales Yearly */}
           <div className="bg-[#C6D936] rounded-4xl p-8 flex flex-col justify-between text-[#051B05] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
-              <h3
-                className="text-[#051B05] font-extrabold text-2xl mb-4"
-                style={{ fontFamily: "var(--font-manrope), sans-serif" }}
-              >
+              <h3 className="font-manrope text-[#051B05] font-semibold text-[32px] leading-10 mb-4">
                 Sales Yearly
               </h3>
-              <p
-                className="text-[#051B05] text-sm leading-relaxed mb-8 font-semibold italic"
-                style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
-              >
+              <p className="font-dm-sans text-[#051B05] text-[18px] leading-7 font-normal">
                 &ldquo;Consistent year-over-year sales growth driven by strategic planning, strong client relationships, and performance-focused execution.&rdquo;
               </p>
             </div>
@@ -169,8 +167,7 @@ export default function Approach() {
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-2 px-5 py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs font-bold shadow-md cursor-pointer transition-all duration-300 select-none"
-                style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+                className="font-manrope flex items-center gap-2 px-5 py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs font-bold shadow-md cursor-pointer transition-all duration-300 select-none"
               >
                 <span className="material-symbols-outlined text-[#C6D936] text-[14px] select-none leading-none">
                   {tag.icon}

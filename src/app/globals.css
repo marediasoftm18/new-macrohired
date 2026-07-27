@@ -14,6 +14,8 @@
 
 @theme {
   --font-sans: var(--font-dm-sans), sans-serif;
+  --font-dm-sans: var(--font-dm-sans), sans-serif;
+  --font-manrope: var(--font-manrope), sans-serif;
   --font-mono: var(--font-manrope), sans-serif;
   --font-serif: var(--font-manrope), serif;
   

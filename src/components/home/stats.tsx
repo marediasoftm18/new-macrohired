@@ -27,9 +27,9 @@ const statsList = [
 
 export default function Stats() {
   return (
-    <section className="w-full bg-white border-y border-gray-100">
-      <div className="max-w-360 mx-auto w-full px-6 lg:px-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 md:py-10">
+    <section className="w-full bg-white border-y border-gray-200">
+      <div className="w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-200 py-2 md:py-2">
           {statsList.map((stat, idx) => (
             <motion.div
               key={idx}
@@ -37,44 +37,17 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="flex items-center justify-center gap-6 py-6 px-4"
+              className="flex items-center justify-center gap-4 p-4"
             >
               <div className="flex items-start">
-                <span
-                  style={{ 
-                    fontFamily: "var(--font-dm-sans), sans-serif", 
-                    fontWeight: 600,
-                    fontSize: "74px",
-                    lineHeight: "80px",
-                    color: "#051B05",
-                  }}
-                >
+                <span className="font-dm-sans font-semibold text-[74px] leading-20 text-[#051B05]">
                   {stat.number}
                 </span>
-                <span
-                  style={{ 
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    fontWeight: 500,
-                    fontSize: "42px",
-                    lineHeight: "42px",
-                    color: "#C6D936",
-                    marginLeft: "4px",
-                    marginTop: "4px",
-                  }}
-                >
+                <span className="font-dm-sans font-semibold text-[42px] leading-10.5 text-[#C6D936] ml-1 mt-1">
                   {stat.suffix}
                 </span>
               </div>
-              <p
-                style={{ 
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontWeight: 600,
-                  fontSize: "22px",
-                  lineHeight: "28px",
-                  color: "#051B05",
-                  maxWidth: "200px",
-                }}
-              >
+              <p className="font-dm-sans font-semibold text-[22px] leading-7 text-[#051B05] max-w-50">
                 {stat.label}
               </p>
             </motion.div>

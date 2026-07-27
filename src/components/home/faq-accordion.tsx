@@ -34,27 +34,18 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-6 md:px-16 font-sans">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <section className="w-full bg-white py-16 md:py-24 font-sans">
+      <div className="max-w-350 mx-auto w-full">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-16">
           
           {/* Left Column: Title & Accordion list */}
-          <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+          <div className="flex-1 w-full flex flex-col gap-6 text-left">
             <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // QUICK ANSWERS
             </span>
 
-            <h2
-              style={{
-                fontFamily: "var(--font-manrope), sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(30px, 4.5vw, 44px)",
-                color: "#051B05",
-                lineHeight: 1.15,
-              }}
-              className="tracking-tight mb-4"
-            >
-              We support organizations
+            <h2 className="font-manrope text-[52px] leading-15.5 font-semibold mb-4">
+              HR Support and Guidance
             </h2>
 
             {/* Accordion list */}
@@ -65,35 +56,46 @@ export default function FAQAccordion() {
                   <div key={idx} className="border-b border-gray-100 py-4">
                     <button
                       onClick={() => toggle(idx)}
-                      className="w-full flex items-center justify-between gap-4 py-2 hover:opacity-90 transition-opacity"
+                      className="w-full flex items-center justify-between gap-4 py-5 group text-left transition-all"
                     >
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-11">
+                        {/* Left Question Mark Icon (Active: Solid Lime, Hover: Lime with dark teal border, Inactive: Solid Dark Teal) */}
                         <div
-                          className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors shrink-0 ${
-                            isOpen ? "bg-[#C6D936] text-[#044647]" : "bg-[#044647] text-white"
+                          className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-[14px] leading-none shadow-xs select-none transition-all duration-300 ${
+                            isOpen
+                              ? "bg-[#C6D936] text-white border-2 border-transparent"
+                              : "bg-[#000000] text-white group-hover:bg-[#C6D936]"
                           }`}
                         >
-                          <span className="material-symbols-outlined text-[14px] select-none leading-none">
-                            help
-                          </span>
+                          ?
                         </div>
                         <span
-                          className="font-bold text-[#051B05] text-sm md:text-base text-left"
-                          style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+                          className={`font-manrope font-semibold text-[26px] leading-9 text-left transition-colors duration-200 ${
+                            isOpen
+                              ? "text-[#044647]"
+                              : "text-[#051B05] group-hover:text-[#044647]"
+                          }`}
                         >
                           {item.question}
                         </span>
                       </div>
                       
-                      <div className="text-[#044647] shrink-0 flex items-center justify-center">
+                      {/* Right Toggle Arrow (Bootstrap bi-caret-down-fill / bi-caret-right-fill at 22x22px) */}
+                      <div className="text-[#044647] shrink-0 flex items-center justify-center select-none">
                         {isOpen ? (
-                          <span className="material-symbols-outlined text-[18px] select-none leading-none">
-                            keyboard_arrow_down
-                          </span>
+                          <svg
+                            className="w-5.5 h-5.5 fill-current"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                          </svg>
                         ) : (
-                          <span className="material-symbols-outlined text-[18px] select-none leading-none">
-                            keyboard_arrow_right
-                          </span>
+                          <svg
+                            className="w-5.5 h-5.5 fill-current"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                          </svg>
                         )}
                       </div>
                     </button>
@@ -108,8 +110,7 @@ export default function FAQAccordion() {
                           className="overflow-hidden"
                         >
                           <p
-                            className="text-[#595B62] text-xs md:text-sm pl-11 pr-8 pt-2 pb-3 leading-relaxed font-normal"
-                            style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                            className="font-dm-sans text-[#595B62] text-[18px] pl-18 pr-8 pt-3 pb-4 leading-7 font-normal"
                           >
                             {item.answer}
                           </p>
@@ -123,32 +124,26 @@ export default function FAQAccordion() {
           </div>
 
           {/* Right Column: Image & Floating Card */}
-          <div className="lg:col-span-5 relative w-full flex justify-end">
-            <div className="relative w-full max-w-105 rounded-3xl overflow-hidden shadow-xl">
+          <div className="relative w-full lg:w-132 shrink-0 flex justify-end">
+            <div className="relative w-full max-w-132 h-185 rounded-4xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
                 alt="HR consultation support"
-                className="w-full h-112.5 object-cover"
+                className="w-full h-full object-cover"
               />
               
-              {/* Floating Emergency Call Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4 max-w-70 border border-gray-100">
-                <div className="w-12 h-12 rounded-full bg-[#044647] flex items-center justify-center text-[#C6D936] shrink-0">
-                  <span className="material-symbols-outlined text-[20px] select-none leading-none">
-                    phone_in_talk
-                  </span>
-                </div>
-                <div className="text-left">
-                  <span
-                    className="block text-[10px] font-bold text-gray-500 uppercase tracking-wider"
-                    style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
-                  >
+              {/* Floating Emergency Call Card (Positioned at bottom-right corner) */}
+              <div className="absolute bottom-6 right-6 bg-white rounded-3xl p-5 shadow-2xl flex items-center gap-4 border border-gray-100/80 z-10">
+                <img
+                  src="/media assets/home/icon-47.svg"
+                  alt="Phone Icon"
+                  className="w-17.5 h-17.5 object-contain shrink-0"
+                />
+                <div className="text-left pr-2">
+                  <span className="font-manrope block text-[20px] leading-7 font-semibold text-[#044647]">
                     24/7 Emergency
                   </span>
-                  <span
-                    className="block text-sm font-extrabold text-[#044647] mt-0.5"
-                    style={{ fontFamily: "var(--font-manrope), sans-serif" }}
-                  >
+                  <span className="font-manrope block text-[20px] leading-7 font-semibold text-[#044647] mt-0.5">
                     +1 (123) 456 7890
                   </span>
                 </div>

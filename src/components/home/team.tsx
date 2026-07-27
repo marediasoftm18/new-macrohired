@@ -43,8 +43,8 @@ export default function Team() {
       `}</style>
 
       {/* Main Teal Box */}
-      <div className="w-full bg-[#044647] rounded-t-[40px] lg:rounded-t-[60px] py-16 md:py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-16">
+      <div className="w-full bg-[#044647] rounded-t-[40px] lg:rounded-t-[60px] py-10 relative overflow-hidden">
+        <div className="max-w-350 mx-auto w-full px-6 lg:px-16">
           {/* Ribbon Watermark Pattern */}
           <div className="absolute -left-10 -bottom-10 opacity-[0.03] text-white pointer-events-none select-none">
             <svg className="w-96 h-96" viewBox="0 0 100 100" fill="currentColor">
@@ -54,41 +54,32 @@ export default function Team() {
 
           {/* Header Block */}
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-12 relative z-10">
-            <div className="flex flex-col gap-4 max-w-xl text-left">
+            <div className="flex flex-col gap-4 max-w-117.5 text-left">
               <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
                 // TEAM MEMBERS
               </span>
-              <h2
-                style={{
-                  fontFamily: "var(--font-manrope), sans-serif",
-                  fontWeight: 800,
-                  fontSize: "clamp(30px, 4.5vw, 44px)",
-                  color: "#ffffff",
-                  lineHeight: 1.15,
-                }}
-                className="tracking-tight"
-              >
+              <h2 className="font-manrope text-white text-[52px] leading-15.5 font-semibold tracking-tight">
                 Our Expert Team for Human Resource
               </h2>
             </div>
 
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 max-w-xl text-left">
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-8 text-left">
+              <p className="font-dm-sans text-white text-[18px] leading-7 font-normal max-w-111.25">
                 Our skilled HR professionals blend experience and insight to guide organizations toward efficiency, engagement, and workforce excellence.
               </p>
               <div className="flex items-center gap-3 shrink-0">
                 <Link
                   href="/team"
-                  className="px-6 py-3 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#C6D936] text-[#044647]"
+                  className="font-dm-sans px-8 py-3.5 rounded-full text-[18px] leading-7.5 font-medium shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#C6D936] text-[#000000]"
                 >
                   View All Team
                 </Link>
                 <Link
                   href="/team"
-                  className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
+                  className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
                   aria-label="View all team members"
                 >
-                  <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                  <span className="material-symbols-outlined text-[20px] select-none leading-none">
                     arrow_outward
                   </span>
                 </Link>
@@ -108,16 +99,19 @@ export default function Team() {
                 className="flex flex-col items-center"
               >
                 {/* Image box with share button */}
-                <div className="w-full h-95 rounded-3xl overflow-hidden relative shadow-md group">
+                <div className="w-full h-138.75 rounded-3xl overflow-hidden relative shadow-md group cursor-pointer">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+
+                  {/* Lime green gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-linear-to-t from-[#C6D936]/90 via-[#C6D936]/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   
                   {/* Floating Share Button */}
                   <button
-                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C6D936] hover:bg-[#b4c62e] text-[#044647] flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C6D936] hover:bg-[#b4c62e] text-[#044647] flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-10"
                     aria-label={`Share profile of ${member.name}`}
                   >
                     <span className="material-symbols-outlined text-[16px] select-none leading-none">
@@ -129,14 +123,12 @@ export default function Team() {
                 {/* Text Details below image */}
                 <div className="text-center mt-6">
                   <h3
-                    className="text-white font-bold text-lg"
-                    style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+                    className="font-manrope text-white font-semibold text-[26px] leading-9"
                   >
                     {member.name}
                   </h3>
                   <p
-                    className="text-gray-300 text-xs mt-1"
-                    style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                    className="font-dm-sans text-white text-[18px] leading-7 font-normal mt-1"
                   >
                     {member.role}
                   </p>
@@ -155,13 +147,13 @@ export default function Team() {
               {marqueeWords.map((word, wordIdx) => (
                 <div
                   key={`${setIdx}-${wordIdx}`}
-                  className="flex items-center gap-3 text-[#044647] font-bold text-sm tracking-wide uppercase select-none"
-                  style={{ fontFamily: "var(--font-manrope), sans-serif" }}
+                  className="font-manrope flex items-center gap-3 text-[#000000] font-semibold text-[28px] leading-9 tracking-wide uppercase select-none"
                 >
-                  {/* Custom Asterisk/Snowflake Vector Icon */}
-                  <svg className="w-4 h-4 shrink-0 fill-current" viewBox="0 0 100 100">
-                    <path d="M50 0 L58 40 L98 32 L66 56 L82 94 L50 72 L18 94 L34 56 L2 32 L42 40 Z" />
-                  </svg>
+                  <img
+                    src="/media assets/home/icon-24.svg"
+                    alt="icon"
+                    className="w-5.5 h-5.5 shrink-0 brightness-0"
+                  />
                   <span>{word}</span>
                 </div>
               ))}
