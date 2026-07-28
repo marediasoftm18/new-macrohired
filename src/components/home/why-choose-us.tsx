@@ -38,7 +38,7 @@ const whyChooseList = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-[#F6F5F2] py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-10 lg:px-16 font-sans">
+    <section className="w-full bg-white py-6 sm:py-10 px-[15px] font-sans">
       <style>{`
         @keyframes wobble-skew {
           0% { transform: scale(1) skewX(0deg) skewY(0deg); }
@@ -54,7 +54,8 @@ export default function WhyChooseUs() {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto w-full">
+      {/* Rounded Gray Container on White Background */}
+      <div className="bg-[#F6F5F2] rounded-3xl sm:rounded-4xl p-6 sm:p-8 md:p-10 lg:p-14 max-w-360 mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Sticky Content */}
@@ -64,13 +65,13 @@ export default function WhyChooseUs() {
             </span>
 
             <h2
-              className="font-manrope tracking-tight mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px] leading-tight sm:leading-11 md:leading-[52px] lg:leading-[62px] text-[#051B05]"
+              className="font-manrope tracking-tight mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] sm:leading-11 md:leading-11 lg:leading-[62px] text-[#051B05]"
             >
               Helping organizations unlock people potential
             </h2>
 
             <p
-              className="font-dm-sans max-w-md font-normal text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7 text-[#595B62]"
+              className="font-dm-sans max-w-md md:max-w-3xl lg:max-w-xl font-normal text-[16px] md:text-[18px] lg:text-[18px] leading-6.5 md:leading-7 text-[#595B62]"
             >
               The best way to improve workplace performance is to create and follow an HR strategy. Start with goals, then build processes to achieve them.
             </p>
@@ -100,7 +101,7 @@ export default function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               whileHover={{ y: -5 }}
-              className="w-full rounded-3xl overflow-hidden shadow-lg mt-2 sm:mt-4 cursor-pointer group"
+              className="w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-md mt-2 sm:mt-4 cursor-pointer group"
             >
               <img
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
@@ -110,34 +111,34 @@ export default function WhyChooseUs() {
             </motion.div>
           </div>
 
-          {/* Right Column: Scrollable List of Features */}
-          <div className="flex flex-col w-full">
+          {/* Right Column: List of Feature Cards with White Background */}
+          <div className="flex flex-col gap-4 w-full">
             {whyChooseList.map((item, idx) => {
               return (
                 <div
                   key={idx}
-                  className="flex gap-4 sm:gap-6 items-start border-b border-gray-300/40 last:border-b-0 pb-6 md:pb-7 lg:pb-8 mb-6 md:mb-7 lg:mb-8 last:pb-0 last:mb-0"
+                  className="bg-white rounded-2xl p-4 sm:p-5 md:p-6 shadow-xs border border-gray-100/80 flex items-start gap-4 md:gap-5 relative group transition-all duration-300 hover:shadow-md"
                 >
                   {/* Icon Box */}
                   <div
-                    className="w-16 h-16 md:w-20 md:h-20 lg:w-[105px] lg:h-[105px] group bg-white hover:bg-[#044647] rounded-xl flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.03)] shrink-0 border border-gray-100/50 hover-wobble-skew transition-all duration-300 cursor-pointer"
+                    className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-[#F6F5F2] group-hover:bg-[#044647] rounded-xl flex items-center justify-center shrink-0 border border-gray-100 hover-wobble-skew transition-all duration-300 cursor-pointer"
                   >
                     <img
                       src={`/media assets/home/why choose ${idx + 1}.svg`}
                       alt={item.title}
-                      className="w-9 h-9 md:w-11 md:h-11 lg:w-[55px] lg:h-[55px] group-hover:brightness-0 group-hover:invert transition-all duration-300 object-contain"
+                      className="w-8 h-8 md:w-9 md:h-9 lg:w-11 lg:h-11 group-hover:brightness-0 group-hover:invert transition-all duration-300 object-contain"
                     />
                   </div>
 
                   {/* Text Details */}
-                  <div className="flex flex-col gap-1.5 sm:gap-2 text-left">
+                  <div className="flex flex-col gap-1 text-left pr-8 sm:pr-10">
                     <h3
-                      className="font-manrope font-semibold text-[20px] md:text-[23px] lg:text-[26px] leading-7 md:leading-8 lg:leading-9 text-[#051B05]"
+                      className="font-manrope font-semibold text-[18px] md:text-[20px] lg:text-[22px] leading-6 md:leading-7 text-[#051B05]"
                     >
                       {item.title}
                     </h3>
                     <p
-                      className="font-dm-sans font-normal text-[15px] md:text-[16px] lg:text-[18px] leading-6 md:leading-6.5 lg:leading-7 text-[#595B62]"
+                      className="font-dm-sans font-normal text-[15px] md:text-[18px] lg:text-[18px] leading-6 md:leading-7 lg:leading-7 text-[#595B62]"
                     >
                       {item.description}
                     </p>

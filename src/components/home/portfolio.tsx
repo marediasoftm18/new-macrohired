@@ -40,8 +40,8 @@ export default function Portfolio() {
   );
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-10 lg:px-16 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col items-center gap-8 md:gap-10 lg:gap-12">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-4 lg:px-16 font-sans">
+      <div className="max-w-360 mx-auto flex flex-col items-center gap-8 md:gap-10 lg:gap-12">
         
         {/* Header Block */}
         <div className="flex flex-col items-center gap-4 text-center max-w-2xl">
@@ -49,7 +49,7 @@ export default function Portfolio() {
             // OUR PORTFOLIOS
           </span>
           <h2
-            className="font-manrope tracking-tight mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px] leading-tight sm:leading-11 md:leading-[52px] lg:leading-[62px] text-[#051B05]"
+            className="font-manrope tracking-tight mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] leading-tight sm:leading-11 md:leading-11 lg:leading-15.5 text-[#051B05]"
           >
             Driving Success Through HR Projects
           </h2>
@@ -61,7 +61,7 @@ export default function Portfolio() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`font-dm-sans px-4 md:px-5 lg:px-6 py-2 rounded-full font-normal text-[15px] md:text-[16px] lg:text-[18px] leading-7 transition-all duration-300 ${
+              className={`font-dm-sans px-4 md:px-5 lg:px-6 py-2 rounded-full font-normal text-[15px] md:text-[18px] lg:text-[18px] leading-7 transition-all duration-300 ${
                 activeCategory === category
                   ? "bg-[#044647] text-[#ffffff] shadow-md"
                   : "bg-[#F6F5F2] text-[#051B05] hover:bg-gray-200/80"
@@ -97,14 +97,14 @@ export default function Portfolio() {
                   </div>
 
                   {/* Card Footer Text Block */}
-                  <div className="bg-[#F6F5F2] rounded-b-3xl p-5 md:p-6 lg:p-7.5 flex justify-between items-center border-t border-gray-100/50 shadow-sm h-auto md:h-22 lg:h-25">
+                  <div className="bg-[#F6F5F2] rounded-b-3xl p-5 md:p-3 lg:p-7.5 flex justify-between items-center border-t border-gray-100/50 shadow-sm h-auto md:h-22 lg:h-25">
                     <h3
-                      className="font-manrope font-semibold text-[22px] md:text-[26px] lg:text-[32px] leading-tight md:leading-8 lg:leading-10 text-[#044647]"
+                      className="font-manrope font-semibold md:max-w-55 text-[22px]  md:text-[26px] lg:text-[32px] md:leading-8.5 lg:leading-10 text-[#044647]"
                     >
                       {project.title}
                     </h3>
                     <span
-                      className="font-dm-sans font-semibold text-[12px] md:text-[13px] lg:text-[14px] leading-tight text-[#051B05] bg-white border border-[#051B05]/10 rounded-full px-3.5 md:px-4 py-2 md:py-2.5 shadow-sm shrink-0"
+                      className="font-dm-sans font-semibold text-[12px] md:text-[14px] lg:text-[14px] md:leading-2.5 text-[#051B05] bg-white border border-[#051B05]/10 rounded-full px-3.5 md:px-4 py-2 md:py-2.5 shadow-sm shrink-0"
                     >
                       {project.tag}
                     </span>
