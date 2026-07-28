@@ -96,7 +96,7 @@ export default function Hero() {
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.65, delay: 0.25 }}
         style={{ fontSize: "18px", lineHeight: "28px" }}
-        className="absolute right-6 md:right-8 lg:right-64.5 bottom-8 md:bottom-8 lg:bottom-21.5 hidden md:block w-full max-w-85 sm:max-w-96 lg:max-w-112.5 max-h-63.5 p-6 md:p-8 lg:p-10 overflow-hidden rounded-[18px] border border-white/20 bg-[linear-gradient(145deg,rgba(255,255,255,0.20),rgba(255,255,255,0.08))] text-left text-base md:text-lg leading-6 md:leading-7 text-white shadow-[0_20px_44px_rgba(0,0,0,0.20)] backdrop-blur-md z-20"
+        className="absolute right-6 md:right-8 lg:right-64.5 bottom-8 md:bottom-8 lg:bottom-21.5 hidden md:block w-full max-w-85 sm:max-w-96 lg:max-w-112.5 max-h-63.5 p-6 md:p-6 lg:p-10 overflow-hidden rounded-[18px] border border-white/25 bg-[linear-gradient(145deg,rgba(4,70,71,0.60),rgba(4,70,71,0.40))] text-left text-base md:text-lg leading-6 md:leading-7 text-white shadow-[0_20px_44px_rgba(0,0,0,0.25)] backdrop-blur-md z-20"
       >
         <div
           className="pointer-events-none absolute -right-8 -bottom-8 opacity-[0.06] text-white"
