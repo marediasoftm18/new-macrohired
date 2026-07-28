@@ -14,8 +14,8 @@ const bottomTags = [
 
 export default function Approach() {
   return (
-    <section className="w-full bg-white py-14 md:py-24 px-4 sm:px-6 md:px-16 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col items-center gap-10 md:gap-12">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-10 lg:px-16 font-sans">
+      <div className="max-w-7xl mx-auto flex flex-col items-center gap-8 md:gap-10 lg:gap-12">
         
         {/* Top Circular Portrait & Text */}
         <div className="flex items-center justify-center relative">
@@ -57,57 +57,59 @@ export default function Approach() {
 
         {/* Heading */}
         <div className="flex flex-col items-center gap-4 text-center max-w-2xl">
-          <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
+          <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] md:text-[15px] lg:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
             // OUR APPROACH
           </span>
           <h2
-            className="font-manrope tracking-tight font-semibold text-[30px] sm:text-[40px] lg:text-[52px] leading-tight sm:leading-13 lg:leading-[62px] text-[#051B05]"
+            className="font-manrope tracking-tight font-semibold text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px] leading-tight sm:leading-11 md:leading-[52px] lg:leading-[62px] text-[#051B05]"
           >
             Our Collaborative Approach to Human Resources
           </h2>
         </div>
 
         {/* 3 Columns Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 w-full items-stretch mt-2 sm:mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-8 w-full items-stretch mt-2 sm:mt-4">
           
           {/* Card 1: Innovation */}
-          <div className="bg-[#F6F5F2] rounded-3xl sm:rounded-4xl p-6 sm:p-8 flex flex-col justify-between border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
-            <h3 className="font-manrope text-[#051b05] font-semibold text-[26px] sm:text-[32px] leading-8 sm:leading-10 mb-3 sm:mb-4">
-              Innovation
-            </h3>
-            <p className="font-dm-sans text-[#051b05] text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal mb-4 sm:mb-6">
-              We use smart ideas and modern solutions to support steady business growth and long-term success.
-            </p>
+          <div className="bg-[#F6F5F2] rounded-3xl sm:rounded-4xl p-6 md:p-7 lg:p-8 flex flex-col justify-between border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+            <div>
+              <h3 className="font-manrope text-[#051b05] font-semibold text-[26px] md:text-[28px] lg:text-[32px] leading-8 md:leading-9 lg:leading-10 mb-3 sm:mb-4">
+                Innovation
+              </h3>
+              <p className="font-dm-sans text-[#051b05] text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7 font-normal mb-4 sm:mb-6">
+                We use smart ideas and modern solutions to support steady business growth and long-term success.
+              </p>
 
-            {/* Bullet list */}
-            <div className="flex flex-col">
-              {[
-                "Experienced HR specialists",
-                "Professional Tools and Systems",
-                "Quality Service by Professionals",
-                "Expert Service & Follow-Up",
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 py-2.5 sm:py-3 border-b border-gray-300/30 last:border-b-0"
-                >
-                  <img
-                    src="/media assets/home/icon-24.svg"
-                    alt="bullet icon"
-                    className="w-4.5 h-4.5 shrink-0"
-                  />
-                  <span className="font-dm-sans text-[#051b05] text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal">
-                    {item}
-                  </span>
-                </div>
-              ))}
+              {/* Bullet list */}
+              <div className="flex flex-col">
+                {[
+                  "Experienced HR specialists",
+                  "Professional Tools and Systems",
+                  "Quality Service by Professionals",
+                  "Expert Service & Follow-Up",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 py-2.5 sm:py-3 border-b border-gray-300/30 last:border-b-0"
+                  >
+                    <img
+                      src="/media assets/home/icon-24.svg"
+                      alt="bullet icon"
+                      className="w-4.5 h-4.5 shrink-0"
+                    />
+                    <span className="font-dm-sans text-[#051b05] text-[15px] md:text-[16px] lg:text-[18px] leading-6 md:leading-6.5 lg:leading-7 font-normal">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Card 2: Performance Analytics */}
-          <div className="bg-[#044647] rounded-3xl sm:rounded-4xl p-6 sm:p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
+          <div className="bg-[#044647] rounded-3xl sm:rounded-4xl p-6 md:p-7 lg:p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
             <div>
-              <h3 className="font-manrope text-white font-bold text-[20px] sm:text-[22px] leading-7.5 mb-6 sm:mb-8">
+              <h3 className="font-manrope text-white font-bold text-[20px] md:text-[21px] lg:text-[22px] leading-7.5 mb-6 sm:mb-8">
                 Performance Analytics
               </h3>
 
@@ -120,22 +122,22 @@ export default function Approach() {
                 />
               </div>
 
-              <h4 className="font-manrope text-white font-semibold text-[26px] sm:text-[32px] leading-8 sm:leading-10 mb-2 sm:mb-3">
+              <h4 className="font-manrope text-white font-semibold text-[26px] md:text-[28px] lg:text-[32px] leading-8 md:leading-9 lg:leading-10 mb-2 sm:mb-3">
                 Sales Overview
               </h4>
-              <p className="font-dm-sans text-gray-300 font-normal text-[16px] sm:text-[18px] leading-6.5 sm:leading-7">
+              <p className="font-dm-sans text-gray-300 font-normal text-[15px] md:text-[16px] lg:text-[18px] leading-6 md:leading-6.5 lg:leading-7">
                 This is what we do, executed with perfection. Our dedication and expertise ensure every detail is flawless.
               </p>
             </div>
           </div>
 
           {/* Card 3: Sales Yearly */}
-          <div className="bg-[#C6D936] rounded-3xl sm:rounded-4xl p-6 sm:p-8 flex flex-col justify-between text-[#051B05] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+          <div className="bg-[#C6D936] rounded-3xl sm:rounded-4xl p-6 md:p-7 lg:p-8 flex flex-col justify-between text-[#051B05] shadow-[0_4px_20px_rgba(0,0,0,0.02)] md:col-span-2 lg:col-span-1">
             <div>
-              <h3 className="font-manrope text-[#051B05] font-semibold text-[26px] sm:text-[32px] leading-8 sm:leading-10 mb-3 sm:mb-4">
+              <h3 className="font-manrope text-[#051B05] font-semibold text-[26px] md:text-[28px] lg:text-[32px] leading-8 md:leading-9 lg:leading-10 mb-3 sm:mb-4">
                 Sales Yearly
               </h3>
-              <p className="font-dm-sans text-[#051B05] text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal">
+              <p className="font-dm-sans text-[#051B05] text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7 font-normal">
                 &ldquo;Consistent year-over-year sales growth driven by strategic planning, strong client relationships, and performance-focused execution.&rdquo;
               </p>
             </div>
@@ -153,13 +155,13 @@ export default function Approach() {
         </div>
 
         {/* Bottom Tags Marquee/Pills List */}
-        <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 w-full max-w-4xl mt-6 sm:mt-8">
+        <div className="flex flex-wrap justify-center gap-2.5 md:gap-3 w-full max-w-4xl mt-6 sm:mt-8">
           {bottomTags.map((tag, idx) => {
             return (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="font-manrope flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs font-bold shadow-md cursor-pointer transition-all duration-300 select-none"
+                className="font-manrope flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs font-bold shadow-md cursor-pointer transition-all duration-300 select-none"
               >
                 <span className="material-symbols-outlined text-[#C6D936] text-[14px] select-none leading-none">
                   {tag.icon}

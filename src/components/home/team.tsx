@@ -3,158 +3,134 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const teamList = [
+const teamMembers = [
   {
     name: "William Davis",
     role: "Payroll Manager",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "Ava Clark",
     role: "Training Specialist",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "James Robinson",
     role: "Engagement Lead",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
-const marqueeWords = [
+const tickerItems = [
   "Smart Hiring Solutions",
   "Trusted HR Partners",
-  "Better Hiring Decisions",
-  "People-First HR Solutions",
-  "Talent. Culture. Growth.",
+  "Employee Growth Strategies",
+  "Seamless Workforce Integration",
+  "Expert HR Guidance",
 ];
 
 export default function Team() {
   return (
-    <section className="w-full bg-[#F6F5F2] font-sans relative overflow-hidden">
-      <style>{`
-        @keyframes marquee-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee-scroll 25s linear infinite;
-        }
-      `}</style>
-
-      {/* Main Teal Box */}
-      <div className="w-full bg-[#044647] rounded-t-[40px] lg:rounded-t-[60px] py-10 relative overflow-hidden">
-        <div className="max-w-350 mx-auto w-full px-4 sm:px-6 lg:px-16">
-          {/* Ribbon Watermark Pattern */}
-          <div className="absolute -left-10 -bottom-10 opacity-[0.03] text-white pointer-events-none select-none">
-            <svg className="w-96 h-96" viewBox="0 0 100 100" fill="currentColor">
-              <path d="M50 0 C25 25, 25 75, 50 100 C75 75, 75 25, 50 0 Z" />
-            </svg>
-          </div>
-
+    <section className="w-full bg-white font-sans overflow-hidden">
+      {/* Main Dark Teal Section */}
+      <div className="w-full bg-[#044647] text-white py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="max-w-350 mx-auto w-full flex flex-col gap-10 md:gap-12 lg:gap-16">
+          
           {/* Header Block */}
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 sm:gap-8 mb-12 relative z-10">
-            <div className="flex flex-col gap-4 max-w-117.5 text-left">
-              <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,470px)_minmax(0,560px)_auto] lg:items-end gap-6 md:gap-6 lg:gap-x-10 text-left">
+            <div className="flex flex-col gap-3.5 md:gap-4 text-left max-w-117.5">
+              <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] md:text-[15px] lg:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
                 // TEAM MEMBERS
               </span>
-              <h2 className="font-manrope text-white text-[32px] sm:text-[42px] md:text-[52px] leading-tight sm:leading-13 md:leading-15.5 font-semibold tracking-tight">
+              <h2
+                className="font-manrope tracking-tight font-semibold text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px] leading-tight sm:leading-11 md:leading-[52px] lg:leading-[62px] text-white"
+              >
                 Our Expert Team for Human Resource
               </h2>
             </div>
 
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 sm:gap-8 text-left">
-              <p className="font-dm-sans text-white text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal max-w-111.25">
-                Our skilled HR professionals blend experience and insight to guide organizations toward efficiency, engagement, and workforce excellence.
+            <div className="flex items-start lg:justify-center">
+              <p
+                className="font-dm-sans text-gray-300 font-normal max-w-130 text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7"
+              >
+                Whether you aim to build a strong workplace culture or a high-performing modern workforce, we turn your people strategy into results with expert human resources.
               </p>
-              <div className="flex items-center gap-3 shrink-0">
-                <Link
-                  href="/team"
-                  className="font-dm-sans px-6 sm:px-8 py-3.5 rounded-full text-[16px] sm:text-[18px] leading-7.5 font-medium shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#C6D936] text-[#000000]"
-                >
-                  View All Team
-                </Link>
-                <Link
-                  href="/team"
-                  className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-sm"
-                  aria-label="View all team members"
-                >
-                  <span className="material-symbols-outlined text-[20px] select-none leading-none">
-                    arrow_outward
-                  </span>
-                </Link>
-              </div>
+            </div>
+
+            <div className="flex items-center gap-3 shrink-0 lg:justify-self-end">
+              <Link
+                href="/team"
+                className="font-dm-sans px-6 md:px-8 py-3 md:py-3.5 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#C6D936] text-[#051B05] font-medium text-[16px] md:text-[18px] leading-7.5"
+              >
+                View All Team
+              </Link>
+              <Link
+                href="/team"
+                className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#044647] hover:scale-110 transition-transform shadow-md"
+                aria-label="View all team members"
+              >
+                <span className="material-symbols-outlined text-[20px] select-none leading-none">
+                  arrow_outward
+                </span>
+              </Link>
             </div>
           </div>
 
-          {/* Team Members Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 relative z-10">
-            {teamList.map((member, idx) => (
+          {/* Team Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-8">
+            {teamMembers.map((member, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex flex-col items-center"
+                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                className="group flex flex-col rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-[#C6D936] transition-all duration-300 shadow-lg"
               >
-                {/* Image box with share button */}
-                <div className="w-full h-[360px] sm:h-[420px] md:h-138.75 rounded-3xl overflow-hidden relative shadow-md group cursor-pointer">
+                {/* Member Image with Badge */}
+                <div className="w-full aspect-3/4 overflow-hidden relative">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-
-                  {/* Lime green gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-linear-to-t from-[#C6D936]/90 via-[#C6D936]/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  
-                  {/* Floating Share Button */}
-                  <button
-                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C6D936] hover:bg-[#b4c62e] text-[#044647] flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-10"
-                    aria-label={`Share profile of ${member.name}`}
-                  >
-                    <span className="material-symbols-outlined text-[16px] select-none leading-none">
-                      share
+                  {/* Floating Lime Icon Badge */}
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C6D936] flex items-center justify-center text-[#044647] shadow-md group-hover:rotate-12 transition-transform duration-300">
+                    <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                      person
                     </span>
-                  </button>
+                  </div>
                 </div>
 
-                {/* Text Details below image */}
-                <div className="text-center mt-6">
-                  <h3
-                    className="font-manrope text-white font-semibold text-[22px] sm:text-[26px] leading-8 sm:leading-9"
-                  >
+                {/* Member Info */}
+                <div className="p-5 md:p-6 flex flex-col items-center text-center bg-[#033738]">
+                  <h3 className="font-manrope text-white font-semibold text-[22px] md:text-[24px] leading-7 md:leading-8">
                     {member.name}
                   </h3>
-                  <p
-                    className="font-dm-sans text-white text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal mt-1"
-                  >
+                  <p className="font-dm-sans text-gray-300 text-[15px] md:text-[16px] leading-6 mt-1 font-normal">
                     {member.role}
                   </p>
                 </div>
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
 
-      {/* Bottom Marquee Bar */}
-      <div className="w-full py-3.5 sm:py-4.5 bg-[#C6D936] mt-0 overflow-hidden flex items-center shadow-sm">
-        <div className="flex gap-8 sm:gap-12 animate-marquee whitespace-nowrap">
+      {/* Ticker Bar (Lime Green) */}
+      <div className="w-full bg-[#C6D936] py-3.5 md:py-4.5 overflow-hidden select-none border-t border-b border-[#051B05]/10">
+        <div className="flex gap-8 md:gap-12 animate-scroll whitespace-nowrap">
           {[...Array(4)].map((_, setIdx) => (
-            <div key={setIdx} className="flex gap-8 sm:gap-12 items-center shrink-0">
-              {marqueeWords.map((word, wordIdx) => (
-                <div
-                  key={`${setIdx}-${wordIdx}`}
-                  className="font-manrope flex items-center gap-2.5 sm:gap-3 text-[#000000] font-semibold text-[20px] sm:text-[24px] md:text-[28px] leading-8 sm:leading-9 tracking-wide uppercase select-none"
-                >
-                  <img
-                    src="/media assets/home/icon-24.svg"
-                    alt="icon"
-                    className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 shrink-0 brightness-0"
-                  />
-                  <span>{word}</span>
+            <div key={setIdx} className="flex gap-8 md:gap-12 items-center shrink-0">
+              {tickerItems.map((item, itemIdx) => (
+                <div key={`${setIdx}-${itemIdx}`} className="flex items-center gap-4">
+                  <span className="font-manrope font-extrabold text-[#051B05] text-[16px] md:text-[18px] lg:text-[20px] uppercase tracking-wider">
+                    {item}
+                  </span>
+                  <span className="material-symbols-outlined text-[#044647] text-[18px] md:text-[20px] select-none leading-none">
+                    star
+                  </span>
                 </div>
               ))}
             </div>
