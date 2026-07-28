@@ -34,17 +34,17 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 font-sans">
+    <section className="w-full bg-white py-14 md:py-24 px-4 sm:px-6 md:px-12 lg:px-16 font-sans">
       <div className="max-w-350 mx-auto w-full">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-16">
           
           {/* Left Column: Title & Accordion list */}
-          <div className="flex-1 w-full flex flex-col gap-6 text-left">
-            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
+          <div className="flex-1 w-full flex flex-col gap-5 sm:gap-6 text-left">
+            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // QUICK ANSWERS
             </span>
 
-            <h2 className="font-manrope text-[52px] leading-15.5 font-semibold mb-4">
+            <h2 className="font-manrope text-[32px] sm:text-[42px] lg:text-[52px] leading-tight sm:leading-13 lg:leading-15.5 font-semibold mb-2 sm:mb-4">
               HR Support and Guidance
             </h2>
 
@@ -53,13 +53,13 @@ export default function FAQAccordion() {
               {faqItems.map((item, idx) => {
                 const isOpen = openIdx === idx;
                 return (
-                  <div key={idx} className="border-b border-gray-100 py-4">
+                  <div key={idx} className="border-b border-gray-100 py-3 sm:py-4">
                     <button
                       onClick={() => toggle(idx)}
-                      className="w-full flex items-center justify-between gap-4 py-5 group text-left transition-all"
+                      className="w-full flex items-center justify-between gap-4 py-3 sm:py-5 group text-left transition-all"
                     >
-                      <div className="flex items-center gap-11">
-                        {/* Left Question Mark Icon (Active: Solid Lime, Hover: Lime with dark teal border, Inactive: Solid Dark Teal) */}
+                      <div className="flex items-center gap-4 sm:gap-11">
+                        {/* Left Question Mark Icon */}
                         <div
                           className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-[14px] leading-none shadow-xs select-none transition-all duration-300 ${
                             isOpen
@@ -70,7 +70,7 @@ export default function FAQAccordion() {
                           ?
                         </div>
                         <span
-                          className={`font-manrope font-semibold text-[26px] leading-9 text-left transition-colors duration-200 ${
+                          className={`font-manrope font-semibold text-[18px] sm:text-[22px] md:text-[26px] leading-7 sm:leading-8 md:leading-9 text-left transition-colors duration-200 ${
                             isOpen
                               ? "text-[#044647]"
                               : "text-[#051B05] group-hover:text-[#044647]"
@@ -80,18 +80,18 @@ export default function FAQAccordion() {
                         </span>
                       </div>
                       
-                      {/* Right Toggle Arrow (Bootstrap bi-caret-down-fill / bi-caret-right-fill at 22x22px) */}
+                      {/* Right Toggle Arrow */}
                       <div className="text-[#044647] shrink-0 flex items-center justify-center select-none">
                         {isOpen ? (
                           <svg
-                            className="w-5.5 h-5.5 fill-current"
+                            className="w-5 h-5 sm:w-5.5 sm:h-5.5 fill-current"
                             viewBox="0 0 16 16"
                           >
                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                           </svg>
                         ) : (
                           <svg
-                            className="w-5.5 h-5.5 fill-current"
+                            className="w-5 h-5 sm:w-5.5 sm:h-5.5 fill-current"
                             viewBox="0 0 16 16"
                           >
                             <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
@@ -110,7 +110,7 @@ export default function FAQAccordion() {
                           className="overflow-hidden"
                         >
                           <p
-                            className="font-dm-sans text-[#595B62] text-[18px] pl-18 pr-8 pt-3 pb-4 leading-7 font-normal"
+                            className="font-dm-sans text-[#595B62] text-[16px] sm:text-[18px] pl-11 sm:pl-18 pr-4 sm:pr-8 pt-2 sm:pt-3 pb-3 sm:pb-4 leading-6.5 sm:leading-7 font-normal"
                           >
                             {item.answer}
                           </p>
@@ -124,26 +124,26 @@ export default function FAQAccordion() {
           </div>
 
           {/* Right Column: Image & Floating Card */}
-          <div className="relative w-full lg:w-132 shrink-0 flex justify-end">
-            <div className="relative w-full max-w-132 h-185 rounded-4xl overflow-hidden shadow-xl">
+          <div className="relative w-full lg:w-132 shrink-0 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-132 h-[380px] sm:h-[480px] lg:h-185 rounded-3xl sm:rounded-4xl overflow-hidden shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
                 alt="HR consultation support"
                 className="w-full h-full object-cover"
               />
               
-              {/* Floating Emergency Call Card (Positioned at bottom-right corner) */}
-              <div className="absolute bottom-6 right-6 bg-white rounded-3xl p-5 shadow-2xl flex items-center gap-4 border border-gray-100/80 z-10">
+              {/* Floating Emergency Call Card */}
+              <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 bg-white rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 shadow-2xl flex items-center gap-3 sm:gap-4 border border-gray-100/80 z-10">
                 <img
                   src="/media assets/home/icon-47.svg"
                   alt="Phone Icon"
-                  className="w-17.5 h-17.5 object-contain shrink-0"
+                  className="w-12 h-12 sm:w-17.5 sm:h-17.5 object-contain shrink-0"
                 />
                 <div className="text-left pr-2">
-                  <span className="font-manrope block text-[20px] leading-7 font-semibold text-[#044647]">
+                  <span className="font-manrope block text-[16px] sm:text-[20px] leading-5 sm:leading-7 font-semibold text-[#044647]">
                     24/7 Emergency
                   </span>
-                  <span className="font-manrope block text-[20px] leading-7 font-semibold text-[#044647] mt-0.5">
+                  <span className="font-manrope block text-[16px] sm:text-[20px] leading-5 sm:leading-7 font-semibold text-[#044647] mt-0.5">
                     +1 (123) 456 7890
                   </span>
                 </div>

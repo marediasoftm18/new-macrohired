@@ -86,7 +86,7 @@ export default function Header() {
       name: "Pages",
       href: "#",
       dropdown: [
-        { name: "About Us", href: "#" },
+        { name: "About Us", href: "/about" },
         { name: "Our Team", href: "#" },
         { name: "FAQ", href: "#" },
         { name: "Privacy Policy", href: "#" },
@@ -235,7 +235,7 @@ export default function Header() {
         {/* Right Section Details */}
         <div className="flex items-center gap-5">
           {/* Phone Details */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <Link
               href="tel:+11234567890"
               className="text-[#C6D936] transition-all duration-300 hover:scale-105"

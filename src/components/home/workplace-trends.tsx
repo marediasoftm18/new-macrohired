@@ -64,25 +64,26 @@ export default function WorkplaceTrends() {
   ];
 
   return (
-    <section className="w-full bg-[#F6F5F2] py-16 md:py-24 px-6 md:px-12 lg:px-16 2xl:px-63.75 font-sans overflow-hidden">
+    <section className="w-full bg-[#F6F5F2] py-14 md:py-24 px-4 sm:px-6 md:px-12 xl:px-16 font-sans overflow-hidden">
       <div className="w-full max-w-360 mx-auto">
         
         {/* Header Block */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-16">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 sm:gap-8 mb-12 sm:mb-16">
           <div className="flex flex-col gap-4 max-w-350 text-left">
-            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
+            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // WORKPLACE TRENDS
             </span>
-            <h2 className="font-manrope font-semibold text-[52px] leading-15.5 text-[#051B05]">Insights for Modern Human Resources</h2>
+            <h2 className="font-manrope font-semibold text-[32px] sm:text-[42px] md:text-[52px] leading-tight sm:leading-13 md:leading-15.5 text-[#051B05]">Insights for Modern Human Resources</h2>
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 max-w-xl text-left">
-            <p className="font-dm-sans text-[#595B62] text-[18px] leading-7 font-normal">
-              Whether you aim to build a strong workplace culture or a high-performing modern workforce, we turn your people strategy into results with expert human resources.            </p>
+            <p className="font-dm-sans text-[#595B62] text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal">
+              Whether you aim to build a strong workplace culture or a high-performing modern workforce, we turn your people strategy into results with expert human resources.
+            </p>
             <div className="flex items-center gap-3 shrink-0">
               <Link
                 href="/ceo-talks"
-                className="font-dm-sans px-6 py-3 rounded-full text-[18px] leading-7.5 font-medium shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
+                className="font-dm-sans px-6 py-3 rounded-full text-[16px] sm:text-[18px] leading-7.5 font-medium shadow-md hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center bg-[#044647] text-white"
               >
                 See All Posts
               </Link>
@@ -100,7 +101,7 @@ export default function WorkplaceTrends() {
         </div>
 
         {/* Carousel Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative min-h-115 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative min-h-auto lg:min-h-115 w-full">
           <AnimatePresence mode="popLayout">
             {visibleEpisodes.map((ep, idx) => (
               <motion.div
@@ -112,8 +113,8 @@ export default function WorkplaceTrends() {
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 className={`flex-col text-left group ${idx > 0 ? "hidden md:flex" : "flex"}`}
               >
-                {/* Episode Image (Full column width x 294px height) */}
-                <div className="w-full h-73.5 rounded-3xl overflow-hidden shadow-sm relative mb-6">
+                {/* Episode Image */}
+                <div className="w-full h-56 sm:h-73.5 rounded-3xl overflow-hidden shadow-sm relative mb-4 sm:mb-6">
                   <img
                     src={ep.image}
                     alt={ep.title}
@@ -129,33 +130,33 @@ export default function WorkplaceTrends() {
                 </div>
 
                 {/* Episode Content Metadata Area */}
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-4 sm:gap-5">
                   {/* Vertical Episode Stack */}
                   <div className="flex flex-col items-center shrink-0">
-                    <span className="font-manrope text-[42px] font-extrabold text-[#051B05] leading-10.5">
+                    <span className="font-manrope text-[32px] sm:text-[42px] font-extrabold text-[#051B05] leading-tight sm:leading-10.5">
                       {ep.epNum}
                     </span>
-                    <span className="font-dm-sans text-[20px] leading-7 font-extrabold text-[#595B62] mt-1 uppercase">
+                    <span className="font-dm-sans text-[16px] sm:text-[20px] leading-6 sm:leading-7 font-extrabold text-[#595B62] mt-0.5 sm:mt-1 uppercase">
                       {ep.label}
                     </span>
 
-                    {/* Lime Green Play Button placed under EPISODE text */}
-                    <div className="w-9 h-9 rounded-full bg-[#C6D936] text-[#044647] flex items-center justify-center mt-3 group-hover:scale-110 transition-transform duration-300 shadow-sm cursor-pointer">
-                      <span className="material-symbols-outlined material-symbols-filled text-[18px] leading-none select-none">
+                    {/* Lime Green Play Button */}
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#C6D936] text-[#044647] flex items-center justify-center mt-2 sm:mt-3 group-hover:scale-110 transition-transform duration-300 shadow-sm cursor-pointer">
+                      <span className="material-symbols-outlined material-symbols-filled text-[16px] sm:text-[18px] leading-none select-none">
                         play_arrow
                       </span>
                     </div>
                   </div>
 
                   {/* Divider line */}
-                  <div className="w-px h-16 bg-gray-200 shrink-0 mt-2" />
+                  <div className="w-px h-14 sm:h-16 bg-gray-200 shrink-0 mt-2" />
 
                   {/* Title & Category details */}
-                  <div className="flex flex-col gap-2 pt-1">
-                    <span className="font-dm-sans text-[18px] leading-7 font-normal text-[#595b62] uppercase tracking-wider">
+                  <div className="flex flex-col gap-1.5 sm:gap-2 pt-1">
+                    <span className="font-dm-sans text-[15px] sm:text-[18px] leading-6 sm:leading-7 font-normal text-[#595b62] uppercase tracking-wider">
                       {ep.category}
                     </span>
-                    <h3 className="font-manrope text-[#044647] font-semibold text-[24px] leading-9 group-hover:text-teal-700 transition-colors">
+                    <h3 className="font-manrope text-[#044647] font-semibold text-[20px] sm:text-[24px] leading-7 sm:leading-9 group-hover:text-teal-700 transition-colors">
                       {ep.title}
                     </h3>
                   </div>
