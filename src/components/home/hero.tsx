@@ -7,7 +7,7 @@ export default function Hero() {
   const heroImage = "https://themes.potenzaglobalsolutions.com/hire-hive/wp-content/uploads/2026/02/banner-02-02.jpg";
 
   return (
-    <section className="relative isolate w-full min-h-160 sm:min-h-180 md:h-[818px] md:min-h-[818px] lg:min-h-205 overflow-hidden bg-[#eef4f1]">
+    <section className="relative isolate w-full min-h-160 sm:min-h-180 md:h-204.5 md:min-h-204.5 lg:min-h-205 overflow-hidden bg-[#eef4f1]">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('${heroImage}')` }}
@@ -48,7 +48,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.05 }}
-              className="font-manrope mt-2.5 text-white font-bold text-[36px] sm:text-[52px] md:text-[60px] lg:text-[92px] sm:leading-[1.1] md:leading-[70px] lg:leading-[110px]"
+              className="font-manrope mt-2.5 text-white font-bold text-[36px] sm:text-[52px] md:text-[60px] lg:text-[92px] sm:leading-[1.1] md:leading-17.5 lg:leading-27.5"
             >
               Grow Employee <br className="hidden sm:inline" />
               Culture and Value

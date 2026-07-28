@@ -49,8 +49,8 @@ export default function Services() {
       `}</style>
 
       {/* Top Client Brand Slider */}
-      <div className="w-full py-6 md:py-10 border-b border-gray-200/50 bg-[#F6F5F2]">
-        <div className="max-w-350 mx-auto px-4 sm:px-6 flex items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+      <div className="w-full py-6 md:pt-15.25 md:pb-0 border-b border-gray-200/50 bg-[#F6F5F2]">
+        <div className="max-w-360 mx-auto px-4 sm:px-6 flex items-center justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div className="grow border-t border-gray-300/60 max-w-100 hidden sm:block"></div>
           <span
             className="font-manrope text-[#051b05] text-base md:text-lg lg:text-xl font-semibold tracking-wide shrink-0 text-center"
@@ -68,7 +68,7 @@ export default function Services() {
                 {clientLogos.map((logo, logoIdx) => (
                   <div
                     key={`${setIdx}-${logoIdx}`}
-                    className="flex items-center justify-center bg-white rounded-xl border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all hover:scale-105 select-none w-[200px] md:w-[240px] lg:w-[256px] h-24 md:h-28 lg:h-30"
+                    className="flex items-center justify-center bg-white rounded-xl border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all hover:scale-105 select-none w-50 md:w-60 lg:w-64 h-24 md:h-28 lg:h-30"
                   >
                     <img
                       src={logo.path}
@@ -84,17 +84,17 @@ export default function Services() {
       </div>
 
       {/* Main Services Content */}
-      <div className="max-w-350 w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5 mt-10 md:mt-14 lg:mt-20 flex flex-col gap-8 md:gap-10 lg:gap-12">
+      <div className="max-w-360 w-full mx-auto px-4 sm:px-6 md:px-8 xl:px-5 mt-10 md:mt-15.25 lg:mt-20 flex flex-col gap-8 md:gap-8 lg:gap-12">
         {/* Header Block */}
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[minmax(0,470px)_minmax(0,560px)_auto] lg:items-end gap-6 md:gap-6 lg:gap-x-10 text-left">
-          <div className="flex flex-col gap-3.5 md:gap-4 text-left max-w-117.5">
+          <div className="flex flex-col gap-3.5 md:gap-4 text-left max-w-117.5 md:max-w-full">
             <span
               className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] md:text-[15px] lg:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]"
             >
               {"// OUR SERVICES"}
             </span>
             <h2
-              className="font-manrope tracking-tight font-semibold text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px] leading-tight sm:leading-11 md:leading-[52px] lg:leading-[62px] text-[#051B05]"
+              className="font-manrope tracking-tight font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] sm:leading-11 md:leading-11 lg:leading-15.5 text-[#051B05]"
             >
               Expert Solutions for Workforce Success
             </h2>
@@ -102,7 +102,7 @@ export default function Services() {
 
           <div className="flex items-start lg:justify-center">
             <p
-              className="font-dm-sans text-[#595B62] font-normal max-w-130 text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7"
+              className="font-dm-sans text-[#595B62] font-normal max-w-130 md:max-w-full text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7"
             >
               We provide tailored HR solutions that enhance employee performance, streamline processes, and drive organisational growth efficiently.
             </p>
@@ -128,7 +128,7 @@ export default function Services() {
         </div>
 
         {/* Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2 md:mt-4 lg:mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2 md:mt-0 lg:mt-6">
           {serviceCards.map((card, idx) => {
             return (
               <motion.div
@@ -143,7 +143,7 @@ export default function Services() {
                   {/* Top line with Title and Icon */}
                   <div className="flex justify-between items-start gap-4 mb-4 sm:mb-6">
                     <h3
-                      className="font-manrope service-title text-[#044647] group-hover:text-white transition-colors max-w-65 font-semibold text-[22px] md:text-[24px] lg:text-[26px] leading-7 md:leading-8 lg:leading-[34px]"
+                      className="font-manrope service-title text-[#044647] group-hover:text-white transition-colors max-w-65 font-semibold text-[22px] md:text-[24px] lg:text-[26px] leading-7 md:leading-8 lg:leading-8.5"
                     >
                       {card.title}
                     </h3>
@@ -174,7 +174,7 @@ export default function Services() {
                 </div>
 
                 {/* Bottom Image with overlay arrow */}
-                <div className="service-img w-full h-[220px] md:h-[240px] lg:h-[266.92px] rounded-[15px] overflow-hidden relative transition-transform duration-300">
+                <div className="service-img w-full h-55 md:h-60 lg:h-[266.92px] rounded-[15px] overflow-hidden relative transition-transform duration-300">
                   <img
                     src={card.image}
                     alt={card.title}
