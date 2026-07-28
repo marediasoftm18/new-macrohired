@@ -104,7 +104,7 @@ export default function Services() {
             <p
               className="font-dm-sans text-[#595B62] font-normal max-w-130 md:max-w-full text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7"
             >
-              We provide tailored HR solutions that enhance employee performance, streamline processes, and drive organisational growth efficiently.
+              We provide tailored HR solutions that enhance employee performance,<br />streamline processes, and drive organisational growth efficiently.
             </p>
           </div>
 
@@ -143,7 +143,7 @@ export default function Services() {
                   {/* Top line with Title and Icon */}
                   <div className="flex justify-between items-start gap-4 mb-4 sm:mb-6">
                     <h3
-                      className="font-manrope service-title text-[#044647] group-hover:text-white transition-colors max-w-65 font-semibold text-[22px] md:text-[24px] lg:text-[26px] leading-7 md:leading-8 lg:leading-8.5"
+                      className="font-manrope service-title text-[#044647] group-hover:text-white transition-colors max-w-65 font-semibold text-[22px] md:text-[22px] lg:text-[26px] leading-7 md:leading-8.5 lg:leading-8.5"
                     >
                       {card.title}
                     </h3>
@@ -167,7 +167,7 @@ export default function Services() {
 
                   {/* Description */}
                   <p
-                    className="font-dm-sans service-description text-[#595B62] group-hover:text-white transition-colors font-normal mb-6 sm:mb-8 max-w-92.5 text-[15px] md:text-[16px] leading-6 sm:leading-6.5"
+                    className="font-dm-sans service-description text-[#595B62] group-hover:text-white transition-colors font-normal mb-6 sm:mb-8 max-w-92.5 text-[15px] md:text-[18px] leading-6 sm:leading-6.5 md:leading-7"
                   >
                     {card.description}
                   </p>
