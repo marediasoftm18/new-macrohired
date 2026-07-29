@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#044647] text-white rounded-t-[40px] lg:rounded-t-[60px] relative overflow-hidden font-sans flex flex-col items-center justify-center">
-      
+
       {/* Ribbon Watermark Patterns */}
       <div className="absolute -left-12.5 -top-12.5 opacity-[0.02] text-white pointer-events-none select-none">
         <svg className="w-80 h-80" viewBox="0 0 100 100" fill="currentColor">
@@ -18,34 +18,34 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="w-full max-w-350 px-4 sm:px-6 md:px-12 xl:px-16 mx-auto">
-        
+      <div className="w-full max-w-360 px-4 sm:px-6 md:px-4 lg:px-16 mx-auto">
+
         {/* Top CTA & Newsletter Block */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 py-14 md:py-28 border-b border-white/10 text-left">
+        <div className="flex flex-col md:flex-row lg:flex-row justify-between items-start md:items-center lg:items-center gap-6 md:gap-2 py-10 md:py-12.5 lg:py-16 border-b border-white/10 text-left">
           <h2
-            className="text-[32px] sm:text-[42px] lg:text-[52px] font-semibold leading-tight sm:leading-13 lg:leading-15.5 text-white font-manrope max-w-2xl"
+            className="text-[28px] sm:text-[36px] md:text-[34px] lg:text-[48px] tracking-tighter font-semibold sm:leading-11 md:leading-11 lg:leading-14 text-white font-manrope max-w-xl md:max-w-[400px] lg:max-w-3xl"
           >
             Get the support you need,<br className="hidden sm:inline" /> when you need it
           </h2>
 
           {/* Newsletter Input Form */}
-          <div className="flex flex-col gap-3 w-full max-w-125">
+          <div className="flex flex-col gap-2.5 w-full max-w-125 md:max-w-[320px] lg:max-w-125">
             <span
-              className="text-[18px] sm:text-[24px] font-medium leading-7 text-white font-dm-sans"
+              className="text-[17px] sm:text-[20px] md:text-[20px] font-semibold leading-7 md:leading-6 text-white font-manrope"
             >
               Sign up for our Newsletter
             </span>
-            <div className="bg-[#C6D936] rounded-2xl sm:rounded-full p-1.5 pl-4 sm:pl-6 pr-1.5 flex flex-col sm:flex-row items-center gap-2 sm:gap-0 shadow-sm w-full max-w-125 h-auto sm:h-15">
+            <div className="bg-[#C6D936] rounded-full p-1.5 pl-5 sm:pl-6 pr-1.5 flex items-center justify-between shadow-sm w-full max-w-125 h-13 sm:h-14 md:h-12">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full sm:grow bg-transparent border-none outline-none text-[16px] sm:text-[18px] leading-7 text-[#051B05] placeholder-[#051B05]/60 font-normal py-2 sm:py-0"
+                className="w-full grow bg-transparent border-none outline-none text-[15px] sm:text-[17px] md:text-[18px] leading-7 text-[#051B05] placeholder-[#051B05]/60 font-dm-sans font-normal py-2 sm:py-0"
               />
               <button
-                className="w-full sm:w-12 h-12 rounded-full bg-[#044647] hover:scale-105 transition-transform flex items-center justify-center text-white shrink-0"
+                className="w-10 h-10 sm:w-11 sm:h-11 md:h-10 md:w-10 rounded-full bg-[#044647] hover:scale-105 transition-transform flex items-center justify-center text-white shrink-0 shadow-xs"
                 aria-label="Subscribe"
               >
-                <span className="material-symbols-outlined text-[20px] select-none leading-none">
+                <span className="material-symbols-outlined text-[18px] sm:text-[20px] select-none leading-none">
                   arrow_outward
                 </span>
               </button>
@@ -53,25 +53,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Middle Footer Columns Grid (4 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-20 py-12 md:py-16 text-left justify-between">
-          
+        {/* Middle Footer Columns Grid (Centered & Justified) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-16 py-10 md:py-14 text-left justify-between items-start">
+
           {/* Column 1: About Info */}
-          <div className="flex flex-col gap-5 sm:gap-6">
+          <div className="flex flex-col items-center justify-center gap-4 sm:gap-5">
             <Link href="/" className="flex items-center gap-2 select-none">
               {/* Custom logo icon */}
               <svg className="w-6 h-6 text-[#C6D936] fill-current" viewBox="0 0 100 100">
                 <path d="M50 0 C25 25, 25 75, 50 100 C75 75, 75 25, 50 0 Z" />
               </svg>
-              <span className="font-dm-sans text-white text-[28px] sm:text-[36px] leading-7 font-normal">Macrohired</span>
+              <span className="font-dm-sans text-white text-center text-[26px] sm:text-[32px] md:text-[36px] lg:text-[32px] leading-7 font-normal">Macrohired</span>
             </Link>
 
-            <p className="font-dm-sans text-white text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal">
+            <p className="font-dm-sans text-white text-[15px] sm:text-[17px] md:text-[18px] lg:text-[17px] leading-6 sm:leading-6.5 md:leading-7 font-normal text-center">
               We support modern organizations with strategic human resource solutions, delivering growth, efficiency, and people-focused success.
             </p>
 
             <div
-              className="font-dm-sans text-[18px] sm:text-[20px] leading-7 font-normal text-white flex items-center gap-2 mt-2"
+              className="font-dm-sans text-[16px] sm:text-[18px] leading-7 font-normal text-white flex items-center gap-2 mt-1"
             >
               <span className="font-bold">Follow Us</span>
               <span>&mdash;</span>
@@ -85,13 +85,13 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Useful Links */}
-          <div className="flex flex-col gap-5 sm:gap-6">
+          <div className="flex flex-col gap-4 sm:gap-5">
             <h4
-              className="font-manrope text-white text-[22px] sm:text-[28px] leading-7 sm:leading-8.5 font-semibold"
+              className="font-manrope text-white text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[24px] leading-7 font-semibold"
             >
               Useful Links
             </h4>
-            <nav className="flex flex-col gap-3 text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal text-gray-300 font-dm-sans">
+            <nav className="flex flex-col gap-2.5 items-center text-[15px] sm:text-[17px] leading-6 sm:leading-6.5 md:leading-7 font-normal text-gray-300 font-dm-sans">
               <Link href="/" className="text-[#C6D936] hover:text-[#C6D936] transition-colors font-medium">
                 Home
               </Link>
@@ -111,13 +111,13 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Services */}
-          <div className="flex flex-col gap-5 sm:gap-6">
+          <div className="flex flex-col gap-4 sm:gap-5">
             <h4
-              className="font-manrope text-white text-[22px] sm:text-[28px] leading-7 sm:leading-8.5 font-semibold"
+              className="font-manrope text-white text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[24px] leading-7 font-semibold"
             >
               Services
             </h4>
-            <nav className="flex flex-col gap-3 text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal text-gray-300 font-dm-sans">
+            <nav className="flex flex-col gap-2.5 items-center text-[15px] sm:text-[17px] leading-6 sm:leading-6.5 md:leading-7 font-normal text-gray-300 font-dm-sans">
               <Link href="#" className="hover:text-[#C6D936] transition-colors">
                 Strategic Talent Management
               </Link>
@@ -137,34 +137,34 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Contact info */}
-          <div className="flex flex-col gap-5 sm:gap-6">
+          <div className="flex flex-col gap-4 sm:gap-5">
             <h4
-              className="font-manrope text-white text-[22px] sm:text-[28px] leading-7 sm:leading-8.5 font-semibold"
+              className="font-manrope text-white text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[24px] leading-7 font-semibold"
             >
               Contact Us
             </h4>
-            <div className="flex flex-col gap-4 text-xs md:text-sm text-gray-300">
+            <div className="flex flex-col gap-3 items-center text-gray-300 font-dm-sans text-[15px] sm:text-[17px] md:text-[18px] lg:text-[17px] leading-6 sm:leading-6.5 md:leading-7 font-normal">
               <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#C6D936] text-[16px] shrink-0 select-none">
-                  phone
+                <span className="material-symbols-outlined text-[#C6D936] text-[18px] shrink-0 select-none">
+                  call
                 </span>
-                <a href="tel:+11234567890" className="hover:text-[#C6D936] transition-colors font-dm-sans text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal text-white">
+                <a href="tel:+11234567890" className="hover:text-[#C6D936] transition-colors font-normal text-white">
                   +1 (123) 456 7890
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#C6D936] text-[16px] shrink-0 select-none">
+                <span className="material-symbols-outlined text-[#C6D936] text-[18px] shrink-0 select-none">
                   mail
                 </span>
-                <a href="mailto:info@example.com" className="hover:text-[#C6D936] transition-colors font-dm-sans text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal text-white">
+                <a href="mailto:info@example.com" className="hover:text-[#C6D936] transition-colors font-normal text-white">
                   info@example.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-[#C6D936] text-[16px] shrink-0 mt-0.5 select-none">
-                  location_on
+                <span className="material-symbols-outlined text-[#C6D936] text-[18px] shrink-0 mt-0.5 select-none">
+                  badge
                 </span>
-                <span className="font-dm-sans text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal text-white">
+                <span className="font-normal text-white text-center leading-6">
                   7164 Barton Terrace, North Penelope, Vermont &ndash; 97879, USA
                 </span>
               </div>
@@ -174,12 +174,25 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Copyright bar */}
-      <div className="w-full bg-[#C6D936] text-[#044647] py-4 sm:py-5 relative z-10">
-        <div className="w-full max-w-350 px-4 sm:px-6 md:px-12 xl:px-16 mx-auto flex flex-col md:flex-row justify-between items-center gap-2 sm:gap-3 text-[#051B05] font-dm-sans text-[15px] sm:text-[18px] leading-6 sm:leading-7 font-normal text-center md:text-left">
+      {/* Bottom Copyright Bar with Overlapping Floating Back-to-Top Button */}
+      <div className="w-full bg-[#C6D936] text-[#051B05] py-4 sm:py-4.5 relative z-10">
+        {/* Overlapping Back to Top Circle Button */}
+        <div className="w-full max-w-360 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto relative">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="absolute right-6 -top-10 md:right-8 md:-top-10.5 w-12 h-12 md:w-13 md:h-13 rounded-full border-2 border-[#044647] bg-[#044647] text-[#C6D936] hover:bg-[#033738] hover:text-white transition-all flex items-center justify-center shadow-lg cursor-pointer z-30"
+            aria-label="Scroll to top"
+          >
+            <span className="material-symbols-outlined text-[22px] md:text-[24px] leading-none select-none">
+              arrow_upward
+            </span>
+          </button>
+        </div>
+
+        <div className="w-full max-w-360 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto flex flex-col md:flex-row justify-between items-center gap-2 sm:gap-3 text-[#051B05] font-dm-sans text-[14px] sm:text-[16px] font-normal text-center md:text-left">
           <span>&copy; Copyright {new Date().getFullYear()} Macrohired All Rights Reserved</span>
           <span>
-            Developed and designed by Macrohired
+            Developed and designed by Marediasoft
           </span>
         </div>
       </div>

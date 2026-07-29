@@ -34,17 +34,17 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="w-full bg-white py-14 md:py-24 px-4 sm:px-6 md:px-12 lg:px-16 font-sans">
-      <div className="max-w-350 mx-auto w-full">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-16">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-4 lg:px-16 font-sans">
+      <div className="max-w-360 mx-auto w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-stretch gap-8 md:gap-4 lg:gap-16">
           
           {/* Left Column: Title & Accordion list */}
-          <div className="flex-1 w-full flex flex-col gap-5 sm:gap-6 text-left">
-            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
+          <div className="w-full md:w-[55%] lg:w-auto flex-1 flex flex-col gap-4 sm:gap-6 text-left">
+            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] md:text-[15px] lg:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // QUICK ANSWERS
             </span>
 
-            <h2 className="font-manrope text-[32px] sm:text-[42px] lg:text-[52px] leading-tight sm:leading-13 lg:leading-15.5 font-semibold mb-2 sm:mb-4">
+            <h2 className="font-manrope text-[30px] sm:text-[40px] md:text-[34px] lg:text-[52px] sm:leading-11 md:leading-11 lg:leading-15.5 font-semibold mb-2 text-[#051B05]">
               HR Support and Guidance
             </h2>
 
@@ -53,12 +53,12 @@ export default function FAQAccordion() {
               {faqItems.map((item, idx) => {
                 const isOpen = openIdx === idx;
                 return (
-                  <div key={idx} className="border-b border-gray-100 py-3 sm:py-4">
+                  <div key={idx} className="border-b border-gray-100 py-3 sm:py-4 md:py-0">
                     <button
                       onClick={() => toggle(idx)}
-                      className="w-full flex items-center justify-between gap-4 py-3 sm:py-5 group text-left transition-all"
+                      className="w-full flex items-center justify-between gap-3 sm:gap-4 py-3 sm:py-4 group text-left transition-all"
                     >
-                      <div className="flex items-center gap-4 sm:gap-11">
+                      <div className="flex items-center gap-3 sm:gap-4 md:gap-4 lg:gap-11">
                         {/* Left Question Mark Icon */}
                         <div
                           className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-[14px] leading-none shadow-xs select-none transition-all duration-300 ${
@@ -70,7 +70,7 @@ export default function FAQAccordion() {
                           ?
                         </div>
                         <span
-                          className={`font-manrope font-semibold text-[18px] sm:text-[22px] md:text-[26px] leading-7 sm:leading-8 md:leading-9 text-left transition-colors duration-200 ${
+                          className={`font-manrope font-semibold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[26px] leading-7 md:leading-8.5 lg:leading-9 text-left transition-colors duration-200 ${
                             isOpen
                               ? "text-[#044647]"
                               : "text-[#051B05] group-hover:text-[#044647]"
@@ -110,7 +110,7 @@ export default function FAQAccordion() {
                           className="overflow-hidden"
                         >
                           <p
-                            className="font-dm-sans text-[#595B62] text-[16px] sm:text-[18px] pl-11 sm:pl-18 pr-4 sm:pr-8 pt-2 sm:pt-3 pb-3 sm:pb-4 leading-6.5 sm:leading-7 font-normal"
+                            className="font-dm-sans text-[#595B62] text-[15px] sm:text-[16px] md:text-[18px] lg:text-[18px] pl-10 sm:pl-11 md:pl-12 lg:pl-18 pr-4 sm:pr-8 pt-2 sm:pt-3 md:pt-0 pb-3 sm:pb-4 md:pb-4 leading-6 sm:leading-6.5 md:leading-7 font-normal"
                           >
                             {item.answer}
                           </p>
@@ -124,8 +124,8 @@ export default function FAQAccordion() {
           </div>
 
           {/* Right Column: Image & Floating Card */}
-          <div className="relative w-full lg:w-132 shrink-0 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-132 h-[380px] sm:h-[480px] lg:h-185 rounded-3xl sm:rounded-4xl overflow-hidden shadow-xl">
+          <div className="relative w-full md:w-[45%] lg:w-132 shrink-0 flex justify-center md:justify-end">
+            <div className="relative w-full max-w-132 h-95 sm:h-115 md:h-full md:min-h-140 lg:h-185 rounded-3xl sm:rounded-4xl overflow-hidden shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
                 alt="HR consultation support"
@@ -133,17 +133,17 @@ export default function FAQAccordion() {
               />
               
               {/* Floating Emergency Call Card */}
-              <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 bg-white rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 shadow-2xl flex items-center gap-3 sm:gap-4 border border-gray-100/80 z-10">
+              <div className="absolute bottom-4 sm:bottom-6 md:bottom-7.5 right-4 sm:right-6 md:right-7.5 bg-white rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl flex items-center gap-3 sm:gap-4 border border-gray-100/80 z-10">
                 <img
                   src="/media assets/home/icon-47.svg"
                   alt="Phone Icon"
-                  className="w-12 h-12 sm:w-17.5 sm:h-17.5 object-contain shrink-0"
+                  className="w-11 h-11 sm:w-14 sm:h-14 lg:w-17.5 lg:h-17.5 object-contain shrink-0"
                 />
-                <div className="text-left pr-2">
-                  <span className="font-manrope block text-[16px] sm:text-[20px] leading-5 sm:leading-7 font-semibold text-[#044647]">
+                <div className="text-left pr-1 sm:pr-2">
+                  <span className="font-manrope block text-[15px] sm:text-[18px] lg:text-[20px] leading-5 sm:leading-6 lg:leading-7 font-semibold text-[#044647]">
                     24/7 Emergency
                   </span>
-                  <span className="font-manrope block text-[16px] sm:text-[20px] leading-5 sm:leading-7 font-semibold text-[#044647] mt-0.5">
+                  <span className="font-manrope block text-[15px] sm:text-[18px] lg:text-[20px] leading-5 sm:leading-6 lg:leading-7 font-semibold text-[#044647] mt-0.5">
                     +1 (123) 456 7890
                   </span>
                 </div>
