@@ -12,7 +12,7 @@ export default function AboutVision() {
           
           {/* Column 1: Left Small Card Image (250px x 289px + 90px Right Padding) */}
           <div className="w-full lg:w-85 pr-0 lg:pr-22.5 shrink-0 flex justify-center lg:justify-start items-start">
-            <div className="w-[250px] lg:w-62.5 h-72.25 rounded-[30px] overflow-hidden border border-gray-100 shadow-sm shrink-0">
+            <div className="w-62.5 lg:w-62.5 h-72.25 rounded-[30px] overflow-hidden border border-gray-100 shadow-sm shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
                 alt="Company Overview"
@@ -113,7 +113,7 @@ export default function AboutVision() {
 
           {/* Column 3: Right Large Portrait Image (450px x 640px) */}
           <div className="w-full lg:w-112.5 shrink-0 flex justify-center lg:justify-end items-start">
-            <div className="w-full max-w-[340px] sm:max-w-[400px] lg:max-w-112.5 h-[420px] sm:h-[520px] lg:h-160 rounded-[30px] overflow-hidden shadow-md shrink-0">
+            <div className="w-full max-w-85 sm:max-w-100 lg:max-w-112.5 h-105 sm:h-130 lg:h-160 rounded-[30px] overflow-hidden shadow-md shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
                 alt="Executive Leader"

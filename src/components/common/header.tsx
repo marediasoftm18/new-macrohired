@@ -140,17 +140,17 @@ export default function Header() {
       }}
       className={`w-full z-50 transition-all duration-300 ease-in-out ${
         scrolled
-          ? `fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 h-27.5 ${
+          ? `fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 h-20 md:h-27.5 ${
               showHeader ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
             }`
-          : "bg-white h-27.5 translate-y-0 opacity-100"
+          : "bg-white h-20 md:h-27.5 translate-y-0 opacity-100"
       }`}
     >
-      <div className="w-full h-full px-5 md:px-6 flex justify-between items-center">
+      <div className="w-full h-full px-4 sm:px-6 flex justify-between items-center">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          {/* Custom SVG logo matching the Hirehive style (crossed green & lime loops) */}
-          <div className="relative w-9 h-9 flex items-center justify-center">
+        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group">
+          {/* Custom SVG logo matching Hirehive style */}
+          <div className="relative w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:rotate-12 transition-transform duration-300">
               {/* Left Teal Loop */}
               <path
@@ -176,11 +176,12 @@ export default function Header() {
             style={{
               fontFamily: "var(--font-dm-sans), sans-serif",
               fontWeight: 600,
-              fontSize: "30px",
-              lineHeight: "40px",
+              fontSize: "26px",
+              lineHeight: "36px",
               letterSpacing: "-0.03em",
               color: "#0A3A3B",
             }}
+            className="sm:text-[30px] sm:leading-10"
           >
             MacroHired
           </span>
@@ -233,7 +234,7 @@ export default function Header() {
         </nav>
 
         {/* Right Section Details */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3 sm:gap-5">
           {/* Phone Details */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
@@ -255,17 +256,18 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Search Icon */}
-          <button className="p-2 text-black hover:text-[#044647] transition-colors flex items-center justify-center">
+          {/* Search Icon (Hidden on mobile, visible on md+) */}
+          <button className="hidden md:flex p-2 text-black hover:text-[#044647] transition-colors items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg>
           </button>
 
-          {/* Hamburger Menu Icon */}
+          {/* Hamburger Menu Icon (Always visible on mobile & tablet) */}
           <button
             onClick={() => setMobileMenuOpen(true)}
             className="p-2 text-black hover:text-[#044647] transition-colors flex items-center justify-center animate-pulse-slow"
+            aria-label="Open navigation menu"
           >
             <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="16" width="24" height="2" fill="currentColor" />

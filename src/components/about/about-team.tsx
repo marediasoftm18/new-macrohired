@@ -82,7 +82,7 @@ export default function AboutTeam() {
                 className="flex flex-col items-center"
               >
                 {/* Image box with share button */}
-                <div className="w-full h-[360px] sm:h-[420px] md:h-138.75 rounded-3xl overflow-hidden relative shadow-md group cursor-pointer">
+                <div className="w-full h-90 sm:h-105 md:h-138.75 rounded-3xl overflow-hidden relative shadow-md group cursor-pointer">
                   <img
                     src={member.image}
                     alt={member.name}

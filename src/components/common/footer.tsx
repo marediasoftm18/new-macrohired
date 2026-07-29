@@ -23,7 +23,7 @@ export default function Footer() {
         {/* Top CTA & Newsletter Block */}
         <div className="flex flex-col md:flex-row lg:flex-row justify-between items-start md:items-center lg:items-center gap-6 md:gap-2 py-10 md:py-12.5 lg:py-16 border-b border-white/10 text-left">
           <h2
-            className="text-[28px] sm:text-[36px] md:text-[34px] lg:text-[48px] tracking-tighter font-semibold sm:leading-11 md:leading-11 lg:leading-14 text-white font-manrope max-w-xl md:max-w-[400px] lg:max-w-3xl"
+            className="text-[28px] sm:text-[36px] md:text-[34px] lg:text-[48px] tracking-tighter font-semibold sm:leading-11 md:leading-11 lg:leading-14 text-white font-manrope max-w-xl md:max-w-100 lg:max-w-3xl"
           >
             Get the support you need,<br className="hidden sm:inline" /> when you need it
           </h2>

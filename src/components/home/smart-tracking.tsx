@@ -16,14 +16,14 @@ export default function SmartTracking() {
             </div>
 
             {/* Top / Left Image with Exact Reference Gradient Overlay */}
-            <div className="relative w-full lg:w-[45%] h-60 sm:h-76 md:h-[320px] lg:h-auto overflow-hidden shrink-0">
+            <div className="relative w-full lg:w-[45%] h-60 sm:h-76 md:h-80 lg:h-auto overflow-hidden shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
                 alt="Corporate team working"
                 className="w-full h-full object-cover"
               />
               {/* Gradient Overlay matching reference spec (Dark Slate Blue -> Teal -> Lime Green) */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#20344d]/85 via-[#345268]/60 to-[#C6D936]/85" />
+              <div className="absolute inset-0 bg-linear-to-r from-[#20344d]/85 via-[#345268]/60 to-[#C6D936]/85" />
             </div>
 
             {/* Right Form Content */}
@@ -37,7 +37,7 @@ export default function SmartTracking() {
               </h2>
 
               {/* Form Input Group - Bigger Pill Input Bar */}
-              <div className="bg-white rounded-full pl-6 sm:pl-7 pr-1 flex items-center justify-between shadow-md w-full max-w-[580px] sm:max-w-xl md:max-w-2xl h-16 sm:h-18 md:h-14 border-2 border-white/20">
+              <div className="bg-white rounded-full pl-6 sm:pl-7 pr-1 flex items-center justify-between shadow-md w-full max-w-145 sm:max-w-xl md:max-w-2xl h-16 sm:h-18 md:h-14 border-2 border-white/20">
                 <input
                   type="text"
                   placeholder="Enter Tracking Number"
