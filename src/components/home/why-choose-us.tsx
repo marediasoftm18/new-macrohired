@@ -38,7 +38,7 @@ const whyChooseList = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-white md:px-[15px] font-sans">
+    <section className="w-full bg-white md:px-3.75 font-sans">
       <style>{`
         @keyframes wobble-skew {
           0% { transform: scale(1) skewX(0deg) skewY(0deg); }
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
             </span>
 
             <h2
-              className="font-manrope tracking-tight mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] sm:leading-11 md:leading-11 lg:leading-[62px] text-[#051B05]"
+              className="font-manrope tracking-tight mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] sm:leading-11 md:leading-11 lg:leading-15.5 text-[#051B05]"
             >
               Helping organizations unlock people potential
             </h2>
@@ -121,12 +121,12 @@ export default function WhyChooseUs() {
                 >
                   {/* Icon Box */}
                   <div
-                    className="w-16 h-16 md:w-20 md:h-20 lg:w-[105px] lg:h-[105px] group bg-white hover:bg-[#044647] rounded-xl flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.03)] shrink-0 border border-gray-100/50 hover-wobble-skew transition-all duration-300 cursor-pointer"
+                    className="w-16 h-16 md:w-20 md:h-20 lg:w-26.25 lg:h-26.25 group bg-white hover:bg-[#044647] rounded-xl flex items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.03)] shrink-0 border border-gray-100/50 hover-wobble-skew transition-all duration-300 cursor-pointer"
                   >
                     <img
                       src={`/media assets/home/why choose ${idx + 1}.svg`}
                       alt={item.title}
-                      className="w-9 h-9 md:w-11 md:h-11 lg:w-[55px] lg:h-[55px] group-hover:brightness-0 group-hover:invert transition-all duration-300 object-contain"
+                      className="w-9 h-9 md:w-11 md:h-11 lg:w-13.75 lg:h-13.75 group-hover:brightness-0 group-hover:invert transition-all duration-300 object-contain"
                     />
                   </div>
 

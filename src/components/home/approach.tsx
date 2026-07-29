@@ -3,24 +3,24 @@
 import { motion } from "framer-motion";
 
 const bottomTags = [
-  { icon: "trending_up", label: "Sales Yearly" },
-  { icon: "campaign", label: "Marketing" },
-  { icon: "corporate_fare", label: "Management" },
-  { icon: "model_training", label: "Training" },
-  { icon: "fact_check", label: "HR Audit" },
-  { icon: "gavel", label: "Compliance" },
-  { icon: "developer_board", label: "Development" },
+  { icon: "bookmark", label: "AI UI/UX Design" },
+  { icon: "bookmark", label: "Tech Solutions" },
+  { icon: "bookmark", label: "Design Automation" },
+  { icon: "bookmark", label: "Finance Application" },
+  { icon: "bookmark", label: "Personalized Experiences" },
+  { icon: "bookmark", label: "Generative Branding" },
+  { icon: "bookmark", label: "IT Services" },
 ];
 
 export default function Approach() {
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-10 lg:px-16 font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col items-center gap-8 md:gap-10 lg:gap-12">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-4 lg:px-16 font-sans">
+      <div className="max-w-7xl mx-auto flex flex-col items-center gap-8 md:gap-6 lg:gap-12">
         
         {/* Top Circular Portrait & Text */}
         <div className="flex items-center justify-center relative">
           {/* Left Dark Teal Circle with rotating text and center icon */}
-          <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-[#044647] flex items-center justify-center shadow-lg z-10 shrink-0">
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-25.5 md:h-25.5 rounded-full bg-[#044647] flex items-center justify-center shadow-lg z-10 shrink-0">
             {/* Center User Icon */}
             <span className="material-symbols-outlined text-white text-2xl sm:text-3xl select-none leading-none z-10">
               person
@@ -37,7 +37,7 @@ export default function Approach() {
                   d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                 />
               </defs>
-              <text className="text-[10px] fill-white font-extrabold tracking-[0.16em] uppercase">
+              <text className="text-[10px] md:text-[10px] md:leading-5 font-medium font-dm-sans fill-white tracking-[0.16em] uppercase">
                 <textPath href="#textCirclePathApproach" startOffset="0%">
                   BUILDING STRONGER WORKFORCES •
                 </textPath>
@@ -46,7 +46,7 @@ export default function Approach() {
           </div>
 
           {/* Right Portrait Circle */}
-          <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden shadow-md shrink-0 -ml-6 sm:-ml-8 border-2 border-white z-0">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-25.5 md:h-25.5 rounded-full overflow-hidden shadow-md shrink-0 -ml-6 sm:-ml-8 border-2 border-white z-0">
             <img
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80"
               alt="Professional Leader"
@@ -61,22 +61,22 @@ export default function Approach() {
             // OUR APPROACH
           </span>
           <h2
-            className="font-manrope tracking-tight font-semibold text-[30px] sm:text-[38px] md:text-[44px] lg:text-[52px] leading-tight sm:leading-11 md:leading-[52px] lg:leading-[62px] text-[#051B05]"
+            className="font-manrope md:max-w-147.5 font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] sm:leading-11 md:leading-11 lg:leading-15.5 text-[#051B05]"
           >
             Our Collaborative Approach to Human Resources
           </h2>
         </div>
 
-        {/* 3 Columns Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-8 w-full items-stretch mt-2 sm:mt-4">
+        {/* 3 Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4 lg:gap-8 w-full items-stretch mt-2 sm:mt-4">
           
-          {/* Card 1: Innovation */}
-          <div className="bg-[#F6F5F2] rounded-3xl sm:rounded-4xl p-6 md:p-7 lg:p-8 flex flex-col justify-between border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+          {/* Card 1: Innovation (Spans full width top in tablet mode) */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-1 bg-[#F6F5F2] rounded-3xl sm:rounded-4xl p-6 md:p-7.5 lg:p-8 flex flex-col justify-between border border-gray-100/60 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
-              <h3 className="font-manrope text-[#051b05] font-semibold text-[26px] md:text-[28px] lg:text-[32px] leading-8 md:leading-9 lg:leading-10 mb-3 sm:mb-4">
+              <h3 className="font-manrope text-[#051b05] font-semibold text-[26px] md:text-[26px] lg:text-[32px] leading-8 md:leading-8.5 lg:leading-10 mb-3 sm:mb-4">
                 Innovation
               </h3>
-              <p className="font-dm-sans text-[#051b05] text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7 font-normal mb-4 sm:mb-6">
+              <p className="font-dm-sans text-[#051b05] text-[16px] md:text-[18px] lg:text-[18px] leading-6.5 md:leading-7 font-normal mb-4 sm:mb-6">
                 We use smart ideas and modern solutions to support steady business growth and long-term success.
               </p>
 
@@ -97,7 +97,7 @@ export default function Approach() {
                       alt="bullet icon"
                       className="w-4.5 h-4.5 shrink-0"
                     />
-                    <span className="font-dm-sans text-[#051b05] text-[15px] md:text-[16px] lg:text-[18px] leading-6 md:leading-6.5 lg:leading-7 font-normal">
+                    <span className="font-dm-sans text-[#051b05] text-[15px] md:text-[18px] lg:text-[18px] leading-6 md:leading-7 lg:leading-7 font-normal">
                       {item}
                     </span>
                   </div>
@@ -106,10 +106,10 @@ export default function Approach() {
             </div>
           </div>
 
-          {/* Card 2: Performance Analytics */}
-          <div className="bg-[#044647] rounded-3xl sm:rounded-4xl p-6 md:p-7 lg:p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
+          {/* Card 2: Performance Analytics (Left column in tablet mode row 2) */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-1 bg-[#044647] rounded-3xl sm:rounded-4xl p-6 md:p-7.5 lg:p-8 flex flex-col justify-between text-white shadow-[0_10px_30px_rgba(4,70,71,0.15)] relative overflow-hidden">
             <div>
-              <h3 className="font-manrope text-white font-bold text-[20px] md:text-[21px] lg:text-[22px] leading-7.5 mb-6 sm:mb-8">
+              <h3 className="font-manrope text-white font-bold text-[20px] md:text-[22px] lg:text-[22px] leading-7.5 md:leading-8 lg:leading-10 mb-6 sm:mb-8">
                 Performance Analytics
               </h3>
 
@@ -118,26 +118,26 @@ export default function Approach() {
                 <img
                   src="/media assets/home/performance analysis.svg"
                   alt="Performance Analysis"
-                  className="w-full max-w-[353px] h-auto object-contain"
+                  className="w-full max-w-88.25 h-auto object-contain"
                 />
               </div>
 
-              <h4 className="font-manrope text-white font-semibold text-[26px] md:text-[28px] lg:text-[32px] leading-8 md:leading-9 lg:leading-10 mb-2 sm:mb-3">
+              <h4 className="font-manrope text-white font-semibold text-[26px] md:text-[26px] lg:text-[32px] leading-8 md:leading-8.5 lg:leading-10 mb-2 sm:mb-3">
                 Sales Overview
               </h4>
-              <p className="font-dm-sans text-gray-300 font-normal text-[15px] md:text-[16px] lg:text-[18px] leading-6 md:leading-6.5 lg:leading-7">
+              <p className="font-dm-sans text-gray-300 font-normal text-[15px] md:text-[18px] lg:text-[18px] leading-6 md:leading-7 lg:leading-7">
                 This is what we do, executed with perfection. Our dedication and expertise ensure every detail is flawless.
               </p>
             </div>
           </div>
 
-          {/* Card 3: Sales Yearly */}
-          <div className="bg-[#C6D936] rounded-3xl sm:rounded-4xl p-6 md:p-7 lg:p-8 flex flex-col justify-between text-[#051B05] shadow-[0_4px_20px_rgba(0,0,0,0.02)] md:col-span-2 lg:col-span-1">
+          {/* Card 3: Sales Yearly (Right column in tablet mode row 2) */}
+          <div className="col-span-1 md:col-span-1 lg:col-span-1 bg-[#C6D936] rounded-3xl sm:rounded-4xl p-6 md:p-7.5 lg:p-8 flex flex-col justify-between text-[#051B05] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
             <div>
-              <h3 className="font-manrope text-[#051B05] font-semibold text-[26px] md:text-[28px] lg:text-[32px] leading-8 md:leading-9 lg:leading-10 mb-3 sm:mb-4">
+              <h3 className="font-manrope text-[#051B05] font-semibold text-[26px] md:text-[26px] lg:text-[32px] leading-8 md:leading-8.5 lg:leading-10 mb-3 sm:mb-4">
                 Sales Yearly
               </h3>
-              <p className="font-dm-sans text-[#051B05] text-[16px] md:text-[17px] lg:text-[18px] leading-6.5 md:leading-7 font-normal">
+              <p className="font-dm-sans text-[#051B05] text-[16px] md:text-[18px] lg:text-[18px] leading-6.5 md:leading-7 font-normal">
                 &ldquo;Consistent year-over-year sales growth driven by strategic planning, strong client relationships, and performance-focused execution.&rdquo;
               </p>
             </div>
@@ -147,7 +147,7 @@ export default function Approach() {
               <img
                 src="/media assets/home/Sales Yearly.svg"
                 alt="Sales Yearly"
-                className="w-full max-w-[335px] h-auto object-contain"
+                className="w-full max-w-83.75 h-auto object-contain"
               />
             </div>
           </div>
@@ -161,12 +161,12 @@ export default function Approach() {
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="font-manrope flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs font-bold shadow-md cursor-pointer transition-all duration-300 select-none"
+                className="font-manrope flex items-center gap-2 px-4.5 md:px-5 py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs sm:text-sm font-semibold shadow-md cursor-pointer transition-all duration-300 select-none"
               >
-                <span className="material-symbols-outlined text-[#C6D936] text-[14px] select-none leading-none">
+                <span className="material-symbols-outlined text-[#C6D936] text-[15px] select-none leading-none">
                   {tag.icon}
                 </span>
-                <span>{tag.label}</span>
+                <span className="text-[15px] leading-7 md:text-[16px] md:leading-7.5 lg:text-[16px] lg:leading-7.5 font-normal">{tag.label}</span>
               </motion.div>
             );
           })}

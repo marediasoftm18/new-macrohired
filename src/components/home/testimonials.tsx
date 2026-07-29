@@ -65,18 +65,18 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-[#F6F5F2] py-14 md:py-24 font-sans px-4 sm:px-6 md:px-12 lg:px-16">
+    <section className="w-full bg-[#F6F5F2] py-14 md:py-15.25 font-sans px-4 sm:px-6 md:px-4 lg:px-16">
       <div className="max-w-350 mx-auto w-full">
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-28">
           
           {/* Left Column: Sticky Summary */}
-          <div className="w-full lg:w-105 shrink-0 lg:sticky lg:top-24 flex flex-col gap-5 sm:gap-6 text-left self-start">
+          <div className="w-full lg:w-105 shrink-0 lg:sticky lg:top-24 flex flex-col gap-5 sm:gap-6 md:gap-2 text-left self-start">
             <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
               // OUR TESTIMONIALS
             </span>
 
-            <h2 className="font-manrope font-semibold text-[32px] sm:text-[42px] lg:text-[52px] leading-tight sm:leading-13 lg:leading-15.5 tracking-tight text-[#051B05]">
-              Experiences from <br className="hidden sm:inline" /> Our Clients
+            <h2 className="font-manrope font-semibold text-[32px] sm:text-[42px] md:text-[34px] lg:text-[52px] sm:leading-13 md:leading-11 lg:leading-15.5 tracking-tight text-[#051B05]">
+              Experiences from <br className="hidden sm:inline md:hidden" /> Our Clients
             </h2>
 
             {/* Rating Section */}
@@ -91,7 +91,7 @@ export default function Testimonials() {
               </div>
 
               {/* Tagline Description */}
-              <p className="font-dm-sans text-[#595B62] text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal max-w-sm">
+              <p className="font-dm-sans text-[#595B62] text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal max-w-sm md:max-w-2xl">
                 This HR agency improved our workplace with simple, effective solutions.
               </p>
 
@@ -140,7 +140,7 @@ export default function Testimonials() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -60, scale: 0.96 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="bg-white rounded-3xl sm:rounded-4xl p-6 sm:p-10 md:p-12.5 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-gray-100 flex flex-col md:flex-row gap-6 md:gap-12 relative overflow-hidden w-full h-auto lg:h-87.75 shrink-0"
+                  className="bg-white rounded-3xl sm:rounded-4xl p-6 sm:p-10 md:p-7.5 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-gray-100 flex flex-col md:flex-row gap-6 md:gap-12 relative overflow-hidden w-full h-auto lg:h-87.75 shrink-0"
                 >
                   {/* Left sub-column: Profile details */}
                   <div className="flex flex-col items-start text-left md:border-r border-gray-100 md:pr-8 shrink-0 min-w-36 justify-between border-b md:border-b-0 pb-4 md:pb-0">
@@ -150,7 +150,7 @@ export default function Testimonials() {
                         alt={review.name}
                         className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover mb-2 sm:mb-3"
                       />
-                      <h3 className="font-manrope text-[#051B05] font-semibold text-[18px] sm:text-[20px] leading-6 sm:leading-7">
+                      <h3 className="font-manrope text-[#051B05] font-semibold text-[18px] sm:text-[20px] md:text-[18px] leading-6 sm:leading-7 md:leading-6.5">
                         {review.name}
                       </h3>
                       <p className="font-dm-sans text-[#595B62] text-[16px] sm:text-[18px] leading-6 sm:leading-7 font-normal">
@@ -159,7 +159,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Numeric rating */}
-                    <div className="font-manrope flex items-center gap-1.5 mt-3 sm:mt-6 text-[24px] sm:text-[32px] leading-8 sm:leading-10 font-bold text-[#051B05]">
+                    <div className="font-manrope flex items-center gap-1.5 mt-3 sm:mt-6 text-[24px] sm:text-[32px] md:text-[26px] leading-8 sm:leading-10 md:leading-8.5 font-bold text-[#051B05]">
                       <span>{review.rating}</span>
                       <span className="material-symbols-outlined material-symbols-filled text-[#ED8A19] text-[16px] sm:text-[18px] select-none leading-none">
                         star
