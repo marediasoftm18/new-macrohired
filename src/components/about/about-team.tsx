@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const teamList = [
@@ -22,6 +23,16 @@ const teamList = [
 ];
 
 export default function AboutTeam() {
+  const [activeMobileIdx, setActiveMobileIdx] = useState(0);
+
+  // Auto play timer for mobile mode loop
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveMobileIdx((prev) => (prev + 1) % teamList.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="w-full bg-[#F6F5F2] font-sans relative overflow-hidden">
       {/* Main Teal Box */}
@@ -94,8 +105,66 @@ export default function AboutTeam() {
             </div>
           </div>
 
-          {/* Team Members Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-8 relative z-10">
+          {/* Mobile View (< md): Single Card Carousel with Pagination Dots */}
+          <div className="flex md:hidden flex-col w-full max-w-sm mx-auto items-center relative z-10">
+            <div className="w-full relative min-h-110 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeMobileIdx}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -40 }}
+                  transition={{ duration: 0.45, ease: "easeInOut" }}
+                  className="group flex flex-col rounded-3xl overflow-hidden"
+                >
+                  {/* Member Image with Share Icon */}
+                  <div className="w-full aspect-3/4 rounded-3xl overflow-hidden relative shadow-lg">
+                    <img
+                      src={teamList[activeMobileIdx].image}
+                      alt={teamList[activeMobileIdx].name}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Floating Lime Share Icon Badge */}
+                    <button
+                      className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C6D936] hover:bg-[#b4c62e] text-[#044647] flex items-center justify-center shadow-md transition-transform hover:scale-110"
+                      aria-label={`Share profile of ${teamList[activeMobileIdx].name}`}
+                    >
+                      <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                        share
+                      </span>
+                    </button>
+                  </div>
+
+                  {/* Member Details */}
+                  <div className="p-5 flex flex-col items-center text-center">
+                    <h3 className="font-manrope text-white font-semibold text-[22px] leading-8">
+                      {teamList[activeMobileIdx].name}
+                    </h3>
+                    <p className="font-dm-sans text-white/80 text-[16px] leading-6 mt-1 font-normal">
+                      {teamList[activeMobileIdx].role}
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Pagination Indicators / Dots */}
+            <div className="flex items-center gap-2 mt-2">
+              {teamList.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveMobileIdx(idx)}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    activeMobileIdx === idx ? "bg-[#C6D936] w-7" : "bg-white/40 w-2.5"
+                  }`}
+                  aria-label={`Show team member ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Tablet & Desktop View (>= md): 3 Cards Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-4 sm:gap-5 lg:gap-8 relative z-10">
             {teamList.map((member, idx) => (
               <motion.div
                 key={idx}

@@ -1,9 +1,13 @@
 "use client";
 
 export default function AboutAppBanner() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section className="w-full bg-[#044647] font-sans overflow-hidden">
-      <div className="w-full flex flex-col md:flex-row items-stretch min-h-125 md:h-140 lg:h-164">
+      <div className="w-full flex flex-col-reverse md:flex-row items-stretch min-h-125 md:h-140 lg:h-164">
         
         {/* Left Column: Full-height Dark Teal CTA Block */}
         <div className="w-full md:w-1/2 lg:w-1/2 bg-[#044647] text-white p-6 sm:p-8 md:p-8 lg:p-12 flex flex-col justify-center text-left relative overflow-hidden">
@@ -15,7 +19,7 @@ export default function AboutAppBanner() {
             </svg>
           </div>
 
-          <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-xl mx-auto">
+          <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-xl mx-auto w-full">
             
             {/* Tag */}
             <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
@@ -23,7 +27,7 @@ export default function AboutAppBanner() {
             </span>
 
             {/* Title */}
-            <h2 className="font-manrope font-semibold text-[30px] sm:text-[40px] md:text-[34px] lg:text-[52px] leading-tight sm:leading-13 md:leading-11 lg:leading-15.5 text-white">
+            <h2 className="font-manrope font-semibold text-[28px] sm:text-[40px] md:text-[34px] lg:text-[52px] leading-tight sm:leading-13 md:leading-11 lg:leading-15.5 text-white">
               Insights for Modern Human Resources
             </h2>
 
@@ -37,7 +41,7 @@ export default function AboutAppBanner() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full sm:grow bg-transparent border-none outline-none text-[15px] sm:text-[18px] leading-7 font-normal text-[#051B05] placeholder-[#595B62] font-dm-sans py-2 sm:py-0"
+                className="w-full sm:grow bg-transparent border-none outline-none text-[14px] sm:text-[18px] leading-7 font-normal text-[#051B05] placeholder-[#595B62] font-dm-sans py-2 sm:py-0"
               />
               <button className="w-auto bg-[#C6D936] hover:bg-[#044647] hover:text-white text-[#044647] px-4 sm:px-7 py-2.5 sm:py-3 rounded-full font-medium font-dm-sans text-[14px] sm:text-[18px] leading-7 flex items-center justify-center gap-2 transition-all shrink-0">
                 <span>Subscribe</span>
@@ -48,27 +52,29 @@ export default function AboutAppBanner() {
             </div>
 
             {/* Stats Row */}
-            <div className="flex flex-wrap items-center gap-5 sm:gap-8 text-white font-dm-sans text-[15px] sm:text-[18px] leading-7 font-medium pt-1 sm:pt-2">
+            <div className="flex items-center justify-start sm:justify-start gap-4 sm:gap-4 lg:gap-16 text-white font-dm-sans text-[15px] sm:text-[18px] leading-7 font-medium pt-1 sm:pt-2">
               <span>+100k Customers</span>
               <span>24/7 Support</span>
             </div>
 
-            {/* Store Buttons */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
-              <a href="#" className="hover:opacity-90 transition-opacity">
-                <img
-                  src="/media assets/home/google-play.png"
-                  alt="Google Play"
-                  className="h-10 sm:h-12 md:h-11 lg:h-15 w-auto object-contain"
-                />
-              </a>
-              <a href="#" className="hover:opacity-90 transition-opacity">
-                <img
-                  src="/media assets/home/app-store.png"
-                  alt="App Store"
-                  className="h-10 sm:h-12 md:h-11 lg:h-15 w-auto object-contain"
-                />
-              </a>
+            {/* Store Buttons & Scroll-to-Top Button */}
+            <div className="flex items-center justify-between gap-3 sm:gap-4 pt-1 sm:pt-2">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                <a href="#" className="hover:opacity-90 transition-opacity">
+                  <img
+                    src="/media assets/home/google-play.png"
+                    alt="Google Play"
+                    className="h-10 sm:h-12 md:h-11 lg:h-15 w-auto object-contain"
+                  />
+                </a>
+                <a href="#" className="hover:opacity-90 transition-opacity">
+                  <img
+                    src="/media assets/home/app-store.png"
+                    alt="App Store"
+                    className="h-10 sm:h-12 md:h-11 lg:h-15 w-auto object-contain"
+                  />
+                </a>
+              </div>
             </div>
 
           </div>
@@ -76,7 +82,7 @@ export default function AboutAppBanner() {
         </div>
 
         {/* Right Column: Full-height Office Meeting Photo */}
-        <div className="w-full md:w-1/2 lg:w-1/2 min-h-80 sm:min-h-110 md:min-h-full relative overflow-hidden">
+        <div className="w-full md:w-1/2 lg:w-1/2 h-52 sm:h-64 md:h-full relative overflow-hidden shrink-0">
           <img
             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80"
             alt="Workplace Insights"
