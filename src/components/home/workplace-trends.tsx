@@ -37,7 +37,7 @@ export default function WorkplaceTrends() {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % posts.length);
-    }, 5000);
+    }, 4000); // Cycle every 4 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -76,8 +76,80 @@ export default function WorkplaceTrends() {
           </div>
         </div>
 
-        {/* Posts Grid (2 columns on tablet mode md:grid-cols-2) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
+        {/* Mobile View: Single Post Card with Smooth Loop Animation (< md) */}
+        <div className="flex md:hidden flex-col w-full relative overflow-hidden items-center">
+          <div className="w-full relative min-h-96 overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={posts[startIndex].id}
+                initial={{ opacity: 0, x: 40, scale: 0.96 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -40, scale: 0.96 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="flex flex-col text-left group w-full"
+              >
+                {/* Post Image */}
+                <div className="w-full h-56 sm:h-64 rounded-3xl overflow-hidden shadow-sm relative mb-4 sm:mb-5">
+                  <img
+                    src={posts[startIndex].image}
+                    alt={posts[startIndex].title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Post Metadata & Content */}
+                <div className="flex items-start gap-4">
+                  {/* Date Badge Block */}
+                  <div className="flex flex-col items-center shrink-0">
+                    <span className="font-manrope text-[32px] font-bold text-[#051B05] leading-none">
+                      {posts[startIndex].day}
+                    </span>
+                    <span className="font-dm-sans text-[14px] font-bold text-[#051B05] mt-1 uppercase">
+                      {posts[startIndex].month}
+                    </span>
+                  </div>
+
+                  {/* Vertical Divider */}
+                  <div className="w-px h-16 bg-gray-300/60 shrink-0 mt-1" />
+
+                  {/* Category, Title & Arrow */}
+                  <div className="flex flex-col gap-1.5 flex-1 pt-0.5">
+                    <span className="font-dm-sans text-[13px] font-medium text-[#595B62] uppercase tracking-wider">
+                      {posts[startIndex].category}
+                    </span>
+                    <h3 className="font-manrope text-[#051B05] font-semibold text-[18px] leading-6.5">
+                      {posts[startIndex].title}
+                    </h3>
+
+                    {/* Arrow Action Button */}
+                    <div className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[#044647] bg-[#C6D936] transition-all mt-2 cursor-pointer shadow-xs">
+                      <span className="material-symbols-outlined text-[18px] leading-none select-none">
+                        arrow_forward
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Pagination Indicators / Dots */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            {posts.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setStartIndex(idx)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  startIndex === idx ? "bg-[#044647] w-7" : "bg-gray-300 w-2.5"
+                }`}
+                aria-label={`Show post ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Tablet & Desktop View: 2 Columns (md) & 3 Columns (lg) Posts Grid (Hidden on mobile) */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
           {posts.slice(0, 3).map((post, idx) => (
             <motion.div
               key={post.id}

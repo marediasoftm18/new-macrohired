@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const teamMembers = [
@@ -29,6 +30,16 @@ const tickerItems = [
 ];
 
 export default function Team() {
+  const [activeMobileIdx, setActiveMobileIdx] = useState(0);
+
+  // Auto play timer for mobile mode loop
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveMobileIdx((prev) => (prev + 1) % teamMembers.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="w-full bg-white font-sans overflow-hidden">
       {/* Main Dark Teal Section */}
@@ -46,7 +57,7 @@ export default function Team() {
               Our Expert Team for Human Resource
             </h2>
             <p
-              className="font-dm-sans text-white font-normal max-w-2xl md:max-w-170 text-[16px] md:text-[18px] lg:text-[18px] leading-6.5 md:leading-7"
+              className="font-dm-sans text-white font-normal max-w-2xl md:max-w-170 text-[18px] md:text-[18px] lg:text-[18px] leading-6.5 md:leading-7"
             >
               Our skilled HR professionals blend experience and insight to guide organizations toward efficiency, engagement, and workforce excellence
             </p>
@@ -70,8 +81,63 @@ export default function Team() {
             </div>
           </div>
 
-          {/* Team Cards Grid (1 row of 3 cards in tablet mode) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-5 lg:gap-8">
+          {/* Mobile Mode: Show ONLY ONE member card at a time on loop */}
+          <div className="flex md:hidden flex-col w-full max-w-sm mx-auto items-center">
+            <div className="w-full relative min-h-110 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeMobileIdx}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -40 }}
+                  transition={{ duration: 0.45, ease: "easeInOut" }}
+                  className="group flex flex-col rounded-3xl overflow-hidden"
+                >
+                  {/* Member Image with Share Icon */}
+                  <div className="w-full aspect-3/4 rounded-3xl overflow-hidden relative shadow-lg">
+                    <img
+                      src={teamMembers[activeMobileIdx].image}
+                      alt={teamMembers[activeMobileIdx].name}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Floating Lime Share Icon Badge */}
+                    <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C6D936] flex items-center justify-center text-[#044647] shadow-md">
+                      <span className="material-symbols-outlined text-[18px] select-none leading-none">
+                        share
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Member Info */}
+                  <div className="p-5 flex flex-col items-center text-center">
+                    <h3 className="font-manrope text-white font-semibold text-[22px] leading-8">
+                      {teamMembers[activeMobileIdx].name}
+                    </h3>
+                    <p className="font-dm-sans text-gray-300 text-[16px] leading-6 mt-1 font-normal">
+                      {teamMembers[activeMobileIdx].role}
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Pagination Indicators / Dots */}
+            <div className="flex items-center gap-2 mt-2">
+              {teamMembers.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveMobileIdx(idx)}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    activeMobileIdx === idx ? "bg-[#C6D936] w-7" : "bg-white/40 w-2.5"
+                  }`}
+                  aria-label={`Show team member ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Tablet & Desktop Cards Grid (Hidden on mobile, 3 cards in 1 row on tablet/desktop) */}
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-5 lg:gap-8">
             {teamMembers.map((member, idx) => (
               <motion.div
                 key={idx}
@@ -114,7 +180,16 @@ export default function Team() {
 
       {/* Ticker Bar (Lime Green) */}
       <div className="w-full bg-[#C6D936] py-3.5 md:py-3.75 overflow-hidden select-none border-t border-b border-[#051B05]/10">
-        <div className="flex gap-8 md:gap-12 animate-scroll whitespace-nowrap">
+        <style>{`
+          @keyframes teamTickerScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-25%); }
+          }
+          .animate-team-ticker {
+            animation: teamTickerScroll 4s linear infinite;
+          }
+        `}</style>
+        <div className="flex gap-8 md:gap-12 animate-team-ticker whitespace-nowrap">
           {[...Array(4)].map((_, setIdx) => (
             <div key={setIdx} className="flex gap-8 md:gap-12 items-center shrink-0">
               {tickerItems.map((item, itemIdx) => (

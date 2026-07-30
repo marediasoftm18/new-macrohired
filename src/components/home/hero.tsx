@@ -39,7 +39,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]"
+              className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[15px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]"
             >
               {"// HR EXPERTISE"}
             </motion.div>
@@ -48,7 +48,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.05 }}
-              className="font-manrope mt-2.5 text-white font-bold text-[34px] sm:text-[52px] md:text-[60px] lg:text-[92px] leading-tight sm:leading-[1.1] md:leading-17.5 lg:leading-27.5"
+              className="font-manrope mt-2.5 text-white font-bold text-[40px] sm:text-[52px] md:text-[60px] lg:text-[92px] leading-tight sm:leading-[1.1] md:leading-17.5 lg:leading-27.5"
             >
               Grow Employee <br className="hidden sm:inline" />
               Culture and Value
@@ -58,7 +58,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.12 }}
-              className="font-dm-sans mt-4 sm:mt-5 max-w-145.5 text-[15px] sm:text-[18px] leading-6 sm:leading-7 text-white"
+              className="font-dm-sans mt-4 sm:mt-5 max-w-145.5 text-[18px] sm:text-[18px] leading-7 sm:leading-7 text-white"
             >
               Enhance employee growth with strategic, people-first solutions tailored for teams and organizations. Our expert HR services deliver lasting value today globally.
             </motion.p>
@@ -71,7 +71,7 @@ export default function Hero() {
             >
               <Link
                 href="/about"
-                className="font-dm-sans inline-flex h-12 sm:h-15 items-center rounded-full bg-[#c8db2b] px-6 sm:px-7 text-[15px] sm:text-[18px] md:leading-7.5 font-medium text-[#062828] shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-transform hover:scale-[1.02]"
+                className="font-dm-sans inline-flex h-11 sm:h-15 items-center rounded-full bg-[#c8db2b] px-6 sm:px-7 text-[18px] sm:text-[18px] leading-7.5 md:leading-7.5 font-medium text-[#051B05] shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-transform hover:scale-[1.02]"
               >
                 Get Started
               </Link>
@@ -106,7 +106,7 @@ export default function Hero() {
                 <img src="/award.png" alt="Award logo" className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain" />
               </div>
 
-              <p className="relative z-10 max-w-full text-sm sm:text-base md:text-lg leading-5.5 sm:leading-6 md:leading-7 text-white/90">
+              <p className="relative z-10 max-w-full text-[18px] sm:text-base md:text-lg leading-7 sm:leading-6 md:leading-7 text-white/90">
                 We provide tailored HR solutions that <br className="hidden sm:inline" />enhance employee performance, <br className="hidden sm:inline" />streamline processes.
               </p>
             </motion.div>

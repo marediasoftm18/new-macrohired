@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
             </h2>
 
             <p
-              className="font-dm-sans max-w-md md:max-w-3xl lg:max-w-xl font-normal text-[16px] md:text-[18px] lg:text-[18px] leading-6.5 md:leading-7 text-[#595B62]"
+              className="font-dm-sans max-w-md md:max-w-3xl lg:max-w-xl font-normal text-[18px] md:text-[18px] lg:text-[18px] leading-6.5 md:leading-7 text-[#595B62]"
             >
               The best way to improve workplace performance is to create and follow an HR strategy. Start with goals, then build processes to achieve them.
             </p>

@@ -49,7 +49,7 @@ export default function Portfolio() {
             // OUR PORTFOLIOS
           </span>
           <h2
-            className="font-manrope tracking-tight mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] leading-tight sm:leading-11 md:leading-11 lg:leading-15.5 text-[#051B05]"
+            className="font-manrope mt-2 font-semibold text-[30px] sm:text-[38px] md:text-[34px] lg:text-[52px] leading-9.5 sm:leading-11 md:leading-11 lg:leading-15.5 text-[#051B05]"
           >
             Driving Success Through HR Projects
           </h2>
@@ -61,7 +61,7 @@ export default function Portfolio() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`font-dm-sans px-4 md:px-5 lg:px-6 py-2 rounded-full font-normal text-[15px] md:text-[18px] lg:text-[18px] leading-7 transition-all duration-300 ${
+              className={`font-dm-sans px-4 md:px-5 lg:px-6 py-2 rounded-full font-normal text-[18px] md:text-[18px] lg:text-[18px] leading-7 transition-all duration-300 ${
                 activeCategory === category
                   ? "bg-[#044647] text-[#ffffff] shadow-md"
                   : "bg-[#F6F5F2] text-[#051B05] hover:bg-gray-200/80"
@@ -104,7 +104,7 @@ export default function Portfolio() {
                       {project.title}
                     </h3>
                     <span
-                      className="font-dm-sans font-semibold text-[12px] md:text-[14px] lg:text-[14px] md:leading-2.5 text-[#051B05] bg-white border border-[#051B05]/10 rounded-full px-3.5 md:px-4 py-2 md:py-2.5 shadow-sm shrink-0"
+                      className="font-dm-sans font-semibold text-[14px] md:text-[14px] lg:text-[14px] leading-2.5 md:leading-2.5 text-[#051B05] bg-white border border-[#051B05]/10 rounded-full px-3.5 md:px-4 py-2 md:py-2.5 shadow-sm shrink-0"
                     >
                       {project.tag}
                     </span>

@@ -47,17 +47,17 @@ const reviews = [
 ];
 
 export default function Testimonials() {
-  // Track indices of the 3 reviews currently being shown
+  // Track index of current review
   const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % reviews.length);
-    }, 4000); // Shift reviews every 4 seconds
+    }, 4000); // Shift review every 4 seconds
     return () => clearInterval(interval);
   }, []);
 
-  // Extract exactly 3 reviews based on startIndex
+  // Extract exactly 3 reviews for tablet/desktop feed
   const visibleReviews = [
     reviews[startIndex],
     reviews[(startIndex + 1) % reviews.length],
@@ -129,10 +129,80 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Right Column: Sliding Feed */}
-          <div className="flex-1 w-full lg:w-218.75 flex flex-col gap-6 relative h-auto lg:h-275.25 overflow-hidden">
+          {/* Mobile View: Single Testimonial Card with Smooth Loop Animation (< md) */}
+          <div className="flex md:hidden flex-col w-full relative overflow-hidden items-center">
+            <div className="w-full relative min-h-64 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={reviews[startIndex].id}
+                  initial={{ opacity: 0, x: 40, scale: 0.96 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -40, scale: 0.96 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="bg-white rounded-3xl p-6 shadow-[0_10px_30px_rgba(0,0,0,0.02)] border border-gray-100 flex flex-col gap-4 relative overflow-hidden w-full text-left"
+                >
+                  {/* Card header with avatar, name, role */}
+                  <div className="flex items-center gap-3.5 border-b border-gray-100 pb-3.5">
+                    <img
+                      src={memberPortrait(reviews[startIndex].image)}
+                      alt={reviews[startIndex].name}
+                      className="w-12 h-12 rounded-full object-cover shrink-0"
+                    />
+                    <div className="flex flex-col text-left">
+                      <h3 className="font-manrope text-[#051B05] font-semibold text-[18px] leading-6">
+                        {reviews[startIndex].name}
+                      </h3>
+                      <p className="font-dm-sans text-[#595B62] text-[15px] leading-5 font-normal">
+                        {reviews[startIndex].role}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Quote rating stars & quote text */}
+                  <div className="flex flex-col text-left relative z-10">
+                    <div className="flex gap-1 text-[#ED8A19] mb-2.5">
+                      {[...Array(reviews[startIndex].rating)].map((_, i) => (
+                        <span key={i} className="material-symbols-outlined material-symbols-filled text-[18px] select-none leading-none">
+                          star
+                        </span>
+                      ))}
+                    </div>
+                    <p className="font-dm-sans text-[#595B62] text-[16px] leading-6.5 font-normal italic pr-4 relative z-10">
+                      &ldquo;{reviews[startIndex].text}&rdquo;
+                    </p>
+
+                    {/* Font Awesome fa-quote-left SVG Background Decoration */}
+                    <svg
+                      className="absolute right-0 bottom-0 w-14 h-14 text-[#E8E8E8] pointer-events-none select-none z-0 opacity-40"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                    >
+                      <path d="M448 96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H352v32c0 35.3 28.7 64 64 64h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H416c-70.6 0-128-57.4-128-128V144c0-26.5 21.5-48 48-48H448zM160 96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H64v32c0 35.3 28.7 64 64 64h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H128C57.4 448 0 390.6 0 320V144C0 117.5 21.5 96 48 96H160z" />
+                    </svg>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Pagination Indicators / Dots */}
+            <div className="flex items-center justify-center gap-2 mt-4">
+              {reviews.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setStartIndex(idx)}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    startIndex === idx ? "bg-[#044647] w-7" : "bg-gray-300 w-2.5"
+                  }`}
+                  aria-label={`Show testimonial ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Tablet & Desktop View: 3 Stacked Cards Feed (Hidden on mobile) */}
+          <div className="hidden md:flex flex-1 w-full lg:w-218.75 flex-col gap-6 relative h-auto lg:h-275.25 overflow-hidden">
             <AnimatePresence mode="popLayout">
-              {visibleReviews.map((review, positionIdx) => (
+              {visibleReviews.map((review) => (
                 <motion.div
                   layout
                   key={review.id}
@@ -158,8 +228,8 @@ export default function Testimonials() {
                       </p>
                     </div>
 
-                    {/* Numeric rating */}
-                    <div className="font-manrope flex items-center gap-1.5 mt-3 sm:mt-6 text-[24px] sm:text-[32px] md:text-[26px] leading-8 sm:leading-10 md:leading-8.5 font-bold text-[#051B05]">
+                    {/* Numeric rating (Hidden on mobile) */}
+                    <div className="font-manrope hidden md:flex items-center gap-1.5 mt-3 sm:mt-6 text-[24px] sm:text-[32px] md:text-[26px] leading-8 sm:leading-10 md:leading-8.5 font-bold text-[#051B05]">
                       <span>{review.rating}</span>
                       <span className="material-symbols-outlined material-symbols-filled text-[#ED8A19] text-[16px] sm:text-[18px] select-none leading-none">
                         star

@@ -163,7 +163,7 @@ export default function Approach() {
                 whileHover={{ scale: 1.05 }}
                 className="font-manrope flex items-center gap-2 px-4.5 md:px-5 py-2.5 bg-[#044647] hover:bg-[#033738] text-white rounded-full text-xs sm:text-sm font-semibold shadow-md cursor-pointer transition-all duration-300 select-none"
               >
-                <span className="material-symbols-outlined text-[#C6D936] text-[15px] select-none leading-none">
+                <span className="material-symbols-outlined text-[#C6D936] text-[12px] select-none leading-none">
                   {tag.icon}
                 </span>
                 <span className="text-[15px] leading-7 md:text-[16px] md:leading-7.5 lg:text-[16px] lg:leading-7.5 font-normal">{tag.label}</span>
