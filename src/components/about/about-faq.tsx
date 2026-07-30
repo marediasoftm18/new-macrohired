@@ -34,32 +34,34 @@ export default function AboutFaq() {
   };
 
   return (
-    <section className="w-full bg-[#F6F5F2] py-14 md:py-20 lg:py-28 font-sans">
-      <div className="max-w-350 mx-auto w-full px-4 sm:px-6 md:px-12 xl:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+    <section className="w-full bg-white lg:bg-[#F6F5F2] py-14 md:py-16 lg:py-28 font-sans">
+      <div className="max-w-350 mx-auto w-full px-4 sm:px-6 md:px-6 xl:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-16 items-start">
           
           {/* Left Column: Title & 3D Question Mark Illustration */}
-          <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6 text-left">
-            <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
-              // EXPERT GUIDANCE
-            </span>
+          <div className="md:col-span-5 lg:col-span-5 flex flex-col gap-4 sm:gap-6 text-left justify-between h-full">
+            <div className="flex flex-col gap-4">
+              <span className="inline-flex w-fit rounded-xs items-center bg-[#c8db2b] px-4.5 pt-2.5 py-0 text-[14px] sm:text-[16px] font-semibold uppercase tracking-[0.15em] leading-3.75 text-[#062828]">
+                // QUICK ANSWERS
+              </span>
 
-            <h2 className="font-manrope text-[32px] sm:text-[40px] md:text-[52px] leading-tight sm:leading-13 md:leading-15.5 font-semibold text-[#051B05]">
-              HR Support and Guidance
-            </h2>
+              <h2 className="font-manrope text-[32px] sm:text-[40px] md:text-[34px] lg:text-[52px] leading-tight sm:leading-13 md:leading-11 lg:leading-15.5 font-semibold text-[#051B05]">
+                HR Support and Guidance
+              </h2>
+            </div>
 
             {/* FAQ Background Illustration SVG */}
-            <div className="w-full flex justify-center items-center mt-2">
+            <div className="w-full flex justify-center items-center mt-4 md:mt-6">
               <img
                 src="/media assets/home/faq-bg.svg"
                 alt="FAQ Illustration"
-                className="w-full max-w-72 sm:max-w-85 h-auto object-contain"
+                className="w-full max-w-64 sm:max-w-85 md:max-w-64 lg:max-w-85 h-auto object-contain"
               />
             </div>
           </div>
 
           {/* Right Column: Accordion list */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
+          <div className="md:col-span-7 lg:col-span-7 flex flex-col gap-4">
             <div className="flex flex-col border-t border-gray-200">
               {faqItems.map((item, idx) => {
                 const isOpen = openIdx === idx;
@@ -81,7 +83,7 @@ export default function AboutFaq() {
                         </div>
 
                         <span
-                          className={`font-manrope font-semibold text-[18px] sm:text-[22px] md:text-[26px] leading-7 sm:leading-8 md:leading-9 transition-colors duration-200 ${
+                          className={`font-manrope font-semibold text-[18px] sm:text-[22px] md:text-[20px] lg:text-[26px] leading-7 sm:leading-8 md:leading-7 lg:leading-9 transition-colors duration-200 ${
                             isOpen ? "text-[#044647]" : "text-[#051B05] group-hover:text-[#044647]"
                           }`}
                         >
@@ -89,7 +91,7 @@ export default function AboutFaq() {
                         </span>
                       </div>
                       
-                      {/* Bootstrap bi-caret-right-fill (22px x 22px) */}
+                      {/* Caret Icon */}
                       <div className="shrink-0 flex items-center justify-center select-none">
                         <svg
                           className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-transform duration-300 ${isOpen ? "rotate-90 text-[#044647]" : "text-[#044647]"}`}
@@ -110,7 +112,7 @@ export default function AboutFaq() {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <p className="font-dm-sans text-[#595B62] text-[16px] sm:text-[18px] leading-6.5 sm:leading-7 font-normal pl-11 pb-5 text-left">
+                          <p className="font-dm-sans text-[#595B62] text-[15px] sm:text-[18px] md:text-[15px] lg:text-[18px] leading-6 sm:leading-7 font-normal pl-11 pb-5 text-left">
                             {item.answer}
                           </p>
                         </motion.div>
