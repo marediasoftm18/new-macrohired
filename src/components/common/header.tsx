@@ -87,6 +87,7 @@ export default function Header() {
       href: "#",
       dropdown: [
         { name: "About Us", href: "/about" },
+        { name: "Pricing Plan", href: "/pricing" },
         { name: "Our Team", href: "#" },
         { name: "FAQ", href: "#" },
         { name: "Privacy Policy", href: "#" },

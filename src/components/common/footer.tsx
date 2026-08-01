@@ -174,21 +174,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Copyright Bar with Overlapping Floating Back-to-Top Button */}
+      {/* Bottom Copyright Bar */}
       <div className="w-full bg-[#C6D936] text-[#051B05] py-4 sm:py-4.5 relative z-10">
-        {/* Overlapping Back to Top Circle Button */}
-        <div className="w-full max-w-360 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto relative">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="absolute right-6 -top-10 md:right-8 md:-top-10.5 w-12 h-12 md:w-13 md:h-13 rounded-full border-2 border-[#044647] bg-[#044647] text-[#C6D936] hover:bg-[#033738] hover:text-white transition-all flex items-center justify-center shadow-lg cursor-pointer z-30"
-            aria-label="Scroll to top"
-          >
-            <span className="material-symbols-outlined text-[22px] md:text-[24px] leading-none select-none">
-              arrow_upward
-            </span>
-          </button>
-        </div>
-
         <div className="w-full max-w-360 px-4 sm:px-6 md:px-8 lg:px-16 mx-auto flex flex-col md:flex-row justify-between items-center gap-2 sm:gap-3 text-[#051B05] font-dm-sans text-[14px] sm:text-[16px] font-normal text-center md:text-left">
           <span>&copy; Copyright {new Date().getFullYear()} Macrohired All Rights Reserved</span>
           <span>
