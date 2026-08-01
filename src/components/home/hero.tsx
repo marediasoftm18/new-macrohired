@@ -7,7 +7,8 @@ export default function Hero() {
   const heroImage = "https://themes.potenzaglobalsolutions.com/hire-hive/wp-content/uploads/2026/02/banner-02-02.jpg";
 
   return (
-    <section className="relative isolate w-full min-h-160 sm:min-h-180 md:h-204.5 md:min-h-204.5 lg:min-h-205 overflow-hidden bg-[#eef4f1] pb-10 md:pb-0">
+    <section className="relative isolate w-full min-h-160 sm:min-h-180 md:min-h-204.5 lg:min-h-205 overflow-hidden bg-[#eef4f1] pb-10 md:pb-12 lg:pb-16 flex flex-col justify-end">
+      {/* Background Image & Overlay Gradients */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('${heroImage}')` }}
@@ -32,9 +33,12 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-140 sm:min-h-160 md:h-full lg:min-h-200 w-full max-w-360 items-start px-4 sm:px-6 md:px-8 xl:px-8 pt-20 sm:pt-28 md:pt-36 lg:pt-48.25 pb-8 md:pb-16 lg:pb-0">
-        <div className="grid w-full grid-cols-1 items-start gap-8 lg:gap-8">
-          <div className="flex w-full flex-col gap-0 text-left max-w-2xl lg:max-w-none">
+      {/* Main 2-Column Hero Content Container */}
+      <div className="relative z-10 mx-auto flex w-full max-w-360 items-end px-4 sm:px-6 md:px-8 xl:px-8 pt-20 sm:pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-16 min-h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 w-full gap-4 lg:gap-8 items-end">
+          
+          {/* Column 1 (Left Column): Tag, Title, Subtext, Get Started Buttons */}
+          <div className="lg:col-span-7 flex flex-col gap-0 text-left w-full">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +52,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.05 }}
-              className="font-manrope mt-2.5 text-white font-bold text-[40px] sm:text-[52px] md:text-[60px] lg:text-[92px] leading-tight sm:leading-[1.1] md:leading-17.5 lg:leading-27.5"
+              className="font-manrope mt-2.5 text-white font-bold text-[40px] sm:text-[52px] md:text-[60px] lg:text-[84px] xl:text-[92px] leading-tight sm:leading-[1.1] md:leading-17.5 lg:leading-24 xl:leading-27.5"
             >
               Grow Employee <br className="hidden sm:inline" />
               Culture and Value
@@ -71,7 +75,7 @@ export default function Hero() {
             >
               <Link
                 href="/about"
-                className="font-dm-sans inline-flex h-11 sm:h-15 items-center rounded-full bg-[#c8db2b] px-6 sm:px-7 text-[18px] sm:text-[18px] leading-7.5 md:leading-7.5 font-medium text-[#051B05] shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-transform hover:scale-[1.02]"
+                className="font-dm-sans inline-flex h-11 sm:h-15 items-center rounded-full bg-[#c8db2b] px-6 sm:px-7 text-[18px] sm:text-[18px] leading-7.5 font-medium text-[#051B05] shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-transform hover:scale-[1.02]"
               >
                 Get Started
               </Link>
@@ -85,13 +89,15 @@ export default function Hero() {
                 </span>
               </Link>
             </motion.div>
+          </div>
 
-            {/* Floating Award Glass Card - Rendered on Mobile, Tablet and Desktop */}
+          {/* Column 2 (Right Column): Floating Award Glass Card Positioned at Bottom Right */}
+          <div className="lg:col-span-5 flex justify-end items-end w-full">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.25 }}
-              className="mt-6 md:mt-0 relative md:absolute right-auto md:right-8 lg:right-64.5 bottom-auto md:bottom-8 lg:bottom-21.5 w-full max-w-sm sm:max-w-96 lg:max-w-112.5 p-5 sm:p-6 lg:p-10 overflow-hidden rounded-[18px] border border-white/25 bg-[linear-gradient(145deg,rgba(4,70,71,0.70),rgba(4,70,71,0.50))] text-left text-sm sm:text-base md:text-lg leading-6 md:leading-7 text-white shadow-[0_20px_44px_rgba(0,0,0,0.25)] backdrop-blur-md z-20"
+              className="w-full max-w-60 md:max-w-80 lg:max-w-100 p-5 sm:p-6 lg:p-10 overflow-hidden rounded-[18px] border border-white/25 bg-[linear-gradient(145deg,rgba(4,70,71,0.70),rgba(4,70,71,0.50))] text-left text-sm sm:text-base md:text-lg leading-6 md:leading-7 text-white shadow-[0_20px_44px_rgba(0,0,0,0.25)] backdrop-blur-md relative ml-auto"
             >
               <div
                 className="pointer-events-none absolute -right-8 -bottom-8 opacity-[0.06] text-white"
@@ -106,8 +112,8 @@ export default function Hero() {
                 <img src="/award.png" alt="Award logo" className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain" />
               </div>
 
-              <p className="relative z-10 max-w-full text-[18px] sm:text-base md:text-lg leading-7 sm:leading-6 md:leading-7 text-white/90">
-                We provide tailored HR solutions that <br className="hidden sm:inline" />enhance employee performance, <br className="hidden sm:inline" />streamline processes.
+              <p className="relative z-10 max-w-full text-[16px] sm:text-[18px] leading-6 sm:leading-7 text-white/90">
+                We provide tailored HR solutions that <br className="hidden sm:inline md:hidden lg:hidden " />enhance employee performance, <br className="hidden sm:inline" />streamline processes.
               </p>
             </motion.div>
           </div>

@@ -99,7 +99,7 @@ export default function Portfolio() {
                   {/* Card Footer Text Block */}
                   <div className="bg-[#F6F5F2] rounded-b-3xl p-5 md:p-3 lg:p-7.5 flex justify-between items-center border-t border-gray-100/50 shadow-sm h-auto md:h-22 lg:h-25">
                     <h3
-                      className="font-manrope font-semibold md:max-w-55 text-[22px]  md:text-[26px] lg:text-[32px] md:leading-8.5 lg:leading-10 text-[#044647]"
+                      className="font-manrope font-semibold md:max-w-55 text-[22px]  md:text-[20px] lg:text-[32px] md:leading-8.5 lg:leading-10 text-[#044647]"
                     >
                       {project.title}
                     </h3>
