@@ -12,22 +12,22 @@ const faqItems = [
   {
     question: "How do you hire talent?",
     answer:
-      "We source candidates through our extensive network, screen credentials, conduct preliminary interviews, and present the top matches for your role.",
+      "We use a structured and transparent hiring process that evaluates skills, experience, and cultural fit to ensure long-term success.",
   },
   {
     question: "Can you handle payroll?",
     answer:
-      "Yes, our payroll modules integrate compliance checks, salary distributions, benefit tracking, and tax filing support.",
+      "Yes, we handle complete payroll management, including accurate processing, statutory compliance, and timely reporting.",
   },
   {
     question: "Do you provide training programs?",
     answer:
-      "Yes, we design custom workshops, leadership training, and skills development modules tailored for team growth.",
+      "Yes, we provide customized training programs designed to improve skills, performance, and team development.",
   },
   {
     question: "How quickly can we start?",
     answer:
-      "We can initiate consultation immediately. The recruitment pipeline usually starts yielding screened candidates within 3-5 business days.",
+      "We can usually get started within a few days after completing the initial consultation and onboarding process.Yes, we handle complete payroll management, including accurate processing, statutory compliance, and timely reporting.",
   },
 ];
 

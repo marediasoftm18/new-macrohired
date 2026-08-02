@@ -71,15 +71,39 @@ export default function Footer() {
             </p>
 
             <div
-              className="font-dm-sans text-[16px] sm:text-[18px] leading-7 font-normal text-white flex items-center gap-2 mt-1"
+              className="font-dm-sans text-[16px] sm:text-[18px] leading-7 font-normal text-white flex items-center gap-3 mt-1"
             >
               <span className="font-bold">Follow Us</span>
               <span>&mdash;</span>
-              <div className="flex gap-2.5">
-                <a href="#" className="hover:text-[#C6D936] transition-colors">In.</a>
-                <a href="#" className="hover:text-[#C6D936] transition-colors">Fa.</a>
-                <a href="#" className="hover:text-[#C6D936] transition-colors">X.</a>
-                <a href="#" className="hover:text-[#C6D936] transition-colors">Yt.</a>
+              <div className="flex items-center gap-2.5">
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#C6D936] text-white hover:text-[#051B05] transition-all flex items-center justify-center text-[13px]"
+                >
+                  <i className="fa-brands fa-linkedin-in" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#C6D936] text-white hover:text-[#051B05] transition-all flex items-center justify-center text-[13px]"
+                >
+                  <i className="fa-brands fa-facebook-f" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="X Twitter"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#C6D936] text-white hover:text-[#051B05] transition-all flex items-center justify-center text-[13px]"
+                >
+                  <i className="fa-brands fa-x-twitter" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="YouTube"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#C6D936] text-white hover:text-[#051B05] transition-all flex items-center justify-center text-[13px]"
+                >
+                  <i className="fa-brands fa-youtube" />
+                </a>
               </div>
             </div>
           </div>
