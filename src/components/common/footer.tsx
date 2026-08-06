@@ -122,6 +122,9 @@ export default function Footer() {
               <Link href="/about" className="hover:text-[#C6D936] transition-colors">
                 About Us
               </Link>
+              <Link href="/services" className="hover:text-[#C6D936] transition-colors">
+                Services
+              </Link>
               <Link href="#" className="hover:text-[#C6D936] transition-colors">
                 Team Members
               </Link>
@@ -142,19 +145,19 @@ export default function Footer() {
               Services
             </h4>
             <nav className="flex flex-col gap-2.5 items-center text-[15px] sm:text-[17px] leading-6 sm:leading-6.5 md:leading-7 font-normal text-gray-300 font-dm-sans">
-              <Link href="#" className="hover:text-[#C6D936] transition-colors">
+              <Link href="/services" className="hover:text-[#C6D936] transition-colors">
                 Strategic Talent Management
               </Link>
-              <Link href="#" className="hover:text-[#C6D936] transition-colors">
+              <Link href="/services" className="hover:text-[#C6D936] transition-colors">
                 Staff Engagement Programs
               </Link>
-              <Link href="#" className="hover:text-[#C6D936] transition-colors">
+              <Link href="/services" className="hover:text-[#C6D936] transition-colors">
                 Staff Development Solutions
               </Link>
-              <Link href="#" className="hover:text-[#C6D936] transition-colors">
+              <Link href="/services" className="hover:text-[#C6D936] transition-colors">
                 Professional HR Consulting
               </Link>
-              <Link href="#" className="hover:text-[#C6D936] transition-colors">
+              <Link href="/services" className="hover:text-[#C6D936] transition-colors">
                 Payroll Management Services
               </Link>
             </nav>

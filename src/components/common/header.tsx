@@ -87,6 +87,7 @@ export default function Header() {
       href: "#",
       dropdown: [
         { name: "About Us", href: "/about" },
+        { name: "Services", href: "/services" },
         { name: "Pricing Plan", href: "/pricing" },
         { name: "Our Team", href: "#" },
         { name: "FAQ", href: "#" },
@@ -95,17 +96,17 @@ export default function Header() {
     },
     {
       name: "Jobs",
-      href: "#",
+      href: "/jobs",
       dropdown: [
-        { name: "Find Jobs", href: "#" },
+        { name: "Find Jobs", href: "/jobs" },
         { name: "Candidate Portal", href: "#" },
       ],
     },
     {
       name: "Portfolio",
-      href: "#",
+      href: "/portfolio",
       dropdown: [
-        { name: "Case Studies", href: "#" },
+        { name: "Case Studies", href: "/portfolio" },
         { name: "Success Stories", href: "#" },
       ],
     },

@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "slug": "development-manager",
+    "title": "Development Manager",
+    "category": "People Analytics",
+    "categoryIcon": "Globe",
+    "location": "Singapore",
+    "type": "Freelance",
+    "postedDate": "Posted 6 months ago",
+    "company": "AsiaPeople HR",
+    "companyTagline": "Tomorrow's Leaders",
+    "companyLogo": "/media assets/Jobs/job-01.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking an experienced and results-driven Development Manager to lead and oversee software development projects from planning through execution. The ideal candidate will manage cross-functional teams, ensure timely project delivery, and maintain high-quality technical standards aligned with business objectives.",
+      "The Development Manager will be responsible for coordinating development activities, mentoring team members, reviewing code quality, and implementing best practices in software architecture and project management. This role requires strong leadership, technical expertise, and the ability to collaborate effectively with stakeholders across departments."
+    ],
+    "skills": [
+      "Strong understanding of software development lifecycle (SDLC) and agile methodologies",
+      "Proficiency in modern programming languages and development frameworks",
+      "Experience with version control systems and CI/CD pipelines",
+      "Excellent leadership and team management skills",
+      "Strong problem-solving and analytical abilities",
+      "Effective communication and stakeholder management skills",
+      "Ability to manage multiple projects and meet deadlines",
+      "Knowledge of system architecture and scalable application design"
+    ],
+    "educationExperience": [
+      "Bachelor's degree in Computer Science, Information Technology, or a related field (Master's degree preferred)",
+      "5+ years of experience in software development",
+      "3+ years of experience in a leadership or managerial role",
+      "Proven experience managing development teams and delivering complex projects",
+      "Experience working in agile or fast-paced environments preferred"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "recruitment-coordinator",
+    "title": "Recruitment Coordinator",
+    "category": "Talent Acquisition",
+    "categoryIcon": "Globe",
+    "location": "Dubai, UAE",
+    "type": "Full Time",
+    "postedDate": "Posted 6 months ago",
+    "company": "Gulf Talent Hub",
+    "companyTagline": "Connecting Elite Talent",
+    "companyLogo": "/media assets/Jobs/job-02.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking a detail-oriented and proactive Recruitment Coordinator to streamline our hiring operations and manage candidate communication. You will work closely with talent acquisition managers to schedule interviews, facilitate onboarding, and maintain recruitment records.",
+      "In this position, you will act as the primary point of contact for candidates throughout the interview process, ensuring a seamless candidate experience while supporting internal recruitment administrative workflows."
+    ],
+    "skills": [
+      "Experience with Applicant Tracking Systems (ATS) and HR recruitment tools",
+      "Strong organizational and multi-tasking skills in fast-paced environments",
+      "Exceptional written and verbal communication abilities",
+      "High attention to detail and process compliance",
+      "Proficiency in scheduling across multiple time zones",
+      "Ability to maintain strict confidentiality regarding candidate data"
+    ],
+    "educationExperience": [
+      "Bachelor's degree in Human Resources, Business Administration, or related discipline",
+      "2+ years of administrative or coordination experience in HR/Recruiting",
+      "Demonstrated history of candidate relationship management"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "hr-business-partner",
+    "title": "HR Business Partner",
+    "category": "Human Resources",
+    "categoryIcon": "Users",
+    "location": "Berlin, Germany",
+    "type": "Internship",
+    "postedDate": "Posted 6 months ago",
+    "company": "EuroTalent Group",
+    "companyTagline": "Empowering Workplaces",
+    "companyLogo": "/media assets/Jobs/job-03.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking a strategic and results-driven HR Business Partner to align business objectives with management and employees in designated business units. The position serves as a consultant to management on human resource-related issues.",
+      "You will assess and anticipate HR-related needs, communicating proactively with our HR department and business management to develop integrated solutions."
+    ],
+    "skills": [
+      "Solid knowledge of labor relations and employment legislation",
+      "Proven ability to consult and coach leaders at various organizational levels",
+      "Strong conflict resolution and mediation capabilities",
+      "Data-driven mindset for workforce metrics and organizational planning",
+      "Familiarity with performance management programs and employee retention"
+    ],
+    "educationExperience": [
+      "Degree in Human Resources, Industrial Relations, or Organizational Psychology",
+      "3+ years of progressive HR generalist or HRBP experience",
+      "SHRM-CP or PHR certification is a strong plus"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "payroll-specialist",
+    "title": "Payroll Specialist",
+    "category": "Staff Onboarding",
+    "categoryIcon": "Laptop",
+    "location": "Sydney, Australia",
+    "type": "Part Time",
+    "postedDate": "Posted 6 months ago",
+    "company": "Pacific Workforce",
+    "companyTagline": "Precision & Integrity",
+    "companyLogo": "/media assets/Jobs/job-04.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking a detail-oriented, reliable Payroll Specialist to oversee and execute monthly payroll computations, tax withholdings, and benefit disbursements for our global workforce.",
+      "You will ensure full compliance with regional tax laws and company policies while assisting employees with payroll queries in a prompt, professional manner."
+    ],
+    "skills": [
+      "Expertise in payroll software (Workday, ADP, or Payroll Metrics)",
+      "Deep understanding of tax codes, statutory deductions, and labor laws",
+      "Advanced Excel capabilities (VLOOKUP, Pivot Tables, Formulas)",
+      "High level of mathematical accuracy and analytical problem solving",
+      "Strong ethics and handling of sensitive employee salary data"
+    ],
+    "educationExperience": [
+      "Associate or Bachelor's degree in Accounting, Finance, or Business",
+      "4+ years of hands-on payroll processing experience",
+      "Payroll Industry Certification (CPP/FPC) preferred"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "talent-acquisition-specialist",
+    "title": "Talent Acquisition Specialist",
+    "category": "Talent Acquisition",
+    "categoryIcon": "Globe",
+    "location": "Toronto, Canada",
+    "type": "Temporary",
+    "postedDate": "Posted 6 months ago",
+    "company": "Maple HR Partners",
+    "companyTagline": "Global Recruitment Leaders",
+    "companyLogo": "/media assets/Jobs/job-05.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking a motivated and detail-oriented Talent Acquisition Specialist to drive our end-to-end recruitment pipelines across engineering and operations teams.",
+      "You will source passive talent, conduct initial screening interviews, and collaborate with hiring managers to build strong candidate pipelines for rapid scale."
+    ],
+    "skills": [
+      "Proven active sourcing tactics using LinkedIn Recruiter, GitHub, and Boolean queries",
+      "Experience executing behavioral and competency-based interview frameworks",
+      "Ability to manage high volume pipelines while delivering top candidate experiences",
+      "Market intelligence analysis for compensation benchmarks"
+    ],
+    "educationExperience": [
+      "Bachelor's degree in Human Resources or related domain",
+      "3+ years of full-lifecycle recruiting experience in technology or corporate sectors"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "hr-executive",
+    "title": "HR Executive",
+    "category": "Staff Onboarding",
+    "categoryIcon": "Laptop",
+    "location": "London, UK",
+    "type": "Internship",
+    "postedDate": "Posted 6 months ago",
+    "company": "BrightPath Consulting",
+    "companyTagline": "Strategic People Operations",
+    "companyLogo": "/media assets/Jobs/job-06.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking a proactive, detail-oriented HR Executive to manage daily human resources tasks, employee lifecycle records, and staff engagement initiatives.",
+      "The role involves updating employee databases, assisting in company policy implementation, and supporting employee wellness activities across the organization."
+    ],
+    "skills": [
+      "Strong understanding of HR operational workflows and administrative governance",
+      "Proficiency in Microsoft Office Suite and modern cloud HR systems",
+      "Excellent interpersonal skills for resolving day-to-day employee inquiries",
+      "Event organization skills for internal team building activities"
+    ],
+    "educationExperience": [
+      "Bachelor's degree in Business or HR management",
+      "1-2 years of relevant HR operational experience"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "technical-recruiter",
+    "title": "Technical Recruiter",
+    "category": "Employee Hiring",
+    "categoryIcon": "UserCheck",
+    "location": "San Francisco, USA",
+    "type": "Full Time",
+    "postedDate": "Posted 6 months ago",
+    "company": "NextGen Talent",
+    "companyTagline": "Innovating Talent Acquisition",
+    "companyLogo": "/media assets/Jobs/job-07.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking a detail-oriented and results-driven Technical Recruiter to identify, attract, and hire world-class software engineers, product managers, and tech leads.",
+      "You will partner closely with engineering executives to understand complex technical requirements, build competitive offer packages, and close top-tier engineering talent."
+    ],
+    "skills": [
+      "Deep technical literacy across modern software stacks (React, Node, Cloud, AI/ML)",
+      "Expert passive candidate engagement and cold outreach strategies",
+      "Offer negotiation and competitive intelligence capability",
+      "Strong pipeline analytics and conversion reporting skills"
+    ],
+    "educationExperience": [
+      "Bachelor's degree or equivalent practical experience",
+      "4+ years of specialized technical recruitment experience in fast-growth tech companies"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "senior-hr-manager",
+    "title": "Senior HR Manager",
+    "category": "Human Resources",
+    "categoryIcon": "Users",
+    "location": "New York, USA",
+    "type": "Freelance",
+    "postedDate": "Posted 6 months ago",
+    "company": "TalentBridge Solutions",
+    "companyTagline": "Excellence in Leadership",
+    "companyLogo": "/media assets/Jobs/job-08.svg",
+    "videoUrl": "https://www.youtube.com/embed/FWDHT2K2mMI",
+    "descriptionParagraphs": [
+      "We are seeking an experienced and strategic Senior HR Manager to oversee organizational development, executive compensation, and enterprise HR policies.",
+      "In this senior leadership role, you will report to executive leadership, leading the HR department in building inclusive workplace culture and driving retention strategies."
+    ],
+    "skills": [
+      "Executive coaching, talent management, and succession planning",
+      "Strategic workforce planning and organizational design expertise",
+      "Comprehensive compliance and labor law risk management",
+      "Strong leadership and budget management background"
+    ],
+    "educationExperience": [
+      "Master's degree in HR Management, Business, or related discipline",
+      "8+ years of progressive HR management leadership experience"
+    ]
+  }
+]
