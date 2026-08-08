@@ -112,10 +112,10 @@ export default function Header() {
     },
     {
       name: "Blog",
-      href: "#",
+      href: "/blog",
       dropdown: [
-        { name: "CEO Talks", href: "#" },
-        { name: "Latest News", href: "#" },
+        { name: "Blog Feed", href: "/blog" },
+        { name: "Latest News", href: "/blog" },
       ],
     },
     {

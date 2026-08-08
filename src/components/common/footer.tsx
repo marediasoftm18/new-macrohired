@@ -128,7 +128,7 @@ export default function Footer() {
               <Link href="#" className="hover:text-[#C6D936] transition-colors">
                 Team Members
               </Link>
-              <Link href="#" className="hover:text-[#C6D936] transition-colors">
+              <Link href="/blog" className="hover:text-[#C6D936] transition-colors">
                 Blog
               </Link>
               <Link href="#" className="hover:text-[#C6D936] transition-colors">
